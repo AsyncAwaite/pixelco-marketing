@@ -28,10 +28,9 @@ body {
   color: $white;
   background-color: $gray-900;
   &.active {
-    overflow-y: hidden;
+    overflow: hidden;
     touch-action: none;
-    position: fixed;
-    height: 100vh;
+
   }
 }
 

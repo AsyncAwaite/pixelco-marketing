@@ -14,11 +14,15 @@ const burger = () => {
 
 function toggleMenu() {
     burgerItem.classList.toggle("active");
-    header.classList.toggle('--hide');
-    header.classList.toggle('--show');
-    headerNav.classList.toggle("active");
     document.body.classList.toggle("active");
-
+    if (document.body.classList.contains('active')) {
+        document.getElementsByTagName('html')[0].style.overflow = 'hidden';
+    } else {
+        document.getElementsByTagName('html')[0].style.overflow = 'visible';
+    }
+    // header.classList.toggle('--hide');
+    // header.classList.toggle('--show');
+    headerNav.classList.toggle("active");
 
 
 }

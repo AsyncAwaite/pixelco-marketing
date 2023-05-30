@@ -29,7 +29,8 @@ window.addEventListener('scroll', function () {
 window.addEventListener("DOMContentLoaded", () => {
     try {
         AOS.init({
-            duration: 1000,
+            duration: 800,
+            once: true,
 
         });
         const stringEl = getElement('[data-typing-string]');
