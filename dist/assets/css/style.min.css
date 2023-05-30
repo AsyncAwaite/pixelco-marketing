@@ -4393,6 +4393,9 @@ section {
     -ms-flex-pack: end;
     justify-content: flex-end
   }
+  .mount {
+    background: 0 0!important
+  }
   .mount .btn {
     width: 100%
   }
