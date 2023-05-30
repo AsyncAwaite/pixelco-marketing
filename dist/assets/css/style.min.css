@@ -1848,6 +1848,12 @@ h5 {
   border-radius: 50%;
   background: linear-gradient(271.58deg,#382ed8 6.54%,#9169fb 100.35%)
 }
+.bgc_accent {
+  background-color: #7c6fe6
+}
+.bgc_gray {
+  background-color: #14142c
+}
 @keyframes animatedOpacity {
   0% {
     opacity: .5
@@ -2527,9 +2533,6 @@ h5 {
   padding: 0;
   box-sizing: border-box
 }
-html {
-  height: calc(var(--vh,1vh) * 100)
-}
 body {
   font-family: Montserrat;
   min-height: -webkit-fill-available;
@@ -2539,7 +2542,9 @@ body {
   font-weight: 400;
   position: relative;
   color: #fff;
-  background-color: #14142c
+  background-color: #14142c;
+  height: 100vh;
+  height: calc(var(--vh,1vh) * 100)
 }
 body.active {
   overflow: hidden;
@@ -2574,8 +2579,11 @@ button {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   position: relative
+}
+.modal {
+  height: 100vh;
+  height: calc(var(--vh,1vh) * 100)
 }
 main {
   flex-grow: 1;
@@ -3130,16 +3138,27 @@ section {
 .btn_secondary {
   position: relative
 }
+.btn_secondary::after,
 .btn_secondary::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: .12rem;
-  padding: .01rem;
   background: linear-gradient(271.58deg,#382ed8 6.54%,#9169fb 100.35%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude
+}
+.btn_secondary::before {
+  padding: .01rem
+}
+.btn_secondary::after {
+  padding: .03rem;
+  opacity: 0;
+  transition: opacity .35s linear
+}
+.btn_secondary:hover::after {
+  opacity: 1
 }
 .btn_secondary2 {
   --borderWidth: 1px;
@@ -3265,18 +3284,18 @@ section {
 .card {
   padding: .4rem;
   position: relative;
-  background: linear-gradient(#14142c,#14142c) padding-box,linear-gradient(271.58deg,#382ed8 6.54%,#9169fb 100.35%) border-box;
-  border: 1px solid transparent;
-  border-radius: .24rem
+  border-radius: .24rem;
+  overflow: hidden
 }
 .card + .card {
   margin-top: .16rem
 }
 .card::before {
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: .24rem;
-  padding: .01rem;
+  padding: .015rem;
   background: linear-gradient(271.58deg,#382ed8 6.54%,#9169fb 100.35%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -3524,7 +3543,9 @@ section {
 }
 .cases__item .image {
   height: 3.55rem;
-  width: 100%
+  width: 100%;
+  margin: 0 auto;
+  max-width: 4.61rem
 }
 .cases__item .image img {
   height: 2.66rem;
@@ -3786,22 +3807,8 @@ section {
   border-color: #ff6964;
   color: #ff6964
 }
-.form__item.valid {
-  background: rgba(237,237,237,.25);
-  border-color: transparent
-}
-.form__item.valid input ~ label {
-  top: .05rem;
-  left: .1rem;
-  font-size: .12rem;
-  line-height: .14rem;
-  opacity: .25
-}
-.form__item.valid input .label__tel {
-  bottom: .6rem
-}
-.form__input {
-  width: 100%
+.form__item.valid input {
+  color: #fff
 }
 .form input,
 .form textarea {
@@ -3829,6 +3836,12 @@ section {
 .form textarea {
   resize: none;
   height: .8rem
+}
+.form__input {
+  width: 100%
+}
+.form__input_tel input {
+  color: #8b89b0
 }
 .form__message {
   position: absolute;

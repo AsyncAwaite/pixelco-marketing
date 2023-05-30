@@ -56,9 +56,16 @@
   background: radial-gradient(50% 50% at 50% 50%, rgba(59, 49, 217, 0.47) 0%, rgba(59, 49, 217, 0.1457) 67.71%, rgba(59, 49, 217, 0) 100%);
 }
 
-.bgc_circle{
+.bgc_circle {
   border-radius: 50%;
   background: $gradient;
+}
+
+.bgc_accent {
+  background-color: $accent;
+}
+.bgc_gray{
+  background-color: $gray-900;
 }
 
 

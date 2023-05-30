@@ -1,6 +1,7 @@
 import IMask from "imask";
 import modalsEvents from "./modalsEvents.js";
 import Modal from "./modal.js";
+import {translateFields, lang} from "./base.js";
 import {getElement} from "./helpers.js";
 
 
@@ -40,7 +41,7 @@ const content = {
     },
 };
 let maskOptions = {
-    mask: "+38 (000) 000 - 00 - 00",
+    mask: "+1 (000) 000 - 0000",
     lazy: false,
 };
 
@@ -69,7 +70,7 @@ class Form {
 
     createMask(input) {
         let maskOptions = {
-            mask: "+38 (000) 000 - 00 - 00",
+            mask: "+1 (000) 000 - 0000",
             lazy: false,
         };
         let mask = new IMask(input, maskOptions);
@@ -82,9 +83,6 @@ class Form {
             if (input.name === "name") {
                 this.checkNameInput(input);
             }
-            if (input.name === "surname") {
-                this.checkNameInput(input);
-            }
 
             if (input.name === "tel") {
 
@@ -95,9 +93,7 @@ class Form {
                 this.checkEmailInput(input)
             }
 
-            if (input.name == 'rate') {
-                this.checkRateInput(input);
-            }
+
         });
         // if (this.textarea) {
         //     this.textarea.addEventListener('input', () => {
@@ -132,8 +128,8 @@ class Form {
     }
 
     checkEmailInput(input) {
-        let {email: {en, ua}} = content;
-        let email = !isEn ? ua : en
+        let {email: emailInput} = translateFields;
+        let email = emailInput[lang];
         let isValid = false;
 
         input.addEventListener("input", () => {
@@ -146,18 +142,18 @@ class Form {
                 isValid = false;
             }
             if (!isValid) {
-                input.nextElementSibling.nextElementSibling.innerHTML = `${
+                input.nextElementSibling.innerHTML = `${
                     email
                 }`;
             } else {
-                input.nextElementSibling.nextElementSibling.innerText = "";
+                input.nextElementSibling.innerText = "";
             }
         });
     }
 
     checkPhoneInput(input) {
-        let {template: {en, ua}} = content;
-        let template = !isEn ? ua : en;
+        let {template: templateMessage} = translateFields;
+        let template = templateMessage[lang];
         let isValid = false;
         this.mask.updateValue()
 
@@ -171,9 +167,9 @@ class Form {
                 isValid = false;
             }
             if (!isValid) {
-                input.nextElementSibling.nextElementSibling.innerHTML = `${template}`;
+                input.nextElementSibling.innerHTML = `${template}`;
             } else {
-                input.nextElementSibling.nextElementSibling.innerText = "";
+                input.nextElementSibling.innerText = "";
             }
         });
     }
@@ -198,20 +194,20 @@ class Form {
     }
 
     valid(input) {
-        input.parentNode.classList.add("valid");
-        input.parentNode.classList.remove("invalid");
+        input.closest('.form__item').classList.add("valid");
+        input.closest('.form__item').classList.remove("invalid");
         if (this.form.querySelector('.btn').classList.contains('disabled')) this.form.querySelector('.btn').classList.remove('disabled')
     }
 
     invalid(input) {
-        input.parentNode.classList.add("invalid");
-        input.parentNode.classList.remove("valid");
-        console.log(this.form.querySelector('.btn'))
+        input.closest('.form__item').classList.add("invalid");
+        input.closest('.form__item').classList.remove("valid");
         this.form.querySelector('.btn').classList.add('disabled')
     }
 
     validateEmptyField() {
-        let {field: {ua, en}} = content;
+        let {field} = translateFields;
+
         let isValid = true;
         if (this.form.dataset.form == 'rate') return isValid;
         let validator = {
@@ -221,20 +217,18 @@ class Form {
             email: null
         };
         let validInputs = false;
-        let field = !isEn ? ua : en;
-
         this.inputs.forEach((input) => {
 
             if (input.name === "name" || input.name === "surname") {
                 if (!input.value.trim()) {
-                    input.parentNode.classList.add("invalid");
-                    input.nextElementSibling.nextElementSibling.innerHTML = `${
-                        field
+                    input.closest('.form__item').classList.add("invalid");
+                    input.nextElementSibling.innerHTML = `${
+                        field[lang]
                     }`;
                     return (isValid = false);
                 } else {
                     this.valid(input);
-                    input.nextElementSibling.nextElementSibling.innerText = "";
+                    input.nextElementSibling.innerText = "";
 
                     validator[input.name] = true;
                     return (isValid = true);
@@ -242,14 +236,13 @@ class Form {
             } else if (input.name === "tel") {
                 if (input.value.indexOf("_") === -1) {
                     this.valid(input);
-                    input.nextElementSibling.nextElementSibling.innerText = "";
-
+                    input.nextElementSibling.innerText = "";
                     validator.tel = true;
                     return (isValid = true);
                 } else {
-                    input.parentNode.classList.add("invalid");
-                    input.nextElementSibling.nextElementSibling.innerHTML = `${
-                        field
+                    input.closest('.form__item').classList.add("invalid");
+                    input.nextElementSibling.innerHTML = `${
+                        field[lang]
                     }`;
 
                     validator.tel = false;
@@ -257,14 +250,14 @@ class Form {
                 }
             } else if (input.name === "email") {
                 if (!input.value.match(validRegex)) {
-                    input.parentNode.classList.add("invalid");
-                    input.nextElementSibling.nextElementSibling.innerHTML = `${
-                        field
+                    input.closest('.form__item').classList.add("invalid");
+                    input.nextElementSibling.innerHTML = `${
+                        field[lang]
                     }`;
                     return (isValid = false);
                 } else {
                     this.valid(input);
-                    input.nextElementSibling.nextElementSibling.innerText = "";
+                    input.nextElementSibling.innerText = "";
 
                     validator.email = true;
                     return (isValid = true);
@@ -356,6 +349,8 @@ class Form {
     checkNameInput(input) {
         // let name = !isEn ? content[input.name].ua : content[input.name].en;
         //TODO
+        let {name: nameInput} = translateFields;
+        let name = nameInput[lang];
         let isValid = false;
         input.addEventListener("keypress", function (e) {
             if (!e.key.match(/^[a-zA-Zа-щА-ЩЬьЮюЯяЇїІіЄєҐґЁёЭэЪъ\s]/)) {
@@ -373,9 +368,9 @@ class Form {
                 isValid = false;
             }
             if (!isValid) {
-                input.nextElementSibling.nextElementSibling.innerHTML = `${name}`;
+                input.nextElementSibling.innerHTML = `${name}`;
             } else {
-                input.nextElementSibling.nextElementSibling.innerText = "";
+                input.nextElementSibling.innerText = "";
             }
         });
     }

@@ -3,10 +3,11 @@
 
   padding: gem(40);
   position: relative;
-  background: linear-gradient($gray-900, $gray-900) padding-box,
-  $gradient border-box;
-  border: 1px solid transparent;
+  //background: linear-gradient($gray-900, $gray-900) padding-box,
+  //$gradient border-box;
+  //border: 1px solid transparent;
   border-radius: gem(24);
+  overflow: hidden;
 
   + .card {
     margin-top: gem(16);
@@ -14,11 +15,11 @@
 
   &::before {
     //Розкоментувати для прозорого фону
-    //content: "";
+    content: "";
     position: absolute;
     inset: 0;
     border-radius: gem(24);
-    padding: gem(1);
+    padding: gem(1.5);
     background: $gradient;
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;

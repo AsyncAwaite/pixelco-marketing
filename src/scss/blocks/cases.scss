@@ -3,7 +3,8 @@
     .image {
       height: gem(355);
       width: 100%;
-
+      margin: 0 auto;
+      max-width: gem(461);
       img {
         height: gem(266);
         object-fit: cover;

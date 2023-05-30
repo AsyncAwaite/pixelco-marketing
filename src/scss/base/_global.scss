@@ -13,9 +13,9 @@
   box-sizing: border-box;
 }
 
-html {
-  height: calc(var(--vh, 1vh) * 100);
-}
+//html {
+//  height: calc(var(--vh, 1vh) * 100);
+//}
 
 body {
   font-family: Montserrat;
@@ -27,6 +27,9 @@ body {
   position: relative;
   color: $white;
   background-color: $gray-900;
+  height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+
   &.active {
     overflow: hidden;
     touch-action: none;
@@ -69,8 +72,13 @@ button {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+
   position: relative;
+}
+
+.modal {
+  height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 main {

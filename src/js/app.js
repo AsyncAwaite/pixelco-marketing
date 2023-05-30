@@ -54,7 +54,9 @@ window.addEventListener("DOMContentLoaded", () => {
                 new Modal(".modal").openModal();
             })
         })
-        userPage();
+        if (getElement('.audit-form')) {
+            new Form('.audit-form').init();
+        }
 
 
     } catch (e) {

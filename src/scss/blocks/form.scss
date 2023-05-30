@@ -12,8 +12,6 @@
 
 
     &.invalid {
-
-
       input {
         border-color: #FF6964;
         color: #FF6964;
@@ -21,31 +19,22 @@
     }
 
     &.valid {
-      background: rgba(237, 237, 237, 0.25);
-      border-color: transparent;
+      //background: rgba(237, 237, 237, 0.25);
+      //border-color: transparent;
 
       input {
-        ~ label {
-          top: gem(5);
-          left: gem(10);
-          font-size: gem(12);
-          line-height: gem(14);
-          opacity: .25;
-        }
+        color: $white;
 
-        .label__tel {
-          //color: $darkGreen;
-          bottom: gem(60);
-        }
+        //.label__tel {
+        //color: $darkGreen;
+        //bottom: gem(60);
+        //}
       }
     }
 
 
   }
 
-  &__input {
-    width: 100%;
-  }
 
   input,
   textarea {
@@ -77,6 +66,16 @@
   textarea {
     resize: none;
     height: gem(80);
+  }
+
+  &__input {
+    width: 100%;
+
+    &_tel {
+      input {
+        color: $gray-700;
+      }
+    }
   }
 
 
