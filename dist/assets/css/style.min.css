@@ -2054,6 +2054,9 @@ h5 {
   -webkit-box-sizing: border-box;
   box-sizing: border-box
 }
+html {
+  min-height: 100vh
+}
 body {
   font-family: Montserrat;
   min-height: -webkit-fill-available;
@@ -2063,9 +2066,7 @@ body {
   font-weight: 400;
   position: relative;
   color: #fff;
-  background-color: #14142c;
-  height: 100vh;
-  height: calc(var(--vh,1vh) * 100)
+  background-color: #14142c
 }
 body.active {
   overflow: hidden;
@@ -2276,13 +2277,34 @@ a {
   height: var(--header-height);
   padding: 0 .64rem;
   width: 100%;
-  color: #fff;
-  -webkit-transition: background-color .25s ease-in-out;
-  -o-transition: background-color .25s ease-in-out;
-  transition: background-color .25s ease-in-out
+  color: #fff
 }
-.header.--fixed {
-  background-color: rgba(20,20,44,.9)
+.header::after {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: "";
+  position: absolute;
+  background: rgba(20,20,44,.3);
+  backdrop-filter: blur(.15rem);
+  -webkit-backdrop-filter: blur(.15rem);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0,0,0);
+  transform: translateZ(0);
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: opacity .25s ease-in-out;
+  -o-transition: opacity .25s ease-in-out;
+  transition: opacity .25s ease-in-out
+}
+.header.--fixed::after {
+  opacity: 1
 }
 .header__menu {
   -webkit-box-flex: 1;
@@ -4212,6 +4234,9 @@ section {
   .menu {
     z-index: 9
   }
+  .menu li > a {
+    padding: .22rem 0
+  }
   .header {
     padding: 0 .16rem
   }
@@ -4229,6 +4254,9 @@ section {
   }
   .menu {
     z-index: 9
+  }
+  .menu li > a {
+    padding: .22rem 0
   }
   .main-screen .col-lg-6:last-child {
     position: relative

@@ -4,8 +4,9 @@
 
   li {
     margin: 0 gem(24);
-    a{
-      &:hover{
+
+    a {
+      &:hover {
         color: $accent;
       }
     }
@@ -51,5 +52,10 @@
   }
   @media all and (max-width: 576px) {
     z-index: 9;
+    li {
+      > a {
+        padding: gem(22) 0;
+      }
+    }
   }
 }
