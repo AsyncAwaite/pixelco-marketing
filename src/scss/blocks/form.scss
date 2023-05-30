@@ -46,10 +46,12 @@
     transition: all 0.35s;
     color: $white;
     padding: gem(11) gem(0) gem(16);
+    border: none;
     border-bottom: 1px solid $accent;
     width: 100%;
     font-size: gem(15);
     line-height: gem(21);
+    appearance: none;
 
     &:focus-visible {
       outline: none;
