@@ -16,7 +16,6 @@ import modalsEvents from "./modules/modalsEvents.js";
 import userPage from "./modules/userPage.js";
 import smoothHeight from "./modules/smoothHeight.js";
 
-
 flsFunctions.isWebp();
 document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
 window.addEventListener('resize', function () {
