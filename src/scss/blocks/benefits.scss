@@ -1,0 +1,44 @@
+.benefits {
+  .shadow {
+    height: 150%;
+    width: gem(1539);
+    bottom: gem(-130);
+    left: 0;
+    transform: translateX(-28.5%);
+    z-index: -1;
+  }
+
+  .circle {
+    top: gem(72.5);
+  }
+
+  .image {
+    position: absolute;
+    width: 100%;
+    height: gem(416);
+    bottom: gem(72.5);
+  }
+
+  @media all and (max-width: 992px) {
+    .col-lg-5 {
+      height: gem(350);
+      margin-bottom: gem(32);
+    }
+    .circle {
+      top: 0;
+      left: 25%;
+    }
+    .image {
+      bottom: 0;
+      height: gem(300);
+    }
+  }
+  @media all and (max-width: 576px) {
+    .col-lg-5 {
+      height: gem(247);
+    }
+    .image {
+      height: gem(160);
+    }
+  }
+}

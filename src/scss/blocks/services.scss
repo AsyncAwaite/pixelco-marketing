@@ -1,0 +1,207 @@
+.services {
+  &-item {
+    position: relative;
+    padding-left: gem(64);
+    padding-right: gem(64);
+    @media all and (max-width: 992px) {
+      padding-left: gem(32);
+      padding-right: gem(32);
+    }
+    @media all and (max-width: 576px) {
+      flex-wrap: wrap;
+      padding-left: gem(24);
+      padding-right: gem(24);
+    }
+
+    &::after {
+      width: 1px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      content: '';
+      position: absolute;
+      background-color: $gray-800;
+      transform: translateX(-50%);
+      @media all and (max-width: 576px) {
+        content: none;
+      }
+    }
+
+    .title {
+      width: 85%;
+      font-size: gem(40);
+      line-height: gem(48);
+      margin-bottom: gem(16);
+      @media all and (max-width: 992px) {
+        font-size: gem(32);
+        line-height: gem(40);
+      }
+      @media all and (max-width: 576px) {
+        width: 70%;
+        margin-bottom: 0;
+        font-weight: 500;
+        font-size: gem(20);
+        line-height: gem(30);
+      }
+    }
+
+    &__name, &__content {
+      width: 50%;
+      @media all and (max-width: 576px) {
+        width: 100%;
+      }
+    }
+
+    &__social {
+      li {
+        margin-bottom: gem(16);
+      }
+    }
+
+    &__name {
+      .subtitle {
+        padding-right: gem(60);
+      }
+
+      @media all and (max-width: 992px) {
+        .subtitle {
+          padding-right: gem(30);
+        }
+      }
+      @media all and (max-width: 576px) {
+        .subtitle, .services-item__social {
+          display: none;
+        }
+      }
+    }
+
+    &__btn {
+      width: gem(36);
+      height: gem(36);
+      border-radius: 50%;
+      border: 1px solid $accent;
+      position: absolute;
+      top: gem(24);
+      right: gem(24);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      transition: background-color .35s linear;
+
+      span {
+        width: gem(13.5);
+        height: 1px;
+        background: #FFFFFF;
+        position: absolute;
+
+
+        &:last-child {
+          transform: rotate(90deg);
+          transition: transform .35s linear;
+        }
+
+      }
+
+      @media all and (max-width: 576px) {
+        display: inline-flex;
+      }
+    }
+
+    &__content {
+      padding-left: gem(64);
+      display: flex;
+      align-items: center;
+
+      .subtitle, .services-item__social {
+        display: none;
+      }
+
+      @media all and (max-width: 992px) {
+        padding-left: gem(32);
+      }
+      @media all and (max-width: 576px) {
+        padding-left: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.4s linear;
+        display: block;
+        .subtitle, .services-item__social {
+          display: flex;
+        }
+        .services-item__social {
+          margin-bottom: gem(24);
+        }
+      }
+
+    }
+
+    &__list {
+
+      li {
+        font-size: gem(14);
+        line-height: gem(21);
+        margin-bottom: gem(16);
+        padding-left: gem(15);
+        position: relative;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &::before {
+          width: gem(6);
+          height: gem(6);
+          top: gem(7.5);
+          left: 0;
+          background: $gradient;
+          border-radius: 50%;
+          content: '';
+          position: absolute;
+        }
+
+        @media all and (max-width: 576px) {
+          font-size: gem(12);
+          line-height: gem(18);
+        }
+      }
+
+      @media all and (max-width: 576px) {
+        padding-top: gem(24);
+        position: relative;
+        border-top: 1px solid #35355B;
+      }
+    }
+
+
+    &__social {
+      flex-wrap: wrap;
+
+      li {
+        width: gem(32);
+        height: gem(32);
+        margin-right: gem(16);
+      }
+    }
+
+    &.active {
+      .services-item {
+        &__btn {
+
+          background-color: $accent;
+
+          span {
+            &:last-child {
+              transform: none;
+            }
+          }
+        }
+
+        &__content {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

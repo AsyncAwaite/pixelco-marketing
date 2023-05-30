@@ -1,0 +1,92 @@
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &::before {
+    color: inherit;
+  }
+}
+
+.icon-Tiktok:before {
+  content: "\e900";
+  color: #fff;
+}
+
+.icon-Pinterest:before {
+  content: "\e901";
+  color: #fff;
+}
+
+.icon-Telegram:before {
+  content: "\e902";
+  color: #fff;
+}
+
+.icon-Twitter:before {
+  content: "\e903";
+  color: #fff;
+}
+
+.icon-YouTube:before {
+  content: "\e904";
+  color: #fff;
+}
+
+.icon-LinkedIn:before {
+  content: "\e905";
+  color: #fff;
+}
+
+.icon-Facebook:before {
+  content: "\e906";
+  color: #fff;
+}
+
+.icon-Instagram:before {
+  content: "\e907";
+  color: #fff;
+}
+
+.icon-map:before {
+  content: "\e90e";
+  color: #7c6fe5;
+}
+
+.icon-cards:before {
+  content: "\e90f";
+  color: #7c6fe6;
+}
+
+.icon-bag:before {
+  content: "\e910";
+  color: #7c6fe6;
+}
+
+.icon-calendar:before {
+  content: "\e911";
+  color: #7c6fe6;
+}
+.icon-people:before {
+  content: "\e909";
+  color: #7c6fe6;
+}
+.icon-clock:before {
+  content: "\e90c";
+  color: #7c6fe6;
+}
+.icon {
+  &-32 {
+    font-size: gem(32);
+    line-height: gem(40);
+  }
+}

@@ -1,0 +1,51 @@
+.see-more {
+  h2 {
+    font-size: gem(40);
+    line-height: gem(48);
+    @media all and (max-width: 992px) {
+      font-size: gem(32);
+      line-height: gem(40);
+    }
+    @media all and (max-width: 576px) {
+      font-size: gem(18);
+      line-height: gem(26);
+    }
+  }
+
+  .row {
+    padding-top: gem(40);
+    padding-bottom: gem(40);
+    border-top: 1px solid $gray-800;
+    border-bottom: 1px solid $gray-800;
+  }
+
+  .arrow {
+    margin: 0 auto;
+    max-width: gem(315);
+    height: gem(17.73);
+
+    position: relative;
+
+
+  }
+
+  .btn {
+    width: 100%;
+    box-shadow: 0 gem(4) gem(24) rgba(85, 65, 227, 0.6);
+    @media all and (max-width: 576px) {
+      max-width: gem(185);
+    }
+  }
+
+  @media all and (max-width: 992px) {
+    .col-lg-4 {
+      display: none;
+    }
+  }
+  @media all and (max-width: 576px) {
+    .col-7 {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

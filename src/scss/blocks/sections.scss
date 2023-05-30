@@ -1,0 +1,37 @@
+section {
+  position: relative;
+  z-index: 1;
+
+}
+
+.section {
+  padding: var(--section-padding) 0;
+
+  &__title {
+    margin-bottom: gem(24);
+  }
+
+  &__benefits {
+    h2 {
+      margin-bottom: gem(56);
+      @media all and (max-width: 992px) {
+        margin-bottom: gem(32);
+      }
+    }
+
+
+  }
+
+  &__cases {
+    .row.--just-center.mb_l {
+      @media all and (max-width: 992px) {
+        display: none;
+      }
+
+    }
+  }
+
+
+
+
+}

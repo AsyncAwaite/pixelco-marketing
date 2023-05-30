@@ -1,0 +1,132 @@
+@import "../../base/func";
+@import "menu";
+
+.header {
+  font-size: gem(15);
+  line-height: gem(21);
+  font-weight: 400;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  padding: 0 gem(64);
+  width: 100%;
+  color: $white;
+  transition: background-color .25s ease-in-out;
+  @media all and (max-width: 992px) {
+    padding: 0 gem(32);
+    &::before {
+      width: 100%;
+      height: 1px;
+      background: rgba(124, 111, 230, 0.3);
+      bottom: 0;
+      left: 0;
+      content: '';
+      position: absolute;
+      z-index: 1;
+    }
+  }
+  @media all and (max-width: 576px) {
+    padding: 0 gem(16);
+  }
+
+  &.--fixed {
+    background-color: rgba($gray-900, .9);
+  }
+
+  &__menu {
+
+    flex: 1 0 auto;
+    align-items: center;
+
+    .menu {
+      margin-right: auto;
+    }
+
+    .btn {
+      + .btn {
+        margin-left: gem(24);
+      }
+
+    }
+
+    .social-links {
+      justify-content: space-between;
+      width: 100%;
+      display: none;
+
+      a {
+        font-size: gem(32);
+        line-height: gem(32);
+      }
+
+      @media all and (max-width: 576px) {
+        display: flex;
+      }
+
+    }
+
+    @media all and (max-width: 992px) {
+      z-index: 0;
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.45s ease-in-out;
+      flex-direction: column;
+      padding: var(--header-height) gem(16) gem(32);
+      left: 0;
+      right: 0;
+      height: 100vh;
+      top: 0;
+      background: $gray-900;
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .btn {
+        width: 100%;
+
+        + .btn {
+          margin: gem(24) 0;
+          //margin-bottom: auto;
+        }
+      }
+    }
+    @media all and (max-width: 576px) {
+      padding: var(--header-height) gem(16) gem(16);
+      .menu {
+        padding-top: 0;
+        margin-bottom: auto;
+      }
+    }
+  }
+
+  &__mobile {
+    display: none;
+    @media all and (max-width: 992px) {
+      display: flex;
+      margin-left: auto;
+      color: $white;
+      .burger {
+        margin-left: gem(16);
+      }
+      z-index: 3;
+    }
+  }
+
+  .logo {
+    flex-shrink: 0;
+    margin-right: gem(32);
+  }
+
+
+}
+
+@import "menu";
+@import "burger";
+
+
+

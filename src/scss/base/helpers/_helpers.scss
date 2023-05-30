@@ -1,0 +1,75 @@
+@import "src/scss/base/func";
+@import "flexbox";
+@import "font";
+@import "h";
+@import "text";
+@import "margins";
+
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.block {
+  display: block;
+}
+
+.pos-a {
+  position: absolute;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.circle {
+  border-radius: 50%;
+  background: linear-gradient(51.9deg, #797BFF 9.66%, #FDF0FF 103.24%);
+  width: gem(295);
+  height: gem(295);
+  position: absolute;
+  @media all and (max-width: 992px) {
+    width: gem(204.5);
+    height: gem(204.5);
+  }
+  @media all and (max-width: 576px) {
+    width: gem(114);
+    height: gem(114);
+  }
+}
+
+.shadow {
+  z-index: -1;
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(59, 49, 217, 0.47) 0%, rgba(59, 49, 217, 0.1457) 67.71%, rgba(59, 49, 217, 0) 100%);
+}
+
+.bgc_circle{
+  border-radius: 50%;
+  background: $gradient;
+}
+
+
+@keyframes animatedOpacity {
+  0% {
+    opacity: .5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .5;
+  }
+}

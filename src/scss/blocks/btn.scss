@@ -1,0 +1,223 @@
+.btn {
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.35s ease-in-out;
+  position: relative;
+  flex-shrink: 0;
+  font-weight: 500;
+  //overflow: hidden;
+  text-transform: uppercase;
+  border-radius: gem(12);
+  font-size: gem(16);
+  line-height: gem(16);
+  padding: gem(16) gem(24);
+  height: gem(48);
+  color: $white;
+  position: relative;
+  z-index: 5;
+
+  &_main {
+    box-shadow: 0px 4px 24px rgba(85, 65, 227, 0);
+
+    &::before {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: gem(12);
+      content: '';
+      position: absolute;
+      background: $gradient;
+      animation: animatedgradient 4s ease alternate infinite;
+      background-size: 250% 200%;
+      z-index: -1;
+    }
+
+    &:hover {
+      box-shadow: 0px 4px 24px rgba(85, 65, 227, 0.6);
+
+      &::before {
+        animation: paused;
+      }
+
+
+    }
+  }
+
+  &_secondary {
+    position: relative;
+    //border: 1px solid transparent;
+    //border-image-source: $gradient;
+    //border-image-slice: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: gem(12);
+      padding: gem(1);
+      background: $gradient;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+  }
+
+  &_secondary2 {
+    --borderWidth: 1px;
+    background: $gray-900;
+    background-clip: padding-box;
+    border: solid var(--borderWidth) transparent;
+
+    &::after, &::before {
+      content: '';
+      position: absolute;
+      background: $gradient;
+      border-radius: gem(12);
+      z-index: -1;
+      animation: animatedgradient 3s ease alternate infinite;
+      background-size: 300% 300%;
+      transition: all .35s linear;
+    }
+
+    &::before {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: -1px;
+    }
+
+    &::after {
+      top: calc(-1 * 3px);
+      left: calc(-1 * 3px);
+      height: calc(100% + 3px * 2);
+      width: calc(100% + 3px * 2);
+      opacity: 0;
+      border-radius: calc(#{gem(12)});
+    }
+
+
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+
+    }
+
+  }
+
+  &.disabled {
+    pointer-events: none;
+
+    &.btn {
+      &_main {
+        &::before {
+          background: #35355B;
+          animation: none;
+        }
+
+      }
+
+      &_secondary {
+        color: #79798A;
+
+        &::before, &::after {
+          animation: none;
+          background: #35355B;
+        }
+      }
+    }
+
+  }
+}
+
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.burger1 {
+  display: none;
+  flex-shrink: 0;
+  background: transparent;
+  position: relative;
+  z-index: 100;
+  width: gem(32);
+  height: gem(32);
+  transform: rotate(0deg);
+  transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  user-select: none;
+  right: auto;
+
+  &:focus,
+  &:focus-visible {
+    border: 0 solid transparent !important;
+    outline: 0;
+  }
+
+  span {
+    width: 100%;
+    height: 2.7px;
+    display: block;
+    position: relative;
+    //background: $main;
+    transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+    transition-delay: 0s;
+
+    &:nth-child(1) {
+      transform: translateY(0px) rotate(0deg);
+    }
+
+    &:nth-child(2) {
+      transform: translateY(gem(6)) rotate(0deg);
+    }
+  }
+
+  &.active {
+    transform: rotate(90deg) translateY(-100%);
+
+
+    span {
+      transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+      transition-delay: 0.2s;
+
+      &:nth-child(1) {
+        transform: translateY(gem(4)) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        transform: translateY(gem(3)) rotate(-45deg);
+      }
+    }
+
+    &::before {
+      width: calc(100% - .2rem);
+      right: .1rem;
+      transform: translate3d(0, 0, 0) rotate(45deg);
+    }
+
+    &::after {
+      width: calc(100% - .2rem);
+      right: .1rem;
+      transform: translate3d(0, 0, 0) rotate(-45deg);
+    }
+  }
+
+  @media all and (max-width: 576px) {
+    display: block;
+  }
+
+}

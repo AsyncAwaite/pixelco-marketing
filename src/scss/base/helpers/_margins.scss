@@ -1,0 +1,46 @@
+.mb {
+  &_l {
+    margin-bottom: gem(40);
+    @media all and (max-width: 992px){
+      margin-bottom: gem(32);
+    }
+    @media all and (max-width: 576px) {
+      margin-bottom: gem(24);
+    }
+  }
+
+  &_24 {
+    margin-bottom: gem(24);
+  }
+  &_24-32{
+    margin-bottom: gem(24);
+    @media all and (max-width: 992px){
+      margin-bottom: gem(24);
+    }
+    @media all and (max-width: 576px){
+      margin-bottom: gem(32);
+    }
+  }
+  &_16-8{
+    margin-bottom: gem(16);
+    @media all and (max-width: 992px){
+      margin-bottom: gem(12);
+    }
+    @media all and (max-width: 576px){
+      margin-bottom: gem(8);
+    }
+  }
+  &_16 {
+    margin-bottom: gem(16);
+  }
+  &_16-24{
+    margin-bottom: gem(16);
+    @media all and (max-width: 992px){
+      margin-bottom: gem(20);
+    }
+    @media all and (max-width: 576px){
+      margin-bottom: gem(24);
+    }
+  }
+
+}

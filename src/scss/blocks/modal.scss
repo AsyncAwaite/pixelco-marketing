@@ -1,0 +1,228 @@
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  padding: gem(20);
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  color: $white;
+
+  &__wrapper {
+    overflow: hidden;
+  }
+
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+
+    .modal__body {
+      padding: 0;
+    }
+
+    .modal__wrapper {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s;
+  }
+
+  &__close {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: gem(30);
+    height: gem(30);
+    top: gem(10);
+    right: gem(10);
+    z-index: 5;
+    cursor: pointer;
+    transform: rotate(0);
+    transition: all .35s linear;
+
+    &:hover {
+      transform: rotate(45deg);
+    }
+  }
+
+  &__body {
+    padding: gem(70) gem(85);
+    //background-color: $light;
+    max-width: 100%;
+    margin: 0;
+    transition: all .35s linear;
+    @media all and (max-width: 1024px) {
+      padding: gem(70) gem(45);
+    }
+    @media all and (max-width: 480px) {
+      padding: gem(60) gem(25);
+    }
+
+    &.signin {
+      margin: 0 auto;
+      max-width: gem(467);
+
+
+      .modal__subtitle {
+        width: 100%;
+      }
+    }
+  }
+
+
+  &__title {
+    margin-bottom: gem(15);
+
+    .btn {
+      margin-left: gem(30);
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: gem(30);
+    width: 67%;
+    @media all and (max-width: 480px) {
+      width: 100%;
+    }
+  }
+
+  .form {
+    &__login {
+      .form {
+        &__items {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: gem(15) gem(20);
+          @media (max-width: 480px) {
+            gap: gem(10) 0;
+            grid-template-columns: 1fr;
+            .btn {
+              margin-top: gem(25);
+            }
+          }
+        }
+      }
+
+    }
+
+    &[data-form="registration"] {
+      @media all and (max-width: 480px) {
+        .form__item {
+          &:nth-child(2) {
+            grid-row: 4;
+          }
+
+          &:nth-child(4) {
+            grid-row: 5;
+          }
+        }
+      }
+    }
+
+    &[data-form="signin"] {
+      .form__items {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  &__single-lot-rate {
+    .modal__wrapper {
+
+      width: 100%;
+      max-width: gem(820);
+      @media (max-width: 1024px) {
+        max-width: 100%;
+      }
+    }
+
+    .btn {
+      height: 100%;
+
+      @media all and (max-width: 480px) {
+        height: gem(55);
+      }
+
+    }
+
+    .info {
+      width: 50%;
+      flex-shrink: 0;
+      margin-bottom: gem(30);
+
+      &__line {
+        margin-bottom: gem(10);
+        display: grid;
+        grid-template-columns: 1fr gem(100);
+        //@media all and (max-width: 480px){
+        //  grid-template-columns: 1fr;
+        //  gap: gem(10) 0;
+        //}
+      }
+
+      @media all and (max-width: 480px) {
+        width: 100%;
+      }
+    }
+
+  }
+
+  &__form-answer {
+    .modal__subtitle {
+      width: 100%;
+    }
+
+    .success {
+      width: 100%;
+      max-width: gem(820);
+
+      @media (max-width: 480px) {
+        max-width: 100%;
+      }
+
+      .form-answer {
+        height: gem(469);
+      }
+    }
+    .form-answer{
+      &::before, &::after{
+        content: '';
+        position: absolute;
+      }
+      &::before{
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        background: url('@img/form-line.png') no-repeat center  / contain;
+      }
+      &::after{
+        width: gem(218);
+        height: gem(150);
+        bottom: gem(70);
+        right: gem(85);
+
+        background: url('@img/flag.png') no-repeat center  / contain;
+        @media (max-width: 480px){
+        right: 50%;
+          transform: translateX(50%);
+        }
+      }
+    }
+  }
+
+
+}

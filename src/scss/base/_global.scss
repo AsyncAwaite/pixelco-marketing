@@ -1,0 +1,196 @@
+@import "/node_modules/swiper/swiper-bundle.min.css";
+@import "/node_modules/aos/dist/aos.css";
+@import "gem";
+@import "rem";
+@import "helpers/helpers";
+@import "iconmoon";
+@import "grid";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+body {
+  font-family: Montserrat;
+  min-height: -webkit-fill-available;
+  margin: 0;
+  font-size: var(--body-size);
+  line-height: var(--body-line-height);
+  font-weight: 400;
+  position: relative;
+  color: $white;
+  background-color: $gray-900;
+
+
+  &.active {
+    overflow-y: hidden;
+    touch-action: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
+  margin: 0;
+}
+
+input,
+textarea,
+select {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+
+.page-container {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+main {
+  flex-grow: 1;
+  padding-top: var(--header-height);
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+.logo {
+  width: gem(150);
+  height: gem(35.15);
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  @media all and (max-width: 576px) {
+    width: gem(120);
+    height: gem(28);
+  }
+
+  &_footer {
+    width: gem(150);
+    height: gem(44);
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+  border-radius: 6px;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+
+  transition: all 0.5s linear;
+}
+
+svg {
+  transition: all 0.35s linear;
+
+  path {
+    transition: all 0.35s linear;
+  }
+
+}
+
+.image {
+  position: relative;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+a {
+  color: inherit;
+  transition: all 0.35s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    //color: $darkGreen;
+  }
+}
+
+.progress-bar {
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+
+  div {
+    transition: width 0.1s linear;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-image: $gradient;
+    border-radius: 0 0 gem(10) 0;
+  }
+}
+
+
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  z-index: 1;
+
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+    outline-width: 0;
+  }
+}

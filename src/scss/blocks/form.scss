@@ -1,0 +1,93 @@
+.form {
+
+
+  &__item {
+
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: gem(24);
+
+
+    &.invalid {
+
+
+      input {
+        border-color: #FF6964;
+        color: #FF6964;
+      }
+    }
+
+    &.valid {
+      background: rgba(237, 237, 237, 0.25);
+      border-color: transparent;
+
+      input {
+        ~ label {
+          top: gem(5);
+          left: gem(10);
+          font-size: gem(12);
+          line-height: gem(14);
+          opacity: .25;
+        }
+
+        .label__tel {
+          //color: $darkGreen;
+          bottom: gem(60);
+        }
+      }
+    }
+
+
+  }
+
+  &__input {
+    width: 100%;
+  }
+
+  input,
+  textarea {
+
+    border: none;
+    background: transparent;
+    appearance: none;
+    width: 100%;
+    transition: all 0.35s;
+    color: $white;
+    padding: gem(11) gem(0) gem(16);
+    border-bottom: 1px solid $accent;
+    width: 100%;
+    font-size: gem(15);
+    line-height: gem(21);
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &::placeholder {
+      font-family: Montserrat;
+      color: $gray-700;
+    }
+
+
+  }
+
+  textarea {
+    resize: none;
+    height: gem(80);
+  }
+
+
+  &__message {
+    position: absolute;
+    bottom: gem(-15);
+    left: 0;
+    font-size: gem(10);
+    line-height: gem(10);
+    color: #FF6964;
+  }
+
+}
+

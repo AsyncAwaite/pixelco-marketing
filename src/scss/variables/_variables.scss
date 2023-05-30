@@ -1,0 +1,39 @@
+$black: #0D0D0D;
+$accent: #7C6FE6;
+$white: #FFFFFF;
+$gradient: linear-gradient(271.58deg, #382ED8 6.54%, #9169FB 100.35%);
+$gradient-radial: radial-gradient(50% 50% at 50% 50%, rgba(59, 49, 217, 0.47) 0%, rgba(59, 49, 217, 0.1457) 67.71%, rgba(59, 49, 217, 0) 100%);
+
+$gray-900: #14142C;
+$gray-800: #35355B;
+$gray-700: #8B89B0;
+$gray-600: #D9D7F3;
+
+$success: #7C6FE6;
+$warning: #FACC15;
+$error: #BE312C;
+
+
+$maxWidth: 1440;
+$minWidth: 375;
+:root {
+  --header-height: #{gem(100)};
+  --container-gap: #{gem(135)};
+  --container-gap-decrement: #{gem(-135)};
+  --section-padding: #{gem(60)};
+  @media all and (max-width: 992px) {
+    --container-gap: #{gem(40)};
+    --container-gap-decrement: #{gem(-40)};
+    --section-padding: #{gem(46)};
+  }
+  @media all and (max-width: 576px) {
+    --container-gap: #{gem(16)};
+    --header-height: #{gem(60)};
+    --container-gap-decrement: #{gem(-16)};
+    --section-padding: #{gem(32)};
+  }
+  //40,24,16
+  //32, ,12
+}
+
+@import "typography";

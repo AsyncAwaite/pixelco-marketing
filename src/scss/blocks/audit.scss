@@ -1,0 +1,28 @@
+.audit {
+  .shadow {
+    width: 56.7%;
+    height: gem(826);
+    left: 0;
+  }
+
+  .image {
+    height: gem(517);
+    @media all and (max-width: 992px) {
+      height: gem(397);
+    }
+    @media all and (max-width: 277px) {
+      height: gem(277);
+    }
+  }
+
+  &-form {
+    height: 100%;
+    margin-top: gem(40);
+  }
+
+  h2 {
+    @media all and (max-width: 576px) {
+      text-align: center;
+    }
+  }
+}

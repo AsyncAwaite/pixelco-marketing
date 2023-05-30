@@ -1,0 +1,128 @@
+.cases {
+  &__item {
+    .image {
+      height: gem(355);
+      width: 100%;
+
+      img {
+        height: gem(266);
+        object-fit: cover;
+        border-radius: gem(4);
+        border: gem(5) solid #EDEDED;
+      }
+
+      &::before {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        content: '';
+        position: absolute;
+        background: url('@img/display.png') no-repeat center  / contain;
+      }
+
+      @media all and (max-width: 576px) {
+        height: gem(211);
+        margin-bottom: gem(24);
+        img {
+          height: gem(157.59);
+        }
+      }
+    }
+
+    .title {
+      margin-bottom: gem(16);
+      @media all and (max-width: 576px) {
+        margin-bottom: gem(8);
+      }
+    }
+
+    .descr {
+      margin-bottom: gem(20);
+      width: 80%;
+
+      + .flex {
+        flex-wrap: wrap;
+      }
+
+      @media all and (max-width: 992px) {
+        width: 90%;
+      }
+      @media all and (max-width: 576px) {
+        margin-bottom: gem(24);
+      }
+    }
+
+    .label {
+      height: gem(40);
+      padding: 0 gem(16);
+      border: 1px solid $gray-800;
+      border-radius: gem(100);
+      margin-right: gem(14);
+      margin-bottom: gem(16);
+
+      span {
+        &:first-child {
+          font-size: gem(17);
+          line-height: gem(17);
+          margin-right: gem(8);
+          @media all and (max-width: 576px) {
+            font-size: gem(16);
+            line-height: gem(16);
+          }
+        }
+
+        &:last-child {
+          font-size: gem(12);
+          line-height: gem(24);
+          @media all and (max-width: 576px) {
+            font-size: gem(10);
+            line-height: gem(16);
+          }
+        }
+      }
+
+      @media all and (max-width: 576px) {
+        margin-right: gem(8);
+        margin-bottom: gem(8);
+        background-color: $gray-800;
+        height: gem(28);
+        padding: 0 gem(8);
+      }
+    }
+  }
+
+  &-slider {
+    .swiper-wrapper {
+      display: block;
+
+      .swiper-slide {
+        margin-bottom: gem(80);
+      }
+
+      @media all and (max-width: 992px) {
+        display: flex;
+        .swiper-slide {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .swiper-slide {
+      @media all and (max-width: 992px) {
+        height: auto;
+        padding: gem(24);
+        border: 1px solid $gray-800;
+        border-radius: gem(16);
+        &:nth-child(even) {
+          .row {
+            flex-direction: column-reverse;
+          }
+        }
+      }
+      @media all and (max-width: 576px) {
+        padding: gem(16);
+      }
+    }
+  }
+}

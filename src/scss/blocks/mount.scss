@@ -1,0 +1,61 @@
+.mount {
+  display: flex;
+  align-items: flex-end;
+  background: url('@img/mount.png') no-repeat center var(--section-padding)  / contain;
+  height: gem(940);
+  @media all and (max-width: 992px) {
+    height: 100%;
+    background: none;
+    flex-direction: column;
+    &__img {
+      width: 100%;
+      height: gem(667);
+      background: url('@img/mount_mob.png') no-repeat center right  / cover;
+      margin-bottom: gem(24);
+
+    }
+  }
+  @media all and (max-width: 576px) {
+    .btn {
+      width: 100%;
+    }
+    &__img {
+      height: gem(394);
+    }
+  }
+
+  .card {
+    max-width: gem(581);
+    padding: gem(24);
+    @media all and (max-width: 992px) {
+      max-width: 100%;
+      margin-top: gem(8);
+    }
+  }
+
+  h4 {
+    line-height: gem(36);
+
+  }
+
+  .row {
+    @media all and (max-width: 992px) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    padding: gem(24) 0;
+    display: none;
+
+    + .mount__item {
+      border-top: 1px solid $gray-800;
+    }
+
+    @media all and (max-width: 992px) {
+      display: block;
+    }
+
+
+  }
+}

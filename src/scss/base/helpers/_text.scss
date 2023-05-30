@@ -1,0 +1,45 @@
+.text {
+  &-uppercase {
+    text-transform: uppercase;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+  &-color {
+    &_white {
+      color: $white;
+    }
+
+    &_accent {
+      color: $accent;
+    }
+    &_gray{
+       color: $gray-700;
+    }
+  }
+
+  &-size {
+    &__16 {
+      font-size: gem(16);
+      line-height: gem(18.75);
+    }
+
+    &__14 {
+      font-size: gem(14);
+      line-height: gem(16);
+    }
+
+    &__18 {
+      font-size: gem(18);
+      line-height: gem(22);
+    }
+  }
+
+
+}

@@ -1,0 +1,56 @@
+.burger {
+  width: gem(40);
+  height: gem(40);
+  position: relative;
+
+  //span {
+  //  display: block;
+  //  width: 100%;
+  //  height: 3px;
+  //  background-color: $white;
+  //  transition: transform 0.3s ease;
+  //  margin: gem(4) 0;
+  //  transition: all .5s linear;
+  //  //  &:last-child {
+  //  //    width: calc(100% - #{gem(16)});
+  //  //  }
+
+  //}
+  span {
+    position: absolute;
+    display: block;
+    top: 50%;
+    margin-top: gem(-3);
+    width: 100%;
+    height: gem(3);
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.45s ease-in-out;
+    background-color: $white;
+
+    &:first-child {
+      transform: translateY(gem(-5.3)) translate3d(0, 0, 0);
+    }
+
+    &:last-child {
+      width: calc(100% - #{gem(16)});
+      transform: translateY(gem(8)) translate3d(0, 0, 0);
+    }
+
+  }
+
+  &.active {
+
+
+    span {
+      width: 100%;
+      &:first-child {
+        transform: rotate(45deg);
+      }
+
+      &:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

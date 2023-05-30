@@ -1,0 +1,77 @@
+.burger {
+  display: none;
+  border-radius: 50%;
+  width: gem(32);
+  height: gem(32);
+  flex-shrink: 0;
+  position: relative;
+  margin-left: auto;
+  z-index: 100;
+  padding: gem(8) gem(4);
+
+
+  &:focus,
+  &:focus-visible {
+    border: 0 solid transparent !important;
+    outline: 0;
+  }
+
+  span,
+  &::before,
+  &::after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    margin-top: gem(-2.7);
+    width: gem(24);
+    height: gem(2.7);
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.45s ease-in-out;
+    //background-color: $main;
+  }
+
+  span {
+    margin-top: 0;
+    transform: translateY(-50%);
+  }
+
+
+  &::before,
+  &::after {
+    content: "";
+
+    transition: all 0.4s ease-in-out;
+  }
+
+  &::before {
+    transform: translateY(gem(-5.3)) translate3d(0, 0, 0);
+  }
+
+  &::after {
+    transform: translateY(gem(8)) translate3d(0, 0, 0);
+  }
+
+  &.active {
+    span {
+      width: 0;
+      visibility: hidden;
+
+
+    }
+
+    &::before {
+      transform: rotate(45deg) translate3d(0, 0, 0);
+
+    }
+
+    &::after {
+      transform: rotate(-45deg) translate3d(0, 0, 0);
+
+    }
+  }
+
+  @media all and (max-width: 576px) {
+    display: block;
+  }
+}

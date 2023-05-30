@@ -1,0 +1,445 @@
+import IMask from "imask";
+import modalsEvents from "./modalsEvents.js";
+import Modal from "./modal.js";
+import {getElement} from "./helpers.js";
+
+
+let validRegex =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const content = {
+    field: {
+        en: "This field is required",
+        ua: "Поле обов'язкове для заповнення",
+    },
+    template: {
+        en: "Fill in according to the template",
+        ua: "Заповніть відповідно до шаблону",
+    },
+    send: {
+        en: "Send",
+        ua: "Відправити",
+    },
+    surname: {
+        en: "Enter the surname:",
+        ua: `Введіть прізвище`,
+    },
+
+    email: {
+        en: "Fill in according to the template: test@tect.com",
+        ua: `Заповніть відповідно до шаблону: test@tect.com`,
+    },
+    rate: {
+        en: "Fill in according to the template: test@tect.com",
+        ua: `Сума має бути більшою за запропоновану`,
+    },
+
+
+    thankTitle: {
+        en: "Дякуємо, ми зв'яжемося з Вами найближчим часом!",
+        ua: "Дякуємо, ми зв'яжемося з Вами найближчим часом!",
+    },
+};
+let maskOptions = {
+    mask: "+38 (000) 000 - 00 - 00",
+    lazy: false,
+};
+
+class Form {
+    constructor(form) {
+        this.form = document.querySelector(form);
+        this.inputs = this.form.querySelectorAll("input");
+        this.path = `${path}/assets/services/telegramSend.php`;
+        this.authPath = `${path}/assets/services/sendPulse.php`;
+        this.telInput = this.form.querySelector("[name='tel']") ? this.form.querySelector("[name='tel']") : this.form.querySelector('.tel')
+        this.mask = this.telInput ? new IMask(this.telInput, maskOptions) : null;
+        this.textarea = this.form.querySelector('textarea') ? this.form.querySelector('textarea') : null;
+        this.formData = {
+            title: '',
+            phone: "",
+            surname: "",
+            name: "",
+            email: "",
+            region: '',
+            work: '',
+            role: '',
+            organisation: '',
+            link: location.href
+        };
+    }
+
+    createMask(input) {
+        let maskOptions = {
+            mask: "+38 (000) 000 - 00 - 00",
+            lazy: false,
+        };
+        let mask = new IMask(input, maskOptions);
+        mask.updateValue();
+    }
+
+    checkInputs() {
+
+        this.inputs.forEach((input) => {
+            if (input.name === "name") {
+                this.checkNameInput(input);
+            }
+            if (input.name === "surname") {
+                this.checkNameInput(input);
+            }
+
+            if (input.name === "tel") {
+
+                this.checkPhoneInput(input);
+            }
+
+            if (input.name === 'email') {
+                this.checkEmailInput(input)
+            }
+
+            if (input.name == 'rate') {
+                this.checkRateInput(input);
+            }
+        });
+        // if (this.textarea) {
+        //     this.textarea.addEventListener('input', () => {
+        //         console.log(this.textarea.value)
+        //     })
+        // }
+    }
+
+    resetForm(btn) {
+        this.formData = {
+            title: '',
+            phone: "",
+            surname: "",
+            name: "",
+            email: "",
+            link: location.href
+        };
+        let {send: {ua, en}} = content;
+        btn.dataset.form = '';
+        btn.classList.remove("disabled");
+        btn.innerHTML = `<span class="txt-upper">${!isEn ? ua : en}</span>`;
+        this.form.reset();
+        if (this.form.dataset.formQuestion) return;
+        this.inputs.forEach((input) => {
+            input.parentNode.classList = "form__item";
+            input.value = '';
+            if (input.name == 'tel') {
+                this.mask.updateValue();
+            }
+        });
+        this.checkInputs();
+    }
+
+    checkEmailInput(input) {
+        let {email: {en, ua}} = content;
+        let email = !isEn ? ua : en
+        let isValid = false;
+
+        input.addEventListener("input", () => {
+            if (input.value.match(validRegex)) {
+                this.valid(input);
+                isValid = true;
+                this.formData.email = input.value;
+            } else {
+                this.invalid(input);
+                isValid = false;
+            }
+            if (!isValid) {
+                input.nextElementSibling.nextElementSibling.innerHTML = `${
+                    email
+                }`;
+            } else {
+                input.nextElementSibling.nextElementSibling.innerText = "";
+            }
+        });
+    }
+
+    checkPhoneInput(input) {
+        let {template: {en, ua}} = content;
+        let template = !isEn ? ua : en;
+        let isValid = false;
+        this.mask.updateValue()
+
+        input.addEventListener("input", () => {
+            if (input.value.indexOf("_") === -1) {
+                this.valid(input);
+                this.formData.phone = input.value.substr(1);
+                isValid = true;
+            } else {
+                this.invalid(input);
+                isValid = false;
+            }
+            if (!isValid) {
+                input.nextElementSibling.nextElementSibling.innerHTML = `${template}`;
+            } else {
+                input.nextElementSibling.nextElementSibling.innerText = "";
+            }
+        });
+    }
+
+
+    checkRateInput(input) {
+        let {rate: {en, ua}} = content;
+        let rate = !isEn ? ua : en
+        let isValid = false;
+        const value = +input.value
+        input.addEventListener('input', () => {
+            if (+input.value < value) {
+                this.invalid(input);
+                isValid = false;
+            } else {
+                this.valid(input);
+                isValid = true;
+            }
+            input.nextElementSibling.nextElementSibling.innerHTML = !isValid ? rate : '';
+        })
+
+    }
+
+    valid(input) {
+        input.parentNode.classList.add("valid");
+        input.parentNode.classList.remove("invalid");
+        if (this.form.querySelector('.btn').classList.contains('disabled')) this.form.querySelector('.btn').classList.remove('disabled')
+    }
+
+    invalid(input) {
+        input.parentNode.classList.add("invalid");
+        input.parentNode.classList.remove("valid");
+        console.log(this.form.querySelector('.btn'))
+        this.form.querySelector('.btn').classList.add('disabled')
+    }
+
+    validateEmptyField() {
+        let {field: {ua, en}} = content;
+        let isValid = true;
+        if (this.form.dataset.form == 'rate') return isValid;
+        let validator = {
+            name: null,
+            tel: null,
+            surname: null,
+            email: null
+        };
+        let validInputs = false;
+        let field = !isEn ? ua : en;
+
+        this.inputs.forEach((input) => {
+
+            if (input.name === "name" || input.name === "surname") {
+                if (!input.value.trim()) {
+                    input.parentNode.classList.add("invalid");
+                    input.nextElementSibling.nextElementSibling.innerHTML = `${
+                        field
+                    }`;
+                    return (isValid = false);
+                } else {
+                    this.valid(input);
+                    input.nextElementSibling.nextElementSibling.innerText = "";
+
+                    validator[input.name] = true;
+                    return (isValid = true);
+                }
+            } else if (input.name === "tel") {
+                if (input.value.indexOf("_") === -1) {
+                    this.valid(input);
+                    input.nextElementSibling.nextElementSibling.innerText = "";
+
+                    validator.tel = true;
+                    return (isValid = true);
+                } else {
+                    input.parentNode.classList.add("invalid");
+                    input.nextElementSibling.nextElementSibling.innerHTML = `${
+                        field
+                    }`;
+
+                    validator.tel = false;
+                    return (isValid = false);
+                }
+            } else if (input.name === "email") {
+                if (!input.value.match(validRegex)) {
+                    input.parentNode.classList.add("invalid");
+                    input.nextElementSibling.nextElementSibling.innerHTML = `${
+                        field
+                    }`;
+                    return (isValid = false);
+                } else {
+                    this.valid(input);
+                    input.nextElementSibling.nextElementSibling.innerText = "";
+
+                    validator.email = true;
+                    return (isValid = true);
+                }
+            }
+        });
+        for (let key in validator) {
+            if (!validator[key]) return validInputs = false;
+            validInputs = true;
+        }
+        if (validInputs) {
+            return isValid;
+        }
+
+
+    }
+
+    async sendToSheet(data) {
+        try {
+            const sheetsData = new FormData();
+            for (let key in data) {
+                sheetsData.append(`${key}`, `${data[key]}`);
+            }
+            const result = await fetch(
+                "https://script.google.com/macros/s/AKfycbwFLvu7MShp9xsydD7exK7pLzre6plmHZWocCt94Xzsy_6KCvGWnk37WJqPBgQEzX1E/exec",
+                {
+                    method: "POST",
+                    body: sheetsData,
+                }
+            );
+            console.log(result)
+        } catch (e) {
+            console.log(e);
+        }
+
+
+    }
+
+
+    async postData(url, data, btn) {
+        try {
+            const response = await fetch(url, {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+            //
+            if (this.form.dataset.formQuestion) {
+                btn.dataset.form = 'success';
+                modalsEvents(btn);
+                new Modal(".modal__form-answer").openModal();
+                this.resetForm(btn);
+            } else {
+
+                location.href = `${location.origin}/thank-you`
+
+
+            }
+
+
+        } catch (error) {
+            btn.dataset.form = 'erorr';
+            modalsEvents(btn);
+            new Modal(".modal__form-answer").openModal();
+            this.resetForm(btn);
+
+            console.error("Ошибка:", error);
+        }
+    }
+
+    getUtmParameter(url, object) {
+        if (url) {
+            let urlValues;
+            urlValues = url.substr(1).split("&");
+
+            const values = urlValues.map((value) => value.split("="));
+            values.forEach((item) => {
+                const regex = /utm_/i;
+                let name = item[0].replace(regex, "");
+                object[`${name}`] = item[1]
+            });
+            return true;
+        }
+        return false;
+    };
+
+    checkNameInput(input) {
+        // let name = !isEn ? content[input.name].ua : content[input.name].en;
+        //TODO
+        let isValid = false;
+        input.addEventListener("keypress", function (e) {
+            if (!e.key.match(/^[a-zA-Zа-щА-ЩЬьЮюЯяЇїІіЄєҐґЁёЭэЪъ\s]/)) {
+                e.preventDefault();
+            }
+        });
+        input.addEventListener("input", () => {
+            if (input.value.length >= 2) {
+                this.valid(input);
+                this.formData[input.name] = input.value.trim();
+                isValid = true;
+            } else {
+                this.invalid(input);
+                this.formData[input.name] = ''
+                isValid = false;
+            }
+            if (!isValid) {
+                input.nextElementSibling.nextElementSibling.innerHTML = `${name}`;
+            } else {
+                input.nextElementSibling.nextElementSibling.innerText = "";
+            }
+        });
+    }
+
+    addLotRate(btn) {
+        try {
+            // const response = await fetch(url, {
+            //     method: "POST",
+            //     body: JSON.stringify(data),
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //     },
+            // });
+            btn.dataset.form = 'success';
+            modalsEvents(btn);
+            new Modal(".modal__form-answer").openModal();
+            this.resetForm(btn);
+            // if (this.form.dataset.formQuestion) {
+            //     btn.dataset.form = 'success';
+            //     modalsEvents(btn);
+            //     new Modal(".modal__form-answer").openModal();
+            //     this.resetForm(btn);
+            // } else {
+            //
+            //     location.href = `${location.origin}/thank-you`
+            //
+            //
+            // }
+
+
+        } catch (error) {
+            btn.dataset.form = 'erorr';
+            modalsEvents(btn);
+            new Modal(".modal__form-answer").openModal();
+            this.resetForm(btn);
+
+            console.error("Ошибка:", error);
+        }
+
+    }
+
+    init() {
+        this.checkInputs();
+        this.form.addEventListener("submit", (e) => {
+            this.formData.title = this.form.dataset.form;
+            e.preventDefault();
+            console.log(this.validateEmptyField())
+            if (this.validateEmptyField()) {
+                e.submitter.classList.add("disabled");
+                e.submitter.innerHTML = `<svg class="icon btn__spinner">
+        <use xlink:href="#spinner"></use>
+      </svg>`;
+                // if (!e.submitter.dataset.test) {
+                //     this.sendToSheet(this.formData);
+                // }
+                if (this.form.dataset.form == 'rate') {
+                    this.addLotRate(e.submitter);
+
+                }
+                // this.postData(this.path, this.formData, e.submitter);
+            }
+        });
+    }
+}
+
+export default Form;
+

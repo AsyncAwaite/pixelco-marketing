@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Школа, де відроджується держава</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/icons/favicon/manifest.json">
+    <meta name="facebook-domain-verification" content="65y6b457zln08vttlbchszlo6xev3u"/>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/icons/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <script>
+
+        let speakers = [
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Геращенко.jpg",
+                "name": "Антон Геращенко",
+                "desr": "Радник міністра внутрішніх справ, колишній заступник міністра внутрішніх справ України.  Народний депутат 8-го скликання\r\n",
+                "name_en": "",
+                "desr_en": "",
+                "fb": "https://www.facebook.com/anton.gerashchenko.7",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%93%D0%B5%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BA%D0%BE_%D0%90%D0%BD%D1%82%D0%BE%D0%BD_%D0%AE%D1%80%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Судраба.jpg",
+                "name": "Інгуна Судраба",
+                "desr": "Державний контролер Латвії (з 2004 року по січень 2013 року). Засновник і керівник партії «Від серця для Латвії».",
+                "name_en": "",
+                "desr_en": "",
+                "fb": "",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%86%D0%BD%D0%B3%D1%83%D0%BD%D0%B0_%D0%A1%D1%83%D0%B4%D1%80%D0%B0%D0%B1%D0%B0"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Янченко.jpg",
+                "name": "Галина Янченко ",
+                "desr": "Народна депутатка України. Експерт з антикорупційної політики. Член Національної ради з питань антикорупційної політики (з 25 червня 2019). Заступниця голови фракції Політичної Партії «Слуга народу» У Верховній Раді України ІХ скликання. Голова ТСК з питань захисту прав інвесторів у Верховній раді України. Секретар Національної інвестиційної ради при Президентові України.",
+                "name_en": "",
+                "desr_en": "",
+                "fb": "https://www.facebook.com/halyna.yanchenko",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%AF%D0%BD%D1%87%D0%B5%D0%BD%D0%BA%D0%BE_%D0%93%D0%B0%D0%BB%D0%B8%D0%BD%D0%B0_%D0%86%D0%B3%D0%BE%D1%80%D1%96%D0%B2%D0%BD%D0%B0"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Амелін.jpg",
+                "name": "Анатолій Амелін",
+                "desr": "Український Економіст. Співзасновник та директор економічних програм аналітичного центру “Український інститут майбутнього” Очолював Групу компаній “Альтана Капітал”. Працював у Національній Комісії з цінних паперів та фондового ринку (з 2011 року Член Національної Комісії).",
+                "name_en": "",
+                "desr_en": "",
+                "fb": "https://www.facebook.com/anatoliy.amelin",
+                "wiki": ""
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Федоров.jpg",
+                "name": "Михайло Федоров",
+                "desr": "Віцепрем'єр-міністр, міністр цифрової трансформації України в уряді Олексія Гончарука та Дениса Шмигаля. Ініціатор електронного сервісу державних послуг Дія. Наймолодший міністр в історії української політики. Народний депутат України IX скликання. ",
+                "name_en": "",
+                "desr_en": "",
+                "fb": "https://www.facebook.com/fedorov1991",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%A4%D0%B5%D0%B4%D0%BE%D1%80%D0%BE%D0%B2_%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE_%D0%90%D0%BB%D1%8C%D0%B1%D0%B5%D1%80%D1%82%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Шуляк.jpg",
+                "name": "Шуляк Олена",
+                "desr": " Голова партії «Слуга народу» \r\nНародна депутатка України Верховної Ради України IX скликання, заступниця голови Комітету ВР з питань організації державної влади, місцевого самоврядування, регіонального розвитку та містобудування, голова Координаційної ради з вирішення проблемних питань у сфері містобудування при Президентові України, магістерка з бізнес-адміністрування, сертифікована аудиторка (з 1999 р.). В минулому топ-менеджерка у девелопменті та будівництві, віце-президент з фінансів української філії міжнародної організації Young Presidents’ Organization, екс-керівниця Наглядової ради Української будівельної спільноти (Ukrainian Building Community), екс-членкиня правління  Офісу ефективного регулювання, екс-підприємиця, співзасновниця Спілки українських підприємців.",
+                "name_en": "Olena Shulyak",
+                "desr_en": "Head of the \"Servant of the People\" party.\r\nMember of the Parliament of Ukraine of the 9th convocation, deputy head of the Committee of the Verkhovna Rada of Ukraine on the Organization of State Power, Local Self-Government, Regional Development and Urban Planning, head of the Coordinating Council for Solving Problematic Issues in the Field of Urban Planning under the President of Ukraine, master's degree in business administration, certified auditor ( since 1999). In the past, she was a top manager in development and construction, vice president of finance of the Ukrainian branch of the international organization Young Presidents' Organization, ex-head of the Supervisory Board of the Ukrainian Building Community, ex-member of the board of the Office of Effective Regulation, ex-entrepreneur, co-founder of the Union of Ukrainian ",
+                "fb": "https://www.facebook.com/ShuliakOlena",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%A8%D1%83%D0%BB%D1%8F%D0%BA_%D0%9E%D0%BB%D0%B5%D0%BD%D0%B0_%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D1%96%D1%97%D0%B2%D0%BD%D0%B0"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Зубко.jpg",
+                "name": "Зубко Геннадій",
+                "desr": "Віце-прем'єр-міністр — Міністр регіонального розвитку, будівництва та житлово-комунального господарства. Працював на вищезазначеній посаді  в другому уряді Арсенія Яценюка. 14 квітня 2016 увійшов до складу нового уряду Володимира Гройсмана. Брав активну участь у проведенні реформи децентралізації, яка передбачає зміни у галузях освіти, охорони здоров'я, соціальної політики, державного управління, органів місцевого самоврядування, розвитку міської інфраструктури, заходи з енергоефективності.",
+                "name_en": "Zubko Gennadiy",
+                "desr_en": "Deputy Prime Minister — Minister of Regional Development, Construction and Housing and Communal Services. He worked in the above position in the second government of Arseniy Yatsenyuk. On April 14, 2016, he joined the new government of Volodymyr Groysman. He took an active part in the decentralization reform, which involves changes in the fields of education, health care, social policy, state administration, local self-government bodies, urban infrastructure development, and energy efficiency measures.",
+                "fb": "https://www.facebook.com/profile.php?id=100018747485124",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%97%D1%83%D0%B1%D0%BA%D0%BE_%D0%93%D0%B5%D0%BD%D0%BD%D0%B0%D0%B4%D1%96%D0%B9_%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Ілларіонов.jpg",
+                "name": "Ілларіонов Андрій",
+                "desr": "Працював радником з економічних питань двох прем’єр-міністрів і президента Росії.  Був шерпою (особистим представником) російського президента в «Групі Семи» і «Групі Восьми». Зіграв ключову роль у створенні Стабілізаційного фонду в Росії, введення 13%-ного прибуткового податку, раптову реформу державних фінансів, дострокову виплату державного боргу, перетворення «Групи семи» на «Групу восьми» і вступ до неї Росії. У результаті здійснення розробленої ним політики середньорічні темпи економічного зростання в Росії склали 7%, що дозволило за 10 років подвоїти російський ВВП і збільшити споживання російських громадян на душу населення в 2,3 рази. ",
+                "name_en": "Andrei Illarionov",
+                "desr_en": "Worked as an economic adviser with two Prime ministers and the President of Russia. He was a sherpa (personal representative) of the Russian president in \"Group Seven\" and \"Group Eight\". He played a key role in the creation of the Stabilization Fund in Russia, the introduction of a 13% income tax, the sudden reform of public finances, the early repayment of the public debt, the transformation of the Group of Seven into the Group of Eight, and Russia's entry into it. As a result of the implementation of the policy developed by him, the average annual rate of economic growth in Russia was 7%, which made it possible to double the Russian GDP in 10 years and increase the consumption of Russian citizens per capita by 2.3 times.",
+                "fb": "https://www.facebook.com/andrei.illarionov.7",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%86%D0%BB%D0%BB%D0%B0%D1%80%D1%96%D0%BE%D0%BD%D0%BE%D0%B2_%D0%90%D0%BD%D0%B4%D1%80%D1%96%D0%B9_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Єнін.jpg",
+                "name": "Єнін Євгеній ",
+                "desr": "Український дипломат і правник. Перший заступник Міністра внутрішніх справ України  з 6 вересня 2021 року. Член Комісії при Президентові України з питань громадянства. Агент України у справах України проти РФ у міжнародних судах. Обіймав посаду заступника Міністра закордонних справ України з 15 квітня 2020 року по 6 вересня 2021 року, посаду заступника Генерального прокурора України з 2016 по 2019 роки, радника-посланника Посольства України в Італії (2012—2016).",
+                "name_en": "Yevgeny Yenin",
+                "desr_en": "Ukrainian diplomat and lawyer. First Deputy Minister of Internal Affairs of Ukraine from September 6, 2021. Member of the Commission under the President of Ukraine on citizenship issues. Agent of Ukraine in cases of Ukraine against the Russian Federation in international courts. He held the position of Deputy Minister of Foreign Affairs of Ukraine from April 15, 2020 to September 6, 2021, the position of Deputy Prosecutor General of Ukraine from 2016 to 2019, adviser-envoy of the Embassy of Ukraine in Italy (2012-2016).",
+                "fb": "https://www.facebook.com/eugene.enin",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%84%D0%BD%D1%96%D0%BD_%D0%84%D0%B2%D0%B3%D0%B5%D0%BD%D1%96%D0%B9_%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Єхануров.jpg",
+                "name": "Єхануров Юрій ",
+                "desr": "Український політик, з липня 2009 по лютий 2010 — перший заступник Глави Секретаріату Президента України, з грудня 2007 по червень 2009 — Міністр оборони України. В 2005–2006 — Прем'єр-міністр України. Народний депутат України 3-го, 4-го, 5-го та 6-го скликань.",
+                "name_en": "Yekhanurov Yury",
+                "desr_en": "Ukrainian politician, from July 2009 to February 2010 - first deputy head of the Secretariat of the President of Ukraine, from December 2007 to June 2009 - Minister of Defense of Ukraine. In 2005–2006 — Prime Minister of Ukraine. Member of the Parliament of Ukraine of the 3rd, 4th, 5th and 6th convocations.",
+                "fb": "https://www.facebook.com/yekhanurov",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%84%D1%85%D0%B0%D0%BD%D1%83%D1%80%D0%BE%D0%B2_%D0%AE%D1%80%D1%96%D0%B9_%D0%86%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Войтек-Кутила.jpg",
+                "name": "Кутила Войтек ",
+                "desr": "Радник президента NIK (Вища палата контролю Республіки Польща), Віце-президент Вищої аудиторської служби Республіки Польща у 2012-2019 роках. Працював за проектами аудиту NIK, пов’язаними з виконанням державного бюджету, інфраструктурою, регіональним розвитком, фондами ЄС, навколишнім середовищем, сільським господарством. Контролював відносини NIK з міжнародними партнерами ",
+                "name_en": "",
+                "desr_en": "",
+                "fb": "",
+                "wiki": ""
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Загороднюк.jpg",
+                "name": "Загороднюк Андрій",
+                "desr": "15-й Міністр оборони України. Український підприємець, з 2014 волонтер, з 2015 керівник, потім член проектного офісу реформ при Міністерстві Оборони України, з липня 2019 член наглядової ради «Укроборонпрому».",
+                "name_en": "Andriy Zagorodnyuk",
+                "desr_en": "the 15th Minister of Defense of Ukraine. Ukrainian entrepreneur, a volunteer since 2014. Manager since 2015, then a member of the reform project office at the Ministry of Defense of Ukraine, since July 2019 a member of the Supervisory board of Ukroboronprom.",
+                "fb": "https://www.facebook.com/andrew.zagorodnyuk.7",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BD%D1%8E%D0%BA_%D0%90%D0%BD%D0%B4%D1%80%D1%96%D0%B9_%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Саєнко.jpg",
+                "name": "Саєнко Олександр",
+                "desr": "Заслужений юрист України. Займав посаду Міністра Кабінету Міністрів України з 14 квітня 2016 року до 29 серпня 2019 року. В Уряді Володимира Гройсмана відповідав за реалізацію пріоритетних реформ та координацію роботи Секретаріату Кабміну і за взаємодію з Верховною Радою України. Очолював Офіс реформ Прем'єр-міністра України. Входив до складу Номінаційного комітету з відбору керівників особливо важливих для економіки державних підприємств.",
+                "name_en": "Sayenko Oleksandr",
+                "desr_en": "Honored lawyer of Ukraine. Minister of the Cabinet of Ministers of Ukraine from April 14, 2016 to August 29, 2019. In the Government of Volodymyr Groysman, he was responsible for the implementation of priority reforms and coordination of the work of the Secretariat of the Cabinet of Ministers and for interaction with the Verkhovna Rada of Ukraine. Head the Office of Reforms of the Prime Minister of Ukraine. He was a member of the Nomination Committee for the selection of managers of especially important for the economy of state-owned enterprises.",
+                "fb": "https://www.facebook.com/OSaienko",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%A1%D0%B0%D1%94%D0%BD%D0%BA%D0%BE_%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_%D0%A1%D0%B5%D1%80%D0%B3%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Лещенко.jpg",
+                "name": "Лещенко Роман",
+                "desr": "Міністр аграрної політики та продовольства України з 17 грудня 2020 до 24 березня 2022 року, Голова Державної служби України з питань геодезії, картографії та кадастру (2020 р.), Уповноважений Президента України з земельних питань з 1 жовтня 2019 до 15 червня 2021 року",
+                "name_en": "Leshchenko Roman",
+                "desr_en": "Minister of Agrarian Policy and Food of Ukraine ( December 17, 2020 - March 24, 2022) Head of the State Service of Ukraine for Geodesy, Cartography and Cadaster (2020), Commissioner of the President of Ukraine for Land Affairs from October 1, 2019 to June 15, 2021 year.",
+                "fb": "https://www.facebook.com/RM.Leshchenko",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%9B%D0%B5%D1%89%D0%B5%D0%BD%D0%BA%D0%BE_%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Оніщук.jpg",
+                "name": "Оніщук Ольга",
+                "desr": " З вересня 2019 року по червень 2021 року обіймала посаду заступника Міністра юстиції України з питань державної реєстрації, опікувалася антирейдерським напрямом і питаннями державної реєстрації та нотаріату. Входила до складу Вищої кваліфікаційної комісії нотаріату,  працювала на посаді заступника голови ВККН.",
+                "name_en": "Olga Onishchuk ",
+                "desr_en": "From September 2019 to June 2021, she held the position of the Deputy Minister of Justice of Ukraine for state registration issues, took care of the anti-raider direction and issues of state registration and notary. She was a member of the High Qualification Commission of the Notary, worked as a deputy chairman of the High Qualification Commission of the Notary.",
+                "fb": "https://www.facebook.com/profile.php?id=100006056078422",
+                "wiki": ""
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Повов.jpg",
+                "name": "Попов Ігор ",
+                "desr": " Народний депутат України 8-го скликання.  Перший заступник Голови Національного агентства України з питань державної служби (з вересня 2011 до липня 2013), заступник Голови Секретаріату Президента України, Представник Президента України у Верховній Раді України (2009—2010). Голова правління Всеукраїнської громадської організації «Комітет виборців України» .",
+                "name_en": "Popov Ihor ",
+                "desr_en": "Member of the Parliament of Ukraine of the 8th convocation. First Deputy Head of the National Agency of Ukraine for Civil Service (from September 2011 to July 2013), Deputy Head of the Secretariat of the President of Ukraine, Representative of the President of Ukraine in the Verkhovna Rada of Ukraine (2009-2010). Chairman of the board of the All-Ukrainian public organization \"Committee of Voters of Ukraine\".",
+                "fb": "https://www.facebook.com/igor.popov.5283",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%9F%D0%BE%D0%BF%D0%BE%D0%B2_%D0%86%D0%B3%D0%BE%D1%80_%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Камельчук.jpg",
+                "name": "Камельчук Юрій",
+                "desr": "Народний депутат України 9-го скликання. Член депутатської фракції Слуга народу. Коуч з розвитку. Засновник бізнес-спільноти Ukrainian Business Community, Платформи розвитку бізнесу «Бізнес Актив» та Cardinal University. Камельчук є стратегічним радником українських та міжнародних стартапів, благодійних фондів, керівників малого та середнього бізнесу. Організатор бізнес-форумів та семінарів.",
+                "name_en": "Yuriy Kamelchuk",
+                "desr_en": "Member of the Parliament of Ukraine of the 9th convocation. Member of the Servant of the People parliamentary faction. Development coach. Founder of the business community Ukrainian Business Community, Business Development Platform \"Business Active\" and Cardinal University. Kamelchuk is a strategic advisor to Ukrainian and international startups, charitable foundations, and managers of small and medium-sized businesses. Organizer of business forums and seminars.",
+                "fb": "https://www.facebook.com/kamelchuk",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%9A%D0%B0%D0%BC%D0%B5%D0%BB%D1%8C%D1%87%D1%83%D0%BA_%D0%AE%D1%80%D1%96%D0%B9_%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Криклій.jpg",
+                "name": "Криклій Владислав ",
+                "desr": "Міністр інфраструктури України з 29 серпня 2019 до 18 травня 2021. Начальник Головного сервісного центру МВС України з листопада 2015 року. Головний реформатор сервісних центрів МВС.",
+                "name_en": "Krykliy Vladyslav",
+                "desr_en": "Minister of Infrastructure of Ukraine ( August 29, 2019 to May 18, 2021). Head of the Main Service Center of the Ministry of Internal Affairs of Ukraine since November 2015. The main reformer of service centers of the Ministry of Internal Affairs.",
+                "fb": "https://www.facebook.com/vladyslav.kryklii",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%9A%D1%80%D0%B8%D0%BA%D0%BB%D1%96%D0%B9_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D1%81%D0%BB%D0%B0%D0%B2_%D0%90%D1%80%D1%82%D1%83%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Нойхауз.jpg",
+                "name": "Нойгауз Норберт",
+                "desr": "Німецький політолог . Колишній віце-мер німецького міста Трір. Один із теоретиків християнсько-демократичного руху Німеччини.",
+                "name_en": "Norbert Neuhaus",
+                "desr_en": "German political scientist. Former vice-mayor of the German city of Trier. One of the theorists of the Christian-democratic movement in Germany.",
+                "fb": "https://www.facebook.com/norbert.neuhaus.71",
+                "wiki": ""
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Фролов.jpg",
+                "name": "Фролов Павло ",
+                "desr": "Головний консультант Апарату Верховної Ради України. Народний депутат України IX скликання від  партії Слуга народу. Працював начальником самостійного Відділу забезпечення взаємодії з Верховною Радою України та координації законотворчої роботи Державного комітету природних ресурсів України.\r\n",
+                "name_en": "Pavlo Frolov ",
+                "desr_en": "Chief-consultant of the Staff of the Verkhovna Rada of Ukraine. Member of the Parliament of Ukraine of the 9th convocation from the” Servant of the People” party. He worked as the head of the independent Department for ensuring interaction with the Verkhovna Rada of Ukraine and coordinating the law-making work of the State Committee for Natural Resources of Ukraine.",
+                "fb": "https://www.facebook.com/pavlo.frolov.5",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%A4%D1%80%D0%BE%D0%BB%D0%BE%D0%B2_%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE_%D0%92%D0%B0%D0%BB%D0%B5%D1%80%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Денисенко.jpg",
+                "name": "Денисенко Вадим ",
+                "desr": "Журналіст, бізнесмен, народний депутат України 8 скликання. Виконавчий директор Українського Інституту Майбутнього. Засновник і головний редактор ЕспресоTV. Автор монографії “Модерн як поле експерименту”, двох збірок оповідань: “У пошуках банальних істин” та “Кілька історій про кохання”, а також співавтор книги “Політики не брешуть”.",
+                "name_en": "Denysenko Vadym",
+                "desr_en": "Journalist, businessman, Member of the Parliament of Ukraine of the 8th convocation. Executive Director of the Ukrainian Future Institute. Founder and editor-in-chief of EspressoTV. Author of the monograph \"Modern as a Field of Experimentation\", two collections of short stories: \"In Search of Banal Truths\" and \"Several Love Stories\", as well as co-author of the book \"Politicians don't Lie\".",
+                "fb": "https://www.facebook.com/vadym.denysenko.1",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%94%D0%B5%D0%BD%D0%B8%D1%81%D0%B5%D0%BD%D0%BA%D0%BE_%D0%92%D0%B0%D0%B4%D0%B8%D0%BC_%D0%86%D0%B3%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Андрусів.jpg",
+                "name": "Андрусів Віктор",
+                "desr": "Політичний та громадський діяч, заступник Голови Донецької військово-цивільної адміністрації з гуманітарних питань (2015-2016), радник голови Міністерства внутрішніх справ України та керівника Офісу Президента, Засновник волонтерського проєкту «Добробат», координатор проєкту «Ищи своих», кандидат політичних наук, аналітик і публіцист.",
+                "name_en": "Viktor Andrusiv",
+                "desr_en": "Political and public figure, Deputy Head of the Donetsk military-civilian administration for humanitarian issues (2015-2016), adviser to the head of the Ministry of Internal Affairs of Ukraine and the head of the President's Office, founder of the \"Dobrobat\" volunteer project, coordinator of the \"Ищи своих\" ( “Look for Your Own”) project, candidate of political science, analyst and publicist.",
+                "fb": "https://www.facebook.com/victor.andrusiv",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%90%D0%BD%D0%B4%D1%80%D1%83%D1%81%D1%96%D0%B2_%D0%92%D1%96%D0%BA%D1%82%D0%BE%D1%80_%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Галасюк.jpg",
+                "name": "Галасюк Віктор",
+                "desr": "Народний депутат України VIII скликання, голова парламентського Комітету з питань промислової політики та підприємництва, співголова депутатської групи Верховної Ради України з міжпарламентських зв’язків з США, заступник голови Української частини Парламентського Комітету Асоціації.  Визнаний №2 в рейтингу ефективності законотворчої діяльності серед більше ніж 400 депутатів VIII скликання. Є автором-розробником понад 20 прийнятих парламентом економічних законів, спрямованих на поліпшення інвестиційного клімату, підтримку малого та середнього підприємництва, розвиток промисловості та сприяння експорту.",
+                "name_en": "Viktor Halasiuk",
+                "desr_en": "Member of the Parliament of Ukraine of the 8th convocation, chairman of the Parliamentary Committee on Industrial Policy and Entrepreneurship, co-chairman of the parliamentary group of the Verkhovna Rada of Ukraine on inter-parliamentary relations with the USA, deputy chairman of the Ukrainian part of the Parliamentary Committee of the Association. Recognized No. 2 in the rating of effectiveness of law-making activity among more than 400 deputies of the 8th convocation. He is the author-developer of more than 20 economic laws adopted by the parliament aimed at improving the investment climate, supporting small and medium-sized enterprises, developing industry and promoting exports.",
+                "fb": "https://www.facebook.com/Halasiuk",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%93%D0%B0%D0%BB%D0%B0%D1%81%D1%8E%D0%BA_%D0%92%D1%96%D0%BA%D1%82%D0%BE%D1%80_%D0%92%D0%B0%D0%BB%D0%B5%D1%80%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Бно-Айріян.jpg",
+                "name": "Бно-Айріян Михайло ",
+                "desr": "Український дипломат, управлінець, заступник директора ДП НЕК «Укренерго» з комунікацій та міжнародного співробітництва, режисер. З 10 липня до 28 жовтня 2019 року — Голова Київської ОДА. Автор проєкту «7 фільмів Бно-Айріяна».",
+                "name_en": "Mykhailo Bno-Airiian",
+                "desr_en": "Ukrainian diplomat, manager, deputy director of SE NEC \"Ukrenergo\" for communications and international cooperation, director. From July 10 to October 28, 2019 — Head of the Kyiv Regional State Administration. The author of the project \"7 films of Bno-Airiian\".",
+                "fb": "https://www.facebook.com/BnoAiriian",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%91%D0%BD%D0%BE-%D0%90%D0%B9%D1%80%D1%96%D1%8F%D0%BD_%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE_%D0%9A%D0%B0%D1%80%D0%B5%D0%BD%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Громенко.jpg",
+                "name": "Громенко Сергій",
+                "desr": "Український історик, публіцист та громадський діяч, кандидат історичних наук, співробітник Українського інституту національної пам'яті (2014—2016), оглядач проєкту Крим.Реалії від Радіо Свобода, учасник громадського просвітницького проєкту з популяризації історії України «Лікбез. Історичний фронт». Лавреат V Міжнародного конкурсу ім. Єжи Ґедройця (2011), фіналіст ХХІ Всеукраїнського рейтингу «Книжка року 2019»",
+                "name_en": "Hromenko Serhiy",
+                "desr_en": "Ukrainian historic scientist, publicist and public figure, candidate of historical sciences, employee of the Ukrainian Institute of National Remembrance (2014-2016), columnist of the Krym.Realii project from Radio Liberty, participant of the public educational project to popularize the history of Ukraine \"Likbez. Historical front\". Winner of the 5th International Competition named after Jerzy Gedroitsa (2011), finalist of the 21st All-Ukrainian \"Book of the Year 2019\" rating.",
+                "fb": "https://www.facebook.com/sergii.gromenko",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%93%D1%80%D0%BE%D0%BC%D0%B5%D0%BD%D0%BA%D0%BE_%D0%A1%D0%B5%D1%80%D0%B3%D1%96%D0%B9_%D0%92%D1%96%D0%BA%D1%82%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Шкрум.jpg",
+                "name": "Шкрум Альона",
+                "desr": "Народний депутат України VIII скл. Юрист-міжнародник за фахом, здобула три дипломи про вищу освіту, громадська діячка, у тому числі у сфері захисту і забезпечення прав внутрішньо переміщених осіб.",
+                "name_en": "Alyona Shkrum ",
+                "desr_en": "Member of the Parliament of Ukraine VIII convocation International lawyer by profession, obtained three diplomas of higher education, public activist, including in the field of protection and ensuring the rights of internally displaced persons.",
+                "fb": "https://www.facebook.com/alyxrum",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%A8%D0%BA%D1%80%D1%83%D0%BC_%D0%90%D0%BB%D1%8C%D0%BE%D0%BD%D0%B0_%D0%86%D0%B2%D0%B0%D0%BD%D1%96%D0%B2%D0%BD%D0%B0"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Луценко.jpg",
+                "name": "Луценко Дмитро",
+                "desr": "Кандидат юридичних наук, адвокат. Керівник офісу секретаря національної інвестиційної ради України",
+                "name_en": "Dmytro Lutsenko ",
+                "desr_en": "candidate of legal sciences, lawyer. Head of the Office of the Secretary of the National Investment Council of Ukraine",
+                "fb": "https://www.facebook.com/profile.php?id=100001647587563",
+                "wiki": ""
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Чебаненко.jpg",
+                "name": "Чебаненко Олександр ",
+                "desr": "Директор програми “Право” Українського Інституту Майбутнього. Магістр права (Університет Амстердаму (LLM) та Московський Державний Університет), адвокат. Брав участь в розробці законопроєктів за наступними напрямками: лобіювання, спеціальна конфіскація, інформаційна безпека, азартні ігри, корисні копалини, державні закупівлі, електронна комерція, оподаткування, суд присяжних тощо.",
+                "name_en": "Oleksandr Chebanenko",
+                "desr_en": "Director of the \"Law\" program of the Ukrainian Future Institute. Master of Laws (University of Amsterdam (LLM) and Moscow State University), lawyer. Participated in the development of draft laws in the following areas: lobbying, special confiscation, information security, gambling, minerals, public procurement, e-commerce, taxation, jury trial, etc.",
+                "fb": "https://www.facebook.com/profile.php?id=100011748034990",
+                "wiki": ""
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Тишкевич.jpg",
+                "name": "Тишкевич Ігор",
+                "desr": "Експерт програми “Міжнародна і внутрішня політика” Українського Інституту Майбутнього. У якості аналітика співпрацював із Білоруським інститутом стратегічних досліджень (BISS) та Belarus Security Blog. Надавав консультаційні послуги з політичної реклами для National Democratic Institute. Обіймав посаду голови правління Агентства регіонального розвитку «Варута» (Білорусь), виконавчого директора в Асамблеї депутатів місцевих рад.Розробив низку навчальних програм та тренінгів з комунікацій, політичних кампаній.",
+                "name_en": "Ihor Tyshkevich",
+                "desr_en": "Expert of the \"International and Domestic Policy\" program of the Ukrainian Future Institute. As an analyst, he cooperated with the Belarusian Institute of Strategic Studies (BISS) and the Belarus Security Blog. Provided consulting services on political advertising for the National Democratic Institute. He held the position of chairman of the board of the Regional Development Agency \"Varuta\" (Belarus), executive director of the Assembly of Deputies of Local Councils. Developed a number of educational programs and trainings on communications and political campaigns.",
+                "fb": "https://www.facebook.com/Ihar.Tyshkevich",
+                "wiki": ""
+            }
+        ]
+        let isEn = false;
+        const path = 'https://kspa.com.ua/wp-content/themes/kspa/'
+        const singleLot = {
+            id: 2,
+            name: 'Мирні послання',
+            start_price: '10000',
+            min_step: '5',
+            finish_date: '12.02.2023',
+            current_price: '12000'
+        }
+    </script>
+</head>
+
+<body class="body">
+<div class="page-container">
+    <div class="progress-bar pos-a">
+        <div id="progress-bar"></div>
+    </div>
+
+    <header class="header flex --align-center">
+
+    <div class="header__wrapper w-100 flex --align-center">
+        <a href="#" class="logo">
+            <svg class="icon">
+                <use xlink:href="#logo"></use>
+            </svg>
+        </a>
+
+        <nav class="header__menu text-uppercase f-weight_500 flex">
+            <ul class="menu flex">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Case Studies</a>
+                </li>
+                <li>
+                    <a href="#">Industries</a>
+                </li>
+                <li>
+                    <a href="#">Contacts</a>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+
+            </ul>
+            <button class="btn btn_secondary">Call us now</button>
+            <button class="btn btn_main">Get a quote</button>
+            <ul class="social-links flex flex">
+                <li><a href="#"> <span class="icon-Instagram"></span></a></li>
+                <li><a href="#"> <span class="icon-Facebook"></span></a></li>
+                <li><a href="#"> <span class="icon-Telegram"></span></a></li>
+<!--                <li><a href="#"> <span class="icon-Instagram"></span></a></li>-->
+            </ul>
+        </nav>
+        <button class="header__mobile text-uppercase --align-center">
+            <span>Menu</span>
+            <div class="burger flex --dir-col --just-center">
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+
+    </div>
+
+</header>
+    <main>
+
+        <section  data-aos="fade-down" class="main-screen flex">
+            <div class="shadow"></div>
+            <div class="container">
+                <div class="row --align-center">
+                    <div class="col-lg-6">
+                        <h1 class="mb_24" data-typing-string>The Digital
+                            Marketing
+                            Agency in USA</h1>
+                        <div class="h4 text-color_gray mb_l">Маркетинговые услуги для вашего бренда</div>
+                        <button class="btn btn_main">Заказать бесплатный аудит</button>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="circle"></div>
+                        <div class="image"><img src="assets/img/dragon.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section  class="section section__benefits benefits">
+            <div class="shadow"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 pos-r" data-aos="fade-up">
+                        <div class="circle"></div>
+                        <div class="image"><img src="assets/img/benefits_img.png" alt=""></div>
+                    </div>
+                    <div class="col-lg-7">
+                        <h2>Чем полезны наши услуги для вашей компании</h2>
+
+                        <div data-aos="fade-up" class="card">
+                            Подберем под вас стратегию работы и приведем новых клиентов в вашу компанию на американском
+                            рынке, задействуя такие направления как PPC, SEO, Social PPC (Facebook&Instagram,Twitter,
+                            LinkdIn, Pinterest Ads), Media Buying, Email-Marketing, и другие, чтобы настроить структуру
+                            и увеличить количество продаж
+                        </div>
+                        <div data-aos="fade-up" class="card">
+                            Упакуем бренд под ключ для старта бизнеса, повышения лояльности, роста продаж. От сайта с
+                            логотипом до дизайна упаковок и витрин
+                        </div>
+                        <div data-aos="fade-up" class="card">
+                            Создадим хороший имидж и узнаваемость вашего бренда в социальных сетях. Наберем активную
+                            аудиторию покупателей с помощью органики и платных инструментов продвижения. Создадим
+                            контент, который привлекает внимание и вызывает интерес у потенциальных покупателей
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section  class="section section__services services">
+            <div class="container">
+                <div class="row --just-center mb_l" data-aos="fade-up" >
+                    <div class="col-md-8 text-center">
+                        <h2 class="section__title">
+                            Сервисы
+                        </h2>
+                        <div class="section__subtitle text-color_gray">
+                            Мы предоставляем сервисы привлечения трафика, маркетинга, брендинга, веб-разработки,
+                            фото/видео
+                            съёмки и наружной рекламой
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up"  class="card services-item flex">
+                    <div class="services-item__name">
+                        <div class="title">
+                            Digital Marketing, Social Media
+                        </div>
+                        <div class="subtitle text-color_gray mb_16">
+                            Ведение социальных сетей под ключ:
+                        </div>
+                        <ul class="flex services-item__social">
+                            <li class="bgc_circle flex-inline --just-center --align-center"><span
+                                    class="icon-Instagram icon-32"></span></li>
+                            <li class="bgc_circle flex-inline --just-center --align-center"><span
+                                    class="icon-Facebook icon-32"></span></li>
+                            <li class="bgc_circle flex-inline --just-center --align-center"><span
+                                    class="icon-LinkedIn icon-32"></span></li>
+                            <li class="bgc_circle flex-inline --just-center --align-center"><span
+                                    class="icon-YouTube icon-32"></span></li>
+                            <li class="bgc_circle flex-inline --just-center --align-center"><span
+                                    class="icon-Twitter icon-32"></span></li>
+                            <li class="bgc_circle flex-inline --just-center --align-center"><span
+                                    class="icon-Telegram icon-32"></span></li>
+                            <li class="bgc_circle flex-inline --just-center --align-center"><span
+                                    class="icon-Tiktok icon-32"></span></li>
+                        </ul>
+                        <button class="services-item__btn"><span></span><span></span></button>
+                    </div>
+                    <div class="services-item__content">
+                        <div class="subtitle text-color_gray mb_16">
+                            Ведение социальных сетей под ключ:
+                        </div>
+                        <ul class="flex services-item__social">
+                            <li class="bgc_circle flex-inline --just-center --align-center"><span
+                                    class="icon-Instagram icon-32"></span></li>
+                            <li class="bgc_circle flex-inline --just-center --align-center"><span
+                                    class="icon-Facebook icon-32"></span></li>
+                            <li class="bgc_circle flex-inline --just-center --align-center"><span
+                                    class="icon-LinkedIn icon-32"></span></li>
+                            <li class="bgc_circle flex-inline --just-center --align-center"><span
+                                    class="icon-YouTube icon-32"></span></li>
+                            <li class="bgc_circle flex-inline --just-center --align-center"><span
+                                    class="icon-Twitter icon-32"></span></li>
+                            <li class="bgc_circle flex-inline --just-center --align-center"><span
+                                    class="icon-Telegram icon-32"></span></li>
+                            <li class="bgc_circle flex-inline --just-center --align-center"><span
+                                    class="icon-Tiktok icon-32"></span></li>
+                        </ul>
+                        <ul class="services-item__list">
+                            <li>
+                                Аудит и анализ рынка
+                            </li>
+                            <li>
+                                Разработка рекламной и контент стратегий
+                            </li>
+                            <li>
+                                Разработка фирменного стиля для социальных сетей
+                            </li>
+                            <li>Упаковка аккаунтов</li>
+                            <li>Копирайтинг, дизайн под ключ ежедневно</li>
+                            <li>
+                                Создание видео-контента: сценарии, озвучка, монтаж
+                            </li>
+                            <li>Разработка рекламных кампаний, запуск, тестирование и доработка рабочих стратегий</li>
+                            <li>Привлечение заинтересованной аудитории и покупателей</li>
+                            <li>Ежедневное ведение социальных сетей</li>
+                        </ul>
+                    </div>
+                </div>
+                <div data-aos="fade-up"  class="card services-item flex">
+                    <div class="services-item__name">
+                        <div class="title">
+                            Creative, design and branding
+                        </div>
+                        <div class="subtitle text-color_gray mb_16">
+                            Наше креативное агентство создаст лицо вашей компании, от логотипа до корпоративной одежды
+                        </div>
+
+                        <button class="services-item__btn"><span></span><span></span></button>
+                    </div>
+                    <div class="services-item__content">
+                        <div class="subtitle text-color_gray mb_16">
+                            Наше креативное агентство создаст лицо вашей компании, от логотипа до корпоративной одежды
+                        </div>
+
+                        <ul class="services-item__list">
+                            <li>
+                                Разработка логотипа и фирменного стиля компании
+                            </li>
+                            <li>
+                                Создание дизайна для вашей офлайн и онлайн продукции/упаковки
+                            </li>
+                            <li>
+                                Создание корпоративной формы для сотрудников
+                            </li>
+                            <li>Визуализация вашей будущей продукции</li>
+                            <li>Банера для офлайн и онлайн рекламы</li>
+                        </ul>
+                    </div>
+                </div>
+                <div data-aos="fade-up"  class="card services-item flex">
+                    <div class="services-item__name">
+                        <div class="title">
+                            Разработка и продвижение сайтов в Google
+                        </div>
+                        <div class="subtitle text-color_gray mb_16">
+                            Создадим сайт под ключ: текст, дизайн, разработка.
+                            И займёмся его продвижением для регулярных заявок или продаж.
+                        </div>
+
+                        <button class="services-item__btn"><span></span><span></span></button>
+                    </div>
+                    <div class="services-item__content">
+                        <div class="subtitle text-color_gray mb_16">
+                            Создадим сайт под ключ: текст, дизайн, разработка.
+                            И займёмся его продвижением для регулярных заявок или продаж.
+                        </div>
+
+                        <ul class="services-item__list">
+                            <li>
+                                UI/UX Design
+                            </li>
+                            <li>
+                                Website Development
+                            </li>
+                            <li>
+                                SEO (Search Engine Optimization)
+                            </li>
+                            <li>PPC (Google Ads): Search Ads, Dynamic Ads, Display network, YouTube Ads, Shopping
+                                Campaigns, Mobile app Ads, Discovery, Performance Max, Local Campaigns
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div  data-aos="fade-up" class="card services-item flex">
+                    <div class="services-item__name">
+                        <div class="title">
+                            Powerful web applications and complex
+                        </div>
+                        <div class="subtitle text-color_gray mb_16">
+                            CRM, ERP, and HRM systems built according to the industry’s latest tech trends
+                        </div>
+
+                        <button class="services-item__btn"><span></span><span></span></button>
+                    </div>
+                    <div class="services-item__content">
+                        <div class="subtitle text-color_gray mb_16">
+                            CRM, ERP, and HRM systems built according to the industry’s latest tech trends
+                        </div>
+
+                        <ul class="services-item__list">
+                            <li>
+                                Web app development
+                            </li>
+                            <li>
+                                Digital advertisement
+                            </li>
+                            <li>
+                                Legacy Soft Modernisation
+                            </li>
+                            <li>Custom Software Development
+                            </li>
+                            <li>DevOps</li>
+                            <li>E-Commerce</li>
+                        </ul>
+                    </div>
+                </div>
+                <div data-aos="fade-up"  class="card services-item flex">
+                    <div class="services-item__name">
+                        <div class="title">
+                            Продвижение Amazon / Etsy / Shopify
+                        </div>
+                        <div class="subtitle text-color_gray mb_16">
+                            Поможем развить ваш товарный бизнес в США.
+                            Увеличим количество заказов в 2-3 раза, удвоим средний чек в течении нескольких месяцев и
+                            повысим LTV от 30%
+                        </div>
+
+                        <button class="services-item__btn"><span></span><span></span></button>
+                    </div>
+                    <div class="services-item__content">
+                        <div class="subtitle text-color_gray mb_16">
+                            Поможем развить ваш товарный бизнес в США.
+                            Увеличим количество заказов в 2-3 раза, удвоим средний чек в течении нескольких месяцев и
+                            повысим LTV от 30%
+                        </div>
+
+                        <ul class="services-item__list">
+                            <li>
+                                Аудит и анализ рынка
+                            </li>
+                            <li>
+                                Разработка рекламной стратегии
+                            </li>
+                            <li>
+                                Оформление магазинов
+                            </li>
+                            <li>Дизайн и копирайтинг для рекламных креативов
+                            </li>
+                            <li>Запуск рекламных кампаний</li>
+                            <li>Ведение ежедневной отчётности, тестирование новых связок и улучшение показателей</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <section data-aos="fade-up"  class="section  section__cases cases">
+            <div class="container">
+                <div class="row --just-center mb_l">
+                    <div class="col-md-8 text-center">
+                        <h2 class="section__title">
+                            Кейсы
+                        </h2>
+                        <div class="section__subtitle text-color_gray">
+                            мы поможем решить проблемы вашего бизнеса, качественно вывести продукт на рынок и настроить
+                            поток продаж
+                        </div>
+                    </div>
+                </div>
+                <div class="cases-slider" data-swiper="cases">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-lg-5 offset-lg-1">
+                                    <div class="cases__item">
+                                        <div class="image">
+                                            <img src="assets/img/img.png" alt="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-5 offset-lg-1">
+                                    <div class="cases__item">
+                                        <h4 class="f-weight_600 title">Explorer Yacht</h4>
+                                        <div class="descr">
+                                            Компания-создатель яхт люкс класса созданная Рикардо Радисом. Explorer
+                                            создаёт комфортабельные яхты, которые были преобретены счастливыми
+                                            обладателями благодаря нашему продвижению онлайн и офлайн
+                                        </div>
+                                        <div class="flex">
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-calendar"></span><span>2019</span>
+                                            </div>
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-cards"></span><span>Яхты</span>
+                                            </div>
+
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-bag"></span><span>SMM, Marketing, Website Development</span>
+                                            </div>
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-clock"></span><span>2 months</span>
+                                            </div>
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-people"></span><span>13</span>
+                                            </div>
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-map"></span><span>Италия</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-lg-5 offset-lg-1">
+                                    <div class="cases__item">
+                                        <h4 class="f-weight_600 title">Explorer Yacht</h4>
+                                        <div class="descr">
+                                            Компания-создатель яхт люкс класса созданная Рикардо Радисом. Explorer
+                                            создаёт комфортабельные яхты, которые были преобретены счастливыми
+                                            обладателями благодаря нашему продвижению онлайн и офлайн
+                                        </div>
+                                        <div class="flex">
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-calendar"></span><span>2019</span>
+                                            </div>
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-cards"></span><span>Яхты</span>
+                                            </div>
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-clock"></span><span>2 months</span>
+                                            </div>
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-people"></span><span>13</span>
+                                            </div>
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-bag"></span><span>SMM, Marketing, Website Development</span>
+                                            </div>
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-map"></span><span>Италия</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="cases__item">
+                                        <div class="image">
+                                            <img src="assets/img/img.png" alt="">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section  class="see-more">
+            <div class="container">
+                <div class="row --align-center">
+                    <div class="offset-lg-1 col-lg-3 col-5">
+                        <h2 class="f-weight_400">See more <br>
+                            of our cases</h2>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="arrow">
+                            <svg class="arrow" viewBox="0 0 316 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M314.87 8.70779C315.251 8.31726 315.251 7.6841 314.87 7.29358L308.671 0.929613C308.291 0.539088 307.673 0.539088 307.293 0.929613C306.912 1.32014 306.912 1.9533 307.293 2.34383L312.804 8.00068L307.293 13.6575C306.912 14.0481 306.912 14.6812 307.293 15.0717C307.673 15.4623 308.291 15.4623 308.671 15.0717L314.87 8.70779ZM0.5 9.00071L314.182 9.00068V7.00068L0.5 7.00071L0.5 9.00071Z"
+                                      fill="url(#paint_linear)"/>
+                                <defs>
+                                    <linearGradient id="paint_linear" x1="301.611" y1="2.47771" x2="76.5166"
+                                                    y2="-130.222"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#382ED8"/>
+                                        <stop offset="1" stop-color="#9169FB"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="offset-lg-1 col-lg-2 col-7">
+                        <a href="#" class="btn btn_main">Find out more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section  data-aos="fade-up" class="section section__mount mount">
+            <div class="mount__img"></div>
+            <div class="container">
+                <div class="row --just-end">
+
+                    <div class="col-lg-7">
+                        <div class="mount__item">
+                            <span class="text-color_accent">
+                                  9%
+                            </span>
+                            американских компаний инвестируют в маркетинг и довольны результатом
+                        </div>
+                        <div class="mount__item">
+                                  <span class="text-color_accent">
+                                  59%
+                            </span> компаний в США инвестируют в маркетинг, но не удовлетворены результатом
+                        </div>
+                        <div class="mount__item">
+                                  <span class="text-color_accent">
+                                  33%
+                            </span> компаний не инвестируют в маркетинг
+                        </div>
+                        <div class="card">
+                            <h4 class="f-weight_500 mb_16-24">
+                                <span class="text-color_accent"> 78% </span> компаний по всем штатам при работе с
+                                маркетинговыми компаниями сливают свой бюджет
+                            </h4>
+                            <div class="mb_24 text-color_gray">Пройдите бесплатный аудит от наших маркетологов, чтобы
+                                разработать стратегию продвижения
+                            </div>
+                            <button class="btn btn_main">
+                                Назначить встречу
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-aos="fade-up"  class="section section__audit audit">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-lg-5">
+                        <div class="shadow"></div>
+                        <h2 class="mb_24-32">Получи аудит своей компании бесплатно</h2>
+                        <div class="image"><img src="assets/img/dragon_2.png" alt=""></div>
+                    </div>
+                    <div class="col-md-6 col-lg-5 offset-md-1 offset-lg-2">
+                        <div class="mb_16-8">Project inquiries</div>
+                        <a href="tel:+(352) 565-5589" class="audit__link h2 text-color_accent">(352) 565-5589</a>
+                        <a href="mailto:info@pixelcomarketing.com" class="audit__link text-color_accent">mailto:info@pixelcomarketing.com</a>
+                        <a href="#" class="audit__link"></a>
+                        <form action="" class="form audit-form">
+                            <div class="form__items">
+                                <div class="form__item form__item_row invalid">
+                                    <div class="form__input pos-r">
+                                        <input type="text" id="name-audit" name="name" placeholder="Enter your name">
+
+                                    </div>
+                                    <div class="form__message">
+                                        guhjuyghijjhbkn
+                                    </div>
+                                </div>
+                                <div class="form__item form__item_row ">
+                                    <div class="form__input pos-r">
+                                        <input type="email" id="email-audit" name="email"
+                                               placeholder="Enter your email ">
+                                    </div>
+                                </div>
+                                <div class="form__item form__item_row ">
+                                    <div class="form__input pos-r">
+                                        <input type="text" id="phone-audit" name="phone"
+                                               placeholder="Enter your phone ">
+                                    </div>
+                                </div>
+                                <!--                                <div class="form__item form__item_row ">-->
+                                <!--                                    <div class="form__input pos-r">-->
+                                <!--                                        <input type="date" id="date-audit" name="date" placeholder="Сonvenient time to call">-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
+
+                                <div class="form__item form__item_row ">
+
+                                    <div class="form__input pos-r">
+                                        <textarea id="message-audit" placeholder="Your request "></textarea>
+                                        <span class="icon-12 pos-a close-icon hide "></span>
+                                        <span class="icon-12 pos-a icon-check hide "></span>
+                                    </div>
+                                </div>
+                                <div class="form__item form__item_row ">
+                                    <button type="submit" class="btn btn_main w-100">
+                                        Get Proposal
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__menu flex ">
+            <a href="№" class="logo_footer logo">
+                <svg class="icon">
+                    <use xlink:href="#logo"></use>
+                </svg>
+            </a>
+            <ul class="menu flex">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Case Studies</a>
+                </li>
+                <li>
+                    <a href="#">Industries</a>
+                </li>
+                <li>
+                    <a href="#">Contacts</a>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="footer__copyrighting flex --align-center --just-between">
+            <div class="text">© 2023 PixelCo Corp. All rights reserved.</div>
+            <ul class="social-links flex">
+                <li class="social-link"><a href="#"><span class="icon-Instagram icon-32"></span></a></li>
+                <li class="social-link"><a href="#"><span class="icon-Facebook icon-32"></span></a></li>
+                <li class="social-link"><a href="#"><span class="icon-Telegram icon-32"></span></a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</footer>
+</div>
+<div class="modal  hide ">
+
+    <div class="modal__wrapper pos-r">
+        <div class="modal__body pos-r">
+
+        </div>
+
+
+    </div>
+</div>
+<!--<div class="none">-->
+<svg width="0" height="0" class="none">
+    <symbol id="logo" viewBox="0 0 162 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect y="17" width="5" height="5" fill="white"/>
+        <rect x="7" y="17" width="5" height="5" fill="white"/>
+        <rect x="14" y="17" width="5" height="5" fill="white"/>
+        <rect x="21" y="17" width="5" height="5" fill="white"/>
+        <rect x="21" y="24" width="5" height="5" fill="white"/>
+        <rect x="21" y="31" width="5" height="5" fill="white"/>
+        <rect x="14" y="24" width="5" height="5" fill="white"/>
+        <rect x="14" y="31" width="5" height="5" fill="white"/>
+        <rect x="7" y="24" width="5" height="5" fill="white"/>
+        <rect x="80" y="17" width="6" height="6" fill="white"/>
+        <path d="M41.553 16.21C38.7425 16.21 36.3555 17.1725 34.7385 19.136V16.441H30.157V44.469H34.9695V34.4975C36.625 36.384 38.935 37.2695 41.553 37.2695C47.559 37.2695 51.9865 33.1115 51.9865 26.7205C51.9865 20.368 47.559 16.21 41.553 16.21ZM41.014 33.15C37.549 33.15 34.8925 30.6475 34.8925 26.7205C34.8925 22.7935 37.549 20.291 41.014 20.291C44.479 20.291 47.097 22.7935 47.097 26.7205C47.097 30.6475 44.479 33.15 41.014 33.15Z"
+              fill="white"/>
+        <path d="M71.5 38H65.5L73 28L65.5 17H72L86 38H80L76 32L71.5 38Z" fill="white"/>
+        <path d="M110.062 27.7205C110.062 21.06 105.365 16.979 99.2815 16.979C92.9675 16.979 88.232 21.445 88.232 27.6435C88.232 33.8035 92.8905 38.308 100.052 38.308C103.786 38.308 106.674 37.153 108.599 34.9585L105.403 31.4935C103.979 32.841 102.4 33.4955 100.206 33.4955C97.0485 33.4955 94.854 31.917 94.2765 29.3375H109.946C109.985 28.837 110.062 28.1825 110.062 27.7205ZM99.32 21.522C102.015 21.522 103.979 23.216 104.402 25.834H94.1995C94.623 23.1775 96.5865 21.522 99.32 21.522Z"
+              fill="white"/>
+        <path d="M140.473 34.3324C139.083 35.9541 137.232 37.1135 135.166 37.6558C133.101 38.1982 130.919 38.0977 128.911 37.3678C126.904 36.6378 125.168 35.3132 123.933 33.5706C122.698 31.8281 122.024 29.7504 122.001 27.6148C121.977 25.4792 122.606 23.3872 123.802 21.6181C124.999 19.8489 126.706 18.4866 128.697 17.713C130.687 16.9394 132.867 16.7913 134.944 17.2883C137.021 17.7854 138.897 18.904 140.322 20.495L135.763 24.5775C135.169 23.9137 134.386 23.447 133.52 23.2397C132.653 23.0323 131.744 23.0941 130.913 23.4169C130.083 23.7396 129.37 24.3079 128.871 25.046C128.372 25.7841 128.11 26.6569 128.12 27.5479C128.129 28.4389 128.411 29.3057 128.926 30.0327C129.441 30.7597 130.165 31.3123 131.003 31.6169C131.84 31.9214 132.751 31.9633 133.612 31.737C134.474 31.5108 135.247 31.0271 135.826 30.3505L140.473 34.3324Z"
+              fill="white"/>
+        <path d="M162 27.5C162 33.299 157.299 38 151.5 38C145.701 38 141 33.299 141 27.5C141 21.701 145.701 17 151.5 17C157.299 17 162 21.701 162 27.5ZM147.099 27.5C147.099 29.9306 149.069 31.901 151.5 31.901C153.931 31.901 155.901 29.9306 155.901 27.5C155.901 25.0694 153.931 23.099 151.5 23.099C149.069 23.099 147.099 25.0694 147.099 27.5Z"
+              fill="white"/>
+        <rect x="113" y="7" width="6" height="31" fill="white"/>
+        <path d="M126 14H123V6H128V11H126V14Z" fill="white" stroke="white"/>
+        <rect x="57" y="18" width="5.5" height="20" fill="white"/>
+        <circle cx="60" cy="12" r="3" fill="white"/>
+    </symbol>
+
+    <symbol id="close" viewBox="0 0 30 30" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22.5 7.5L7.5 22.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7.5 7.5L22.5 22.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"
+            viewBox="0 0 100 100" id="spinner">
+        <g transform="rotate(0 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.9166666666666666s"
+                         repeatCount="indefinite"></animate>
+            </rect>
+        </g>
+        <g transform="rotate(30 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.8333333333333334s"
+                         repeatCount="indefinite"></animate>
+            </rect>
+        </g>
+        <g transform="rotate(60 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.75s"
+                         repeatCount="indefinite">
+                </animate>
+            </rect>
+        </g>
+        <g transform="rotate(90 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.6666666666666666s"
+                         repeatCount="indefinite"></animate>
+            </rect>
+        </g>
+        <g transform="rotate(120 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.5833333333333334s"
+                         repeatCount="indefinite"></animate>
+            </rect>
+        </g>
+        <g transform="rotate(150 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.5s"
+                         repeatCount="indefinite">
+                </animate>
+            </rect>
+        </g>
+        <g transform="rotate(180 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.4166666666666667s"
+                         repeatCount="indefinite"></animate>
+            </rect>
+        </g>
+        <g transform="rotate(210 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.3333333333333333s"
+                         repeatCount="indefinite"></animate>
+            </rect>
+        </g>
+        <g transform="rotate(240 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.25s"
+                         repeatCount="indefinite">
+                </animate>
+            </rect>
+        </g>
+        <g transform="rotate(270 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.16666666666666666s"
+                         repeatCount="indefinite"></animate>
+            </rect>
+        </g>
+        <g transform="rotate(300 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.08333333333333333s"
+                         repeatCount="indefinite"></animate>
+            </rect>
+        </g>
+        <g transform="rotate(330 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="0s"
+                         repeatCount="indefinite">
+                </animate>
+            </rect>
+        </g>
+    </symbol>
+    <symbol class="arrow" viewBox="0 0 316 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M314.87 8.70779C315.251 8.31726 315.251 7.6841 314.87 7.29358L308.671 0.929613C308.291 0.539088 307.673 0.539088 307.293 0.929613C306.912 1.32014 306.912 1.9533 307.293 2.34383L312.804 8.00068L307.293 13.6575C306.912 14.0481 306.912 14.6812 307.293 15.0717C307.673 15.4623 308.291 15.4623 308.671 15.0717L314.87 8.70779ZM0.5 9.00071L314.182 9.00068V7.00068L0.5 7.00071L0.5 9.00071Z"
+              fill="url(#paint_linear)"/>
+        <defs>
+            <linearGradient id="paint_linear" x1="301.611" y1="2.47771" x2="76.5166" y2="-130.222"
+                            gradientUnits="userSpaceOnUse">
+                <stop stop-color="#382ED8"/>
+                <stop offset="1" stop-color="#9169FB"/>
+            </linearGradient>
+        </defs>
+    </symbol>
+
+</svg>
+<!--</div>-->
+
+
+
+
+
+
+<script src="app.min.js"></script>
+</body>
+
+</html>

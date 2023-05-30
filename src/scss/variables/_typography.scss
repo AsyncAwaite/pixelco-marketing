@@ -1,0 +1,62 @@
+
+:root {
+  // FONT-SIZE
+  --font-size-h1: #{gem(72)};
+  --font-size-h2: #{gem(40)};
+  --font-size-h3: #{gem(32)};
+  --font-size-h4: #{gem(24)};
+  --font-size-h5: #{gem(20)};
+  --font-size-h6: #{gem(16)};
+
+
+  --body-size: #{gem(16)};
+  --body-size-xl: #{gem(32)};
+  --body-size-l: #{gem(18)};
+  --body-size-sm: #{gem(15)};
+  --body-size-xs: #{gem(14)};
+
+
+  @media all and (max-width: 992px) {
+    --font-size-h1: #{gem(56)};
+    --font-size-h2: #{gem(36)};
+    --font-size-h3: #{gem(28)};
+    --font-size-h4: #{gem(22)};
+    --font-size-h5: #{gem(18)};
+    --font-size-h6: #{gem(15)};
+
+  }
+  @media all and (max-width: 576px) {
+    --font-size-h1: #{gem(40)};
+    --font-size-h2: #{gem(32)};
+    --font-size-h3: #{gem(20)};
+    --font-size-h4: #{gem(18)};
+    --font-size-h5: #{gem(16)};
+    --font-size-h6: #{gem(14)};
+
+    --body-size: #{gem(15)};
+    --body-size-xs: #{gem(12)};
+  }
+
+
+  //LINE-HEIGHT
+  --line-height-h1: #{gem(86)};
+  --line-height-h2: #{gem(52)};
+  --line-height-h3: #{gem(42)};
+
+  --body-line-height: #{gem(24)};
+  --body-line-xs: #{gem(21)};
+
+  @media all and (max-width: 992px) {
+    --line-height-h1: #{gem(68)};
+    --line-height-h2: #{gem(48)};
+    --line-height-h3: #{gem(36)};
+  }
+  @media all and (max-width: 576px) {
+    --line-height-h1: #{gem(48)};
+    --line-height-h2: #{gem(42)};
+    --line-height-h3: #{gem(34)};
+
+    --body-line-height: #{gem(22.5)};
+    --body-line-xs: #{gem(18)};
+  }
+}
