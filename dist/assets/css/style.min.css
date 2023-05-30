@@ -2543,7 +2543,9 @@ body {
 }
 body.active {
   overflow-y: hidden;
-  touch-action: none
+  touch-action: none;
+  position: fixed;
+  height: 100vh
 }
 h1,
 h2,

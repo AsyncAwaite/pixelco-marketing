@@ -27,11 +27,11 @@ body {
   position: relative;
   color: $white;
   background-color: $gray-900;
-
-
   &.active {
     overflow-y: hidden;
     touch-action: none;
+    position: fixed;
+    height: 100vh;
   }
 }
 
