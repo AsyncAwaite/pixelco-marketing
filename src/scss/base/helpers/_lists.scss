@@ -1,0 +1,35 @@
+.circle__list {
+
+  li {
+    font-size: gem(14);
+    line-height: gem(21);
+    margin-bottom: gem(16);
+    padding-left: gem(15);
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      width: gem(6);
+      height: gem(6);
+      top: gem(7.5);
+      left: 0;
+      background: $gradient;
+      border-radius: 50%;
+      content: '';
+      position: absolute;
+    }
+
+    @media all and (max-width: 576px) {
+      font-size: gem(12);
+      line-height: gem(18);
+    }
+  }
+
+  @media all and (max-width: 576px) {
+
+    position: relative;
+  }
+}

@@ -1,0 +1,72 @@
+.cost {
+  color: $white;
+
+  &__items {
+    padding-bottom: gem(80);
+    position: relative;
+
+    .circle {
+      width: gem(570);
+      height: gem(561);
+      box-shadow: gem(2.4) gem(1.6) gem(16) rgba(135, 107, 229, 0.7);
+      right: 0;
+      top: gem(-128);
+      z-index: -1;
+      @media all and (max-width: 992px) {
+        width: gem(350);
+        height: gem(341);
+      }
+    }
+
+    .image {
+      width: gem(310);
+      height: gem(615);
+      position: absolute;
+      top: gem(-98);
+    }
+
+    .shadow {
+      width: gem(1100);
+      height: gem(1100);
+      bottom: gem(-105);
+      right: var(--container-gap-decrement);
+      transform: translateX(gem(115));
+      z-index: -2;
+      @media all and (max-width: 992px) {
+        top: gem(-128);
+        bottom: auto;
+        width: 100%;
+        height: 100%;
+      }
+      @media all and (max-width: 576px) {
+        top: 0;
+        right: 50%;
+        transform: translateX(50%);
+      }
+    }
+
+    @media all and (max-width: 576px) {
+      padding-bottom: gem(40);
+      flex-direction: column-reverse;
+      .col-lg-6 {
+        height: gem(250);
+        margin-bottom: gem(32);
+        position: relative;
+
+        .circle {
+          width: gem(215);
+          height: gem(210);
+          top: 0;
+          right: 50%;
+          transform: translateX(50%);
+        }
+
+        .image {
+          height: gem(245);
+          width: 100%;
+          top: 0;
+        }
+      }
+    }
+  }
+}

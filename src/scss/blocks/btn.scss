@@ -51,9 +51,6 @@
 
   &_secondary {
     position: relative;
-    //border: 1px solid transparent;
-    //border-image-source: $gradient;
-    //border-image-slice: 1;
     &::before, &::after {
       content: "";
       position: absolute;

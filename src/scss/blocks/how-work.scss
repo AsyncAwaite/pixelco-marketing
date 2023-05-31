@@ -1,0 +1,226 @@
+.how-work {
+  position: relative;
+color: $white;
+  .col-lg-5, .col-lg-7, .col-lg-6 {
+    position: relative;
+  }
+
+  &__text {
+    background: $gradient;
+    box-shadow: 0 0 gem(20) rgba(134, 123, 229, 0.4);
+    border-radius: gem(24);
+    padding: gem(40);
+    max-width: gem(590);
+
+    h3 {
+      font-weight: 500;
+      margin-bottom: gem(16);
+      @media all and (max-width: 576px) {
+        margin-bottom: gem(12);
+      }
+    }
+
+    p {
+      + ul {
+        margin-top: gem(16);
+        font-size: var(--body-size-xs);
+        line-height: var(--body-line-xs);
+        list-style: disc;
+        padding-left: gem(10);
+      }
+    }
+
+    @media all and (max-width: 992px) {
+      padding: gem(28);
+    }
+    @media all and (max-width: 576px) {
+      padding: gem(16);
+    }
+
+    &.like {
+      position: relative;
+
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        background: url('@img/like.png') no-repeat center  / contain;
+      }
+
+      &::before {
+        width: gem(215);
+        height: gem(215);
+        bottom: 0;
+        left: 0;
+        transform: translate(-80%, 25%);
+      }
+
+      &::after {
+        width: gem(143);
+        height: gem(143);
+        top: 0;
+        right: 0;
+        transform: translate(60%, -20%) scale(-1, 1);
+      }
+
+      @media all and (max-width: 992px) {
+        &::before {
+          width: gem(180);
+          height: gem(180);
+        }
+        &::after {
+          width: gem(110);
+          height: gem(110);
+        }
+      }
+      @media all and (max-width: 576px) {
+        &::before, &::after {
+          content: none;
+        }
+      }
+    }
+  }
+
+  &__image {
+    width: gem(470);
+    height: gem(470);
+    @media all and (max-width: 992px) {
+      width: gem(360);
+      height: gem(360);
+      &.image {
+        margin-bottom: gem(32) !important;
+      }
+
+    }
+    @media all and (max-width: 576px) {
+      width: gem(251);
+      height: gem(251);
+      &.image {
+        margin-bottom: gem(24) !important;
+      }
+    }
+  }
+
+  .shadow {
+    width: gem(690);
+    height: gem(690);
+    left: var(--container-gap-decrement);
+    z-index: -1;
+    @media all and (max-width: 992px) {
+      top: gem(-30);
+      left: 50% !important;
+      right: auto !important;
+      width: gem(420);
+      height: gem(420);
+      transform: translateX(-50%);
+
+    }
+    @media all and (max-width: 576px) {
+      display: none;
+    }
+  }
+
+  .ml_auto {
+    @media all and (max-width: 992px) {
+      margin: 0 auto;
+    }
+  }
+
+  &__wrapper {
+    .row {
+      + .flex {
+        min-height: gem(394);
+        position: relative;
+
+        ~ .row:nth-child(odd) {
+
+          .shadow {
+            left: auto;
+            right: var(--container-gap-decrement);
+          }
+        }
+
+        ~ .row:nth-child(even) {
+
+
+          .shadow {
+            left: var(--container-gap-decrement);
+            right: auto;
+          }
+        }
+
+        @media all and (max-width: 992px) {
+          min-height: auto;
+          margin: gem(40) 0;
+          + .row {
+            flex-direction: column !important;
+          }
+          ~ .row:nth-child(odd) {
+            flex-direction: column-reverse;
+          }
+          ~ .row:nth-child(even) {
+            flex-direction: column;
+          }
+        }
+        @media all and (max-width: 576px) {
+          margin: gem(64) 0;
+          &::before {
+            width: gem(6);
+            height: gem(64);
+            bottom: gem(-64);
+
+            left: 50%;
+            transform: translateX(-50%);
+            content: '';
+            position: absolute;
+            background: url('@img/stroke_dash.png') no-repeat center  / contain;
+          }
+          &:last-child {
+            &::before {
+              content: none;
+            }
+          }
+        }
+      }
+
+      &:nth-child(even) {
+        .shadow {
+          left: auto;
+          right: var(--container-gap-decrement);
+        }
+      }
+
+      @media all and (max-width: 992px) {
+        + .row {
+          margin-top: gem(40);
+        }
+        .col-lg-5, .col-lg-7 {
+          display: flex;
+          justify-content: center;
+        }
+        &:nth-child(even) {
+          flex-direction: column-reverse;
+        }
+      }
+      @media all and (max-width: 576px) {
+        position: relative;
+        &::before {
+          width: gem(6);
+          height: gem(64);
+          bottom: gem(-64);
+
+          left: 50%;
+          transform: translateX(-50%);
+          content: '';
+          position: absolute;
+          background: url('@img/stroke_dash.png') no-repeat center  / contain;
+        }
+        + .row {
+          margin-top: gem(64);
+
+
+        }
+      }
+    }
+  }
+
+}

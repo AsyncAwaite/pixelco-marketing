@@ -61,7 +61,8 @@
       border-radius: gem(100);
       margin-right: gem(14);
       margin-bottom: gem(16);
-
+      background-color: $gray-900;
+      color: $white;
       span {
         &:first-child {
           font-size: gem(17);

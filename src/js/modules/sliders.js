@@ -118,26 +118,26 @@ export default function sliders() {
     function casesSlider() {
         if (!getElement('[data-swiper="cases"]')) return;
         if (screen.width <= 992) {
-            if (!caseSwiper) {
-                caseSwiper = new Swiper(
-                    getElement('[data-swiper="cases"]'),
-                    {
-                        slidesPerView: 1.1,
-                        spaceBetween: 16,
-                        preloadImages: false,
-                        lazy: true,
-                        watchSlidesProgress: true,
-                        breakpoints: {
-                            576: {
-                                slidesPerView: 1.5,
-                                centeredSlides: false
-                            },
 
+            caseSwiper = new Swiper(
+                getElement('[data-swiper="cases"]'),
+                {
+                    slidesPerView: 1.1,
+                    spaceBetween: 16,
+                    preloadImages: false,
+                    lazy: true,
+                    watchSlidesProgress: true,
+                    breakpoints: {
+                        576: {
+                            slidesPerView: 1.5,
+                            centeredSlides: false
                         },
-                    }
-                );
 
-            }
+                    },
+                }
+            );
+
+
         } else {
             if (caseSwiper) {
                 caseSwiper.destroy();

@@ -1,0 +1,158 @@
+:root {
+  --cell-width: #{gem(56)};
+  @media all and (max-width: 992px) {
+    --cell-width: #{gem(44)};
+  }
+  @media all and (max-width: 576px) {
+    --cell-width: #{gem(40)};
+  }
+}
+
+.flatpickr {
+  &-calendar.inline {
+    background: transparent;
+    max-width: gem(470);
+    border: none;
+    box-shadow: none;
+    color: $white;
+    font-size: var(--body-size);
+    line-height: var(--body-line-height);
+    border-radius: 0;
+
+    &::before, &::after {
+      content: none;
+    }
+
+    span.flatpickr-weekday {
+      color: $white;
+      font-size: var(--body-size);
+      line-height: var(--body-line-height);
+      font-weight: 500;
+    }
+
+    .dayContainer {
+      display: grid;
+      grid-template-columns: repeat(7, var(--cell-width));
+      gap: gem(8);
+
+      justify-items: center;
+      width: 100%;
+      max-width: 100%;
+
+    }
+  }
+
+  &-rContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  &-months {
+    display: none;
+  }
+
+  &-input {
+    visibility: hidden;
+  }
+
+  &-days {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    max-height: calc((6 * var(--cell-width)) - 0.1rem);
+    padding: gem(10) gem(15);
+    @media all and (max-width: 992px) {
+      max-height: calc((6 * var(--cell-width)));
+    }
+    @media all and (max-width: 576px) {
+      max-height: calc((6 * var(--cell-width)) + 0.1rem);
+    }
+  }
+
+  &-day {
+    width: var(--cell-width);
+    height: var(--cell-width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    position: relative;
+    background: transprent;
+    border-radius: gem(8);
+    transition: all .35s linear;
+    font-weight: 500;
+    font-size: var(--body-size);
+    line-height: var(--body-line-height);
+    color: $white;
+    max-width: 100%;
+    border: none;
+    transition: all .35s linear;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: gem(8);
+      padding: gem(1);
+      background: $gradient;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+
+    &:hover {
+      background-color: rgba($gray-800, .6);
+    }
+
+    &.selected {
+      box-shadow: 0px 0px gem(20) rgba(134, 123, 229, 0.4);
+      background: $gradient !important;
+      border-radius: 50%;
+      border: none;
+
+      &::before {
+        content: none;
+      }
+
+      &:hover {
+        background: $gradient;
+      }
+    }
+
+    &.prevMonthDay, &.nextMonthDay {
+      color: rgba($gray-800, .7);
+
+      &:hover {
+        border: none;
+        background-color: rgba($gray-800, .6);
+      }
+    }
+  }
+
+  &-weekdays {
+
+    border-radius: gem(8);
+    background: $gradient;
+    padding: 0 gem(15);
+    height: gem(60);
+    display: flex;
+    align-items: center;
+    @media all and (max-width: 992px) {
+      height: gem(50);
+    }
+
+  }
+
+  &-weekdaycontainer {
+    display: grid;
+    grid-template-columns: repeat(7, var(--cell-width));
+    justify-items: center;
+
+    gap: gem(8);
+  }
+}

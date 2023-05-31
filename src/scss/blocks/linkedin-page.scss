@@ -1,0 +1,77 @@
+.linkedin-page {
+  color: #D9D7F3;
+
+  h1, h2, h4 {
+    color: $white;
+  }
+
+  .section__info {
+    .shadow {
+      top: 0;
+      left: gem(-300);
+      @media all and (max-width: 992px) {
+        left: gem(-100);
+      }
+    }
+  }
+
+  .info {
+    padding: gem(40);
+    background: url('@img/linkedin_info.png') no-repeat center  / contain;
+    border-radius: gem(24);
+    min-height: gem(500);
+    height: 100%;
+    @media all and (max-width: 992px) {
+      background-size: cover;
+      background-position-x: 20%;
+    }
+    @media all and (max-width: 576px) {
+      min-height: gem(334);
+      padding: gem(24);
+      background: linear-gradient(132.5deg, #345D93 0%, #3662A1 100%);
+    }
+
+    h2 + div {
+      width: calc(100% - #{gem(40)});
+      @media all and (max-width: 576px) {
+        width: calc(100% - #{gem(24)});
+      }
+    }
+  }
+  .how-work{
+    &::before {
+      width: 60.4%;
+      height: 100%;
+      top: gem(100);
+      left: 50%;
+      transform: translate(-50%, 0%);
+      content: '';
+      position: absolute;
+      background: url('@img/stroke_linkedin_bg.png') no-repeat center  / contain;
+      z-index: -1;
+    }
+
+    @media all and (max-width: 992px) {
+      &::before {
+        height: 70%;
+      }
+      &::after {
+        width: 60.4%;
+        height: 50%;
+        bottom: gem(100);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        content: '';
+        position: absolute;
+        background: url('@img/stroke_linkedin_bg.png') no-repeat center  / contain;
+        z-index: -1;
+      }
+    }
+    @media all and (max-width: 576px) {
+      &::before, &::after {
+        content: none;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,38 @@
+.why {
+  .image {
+    width: gem(370);
+    height: gem(285);
+    margin-left: 16%;
+    @media all and (max-width: 576px) {
+      width: gem(203);
+      height: gem(156);
+    }
+  }
+
+  &__img {
+    padding-top: gem(40);
+    @media all and (max-width: 576px) {
+      height: gem(251);
+      margin-bottom: gem(32);
+    }
+  }
+
+  .circle {
+    @media all and (max-width: 576px) {
+      width: gem(200);
+      height: gem(200);
+    }
+  }
+
+  &__text {
+    padding: 0 gem(50);
+    @media all and (max-width: 992px) {
+      padding: 0 gem(30);
+    }
+    @media all and (max-width: 576px) {
+      padding: 0;
+    }
+  }
+
+
+}

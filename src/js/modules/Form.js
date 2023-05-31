@@ -413,6 +413,14 @@ class Form {
     }
 
     init() {
+        let dateParent = this.form.offsetParent.querySelector('[data-date]');
+        if (dateParent) {
+            let date = dateParent.nextElementSibling.querySelector('.selected')
+            this.form.querySelector('[name="date"]').value = date.ariaLabel
+
+            console.dir()
+        }
+
         this.checkInputs();
         this.form.addEventListener("submit", (e) => {
             this.formData.title = this.form.dataset.form;

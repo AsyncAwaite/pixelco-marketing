@@ -4,6 +4,7 @@
 @import "h";
 @import "text";
 @import "margins";
+@import "lists";
 
 
 .hide {
@@ -53,7 +54,25 @@
   z-index: -1;
   position: absolute;
   border-radius: 50%;
+  opacity: .4;
+  //background: url('@img/shadow.png') no-repeat center  / contain;
+  //
   background: radial-gradient(50% 50% at 50% 50%, rgba(59, 49, 217, 0.47) 0%, rgba(59, 49, 217, 0.1457) 67.71%, rgba(59, 49, 217, 0) 100%);
+  &_big {
+    width: gem(1413);
+    height: gem(1394);
+    left: 0;
+    top: 50%;
+    transform: translate(gem(-300), -50%);
+    @media all and (max-width: 992px) {
+      width: calc(#{gem(1413)} / 2);
+      height: calc(#{gem(1394)} / 2);
+      transform: translate(gem(-150), -50%);
+    }
+    @media all and (max-width: 576px) {
+      display: none;
+    }
+  }
 }
 
 .bgc_circle {

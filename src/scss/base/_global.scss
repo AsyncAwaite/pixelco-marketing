@@ -5,7 +5,8 @@
 @import "helpers/helpers";
 @import "iconmoon";
 @import "grid";
-
+//@import '/node_modules/flatpickr/dist/flatpickr.min.css';
+//@import "node_modules/vanillajs-datepicker/sass/datepicker.scss";
 
 * {
   margin: 0;
@@ -28,6 +29,7 @@ body {
   position: relative;
   color: $white;
   background-color: $gray-900;
+  //min-width: 100vh;
   //height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
   //height: calc(var(--vh, 1vh) * 100);
 

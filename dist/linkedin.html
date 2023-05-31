@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Linkedin</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/icons/favicon/manifest.json">
+    <meta name="facebook-domain-verification" content="65y6b457zln08vttlbchszlo6xev3u"/>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/icons/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap&_v=20230601013335" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.min.css?_v=20230601013335">
+    <script>
+
+        let speakers = [
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Геращенко.jpg",
+                "name": "Антон Геращенко",
+                "desr": "Радник міністра внутрішніх справ, колишній заступник міністра внутрішніх справ України.  Народний депутат 8-го скликання\r\n",
+                "name_en": "",
+                "desr_en": "",
+                "fb": "https://www.facebook.com/anton.gerashchenko.7",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%93%D0%B5%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%BA%D0%BE_%D0%90%D0%BD%D1%82%D0%BE%D0%BD_%D0%AE%D1%80%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Судраба.jpg",
+                "name": "Інгуна Судраба",
+                "desr": "Державний контролер Латвії (з 2004 року по січень 2013 року). Засновник і керівник партії «Від серця для Латвії».",
+                "name_en": "",
+                "desr_en": "",
+                "fb": "",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%86%D0%BD%D0%B3%D1%83%D0%BD%D0%B0_%D0%A1%D1%83%D0%B4%D1%80%D0%B0%D0%B1%D0%B0"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Янченко.jpg",
+                "name": "Галина Янченко ",
+                "desr": "Народна депутатка України. Експерт з антикорупційної політики. Член Національної ради з питань антикорупційної політики (з 25 червня 2019). Заступниця голови фракції Політичної Партії «Слуга народу» У Верховній Раді України ІХ скликання. Голова ТСК з питань захисту прав інвесторів у Верховній раді України. Секретар Національної інвестиційної ради при Президентові України.",
+                "name_en": "",
+                "desr_en": "",
+                "fb": "https://www.facebook.com/halyna.yanchenko",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%AF%D0%BD%D1%87%D0%B5%D0%BD%D0%BA%D0%BE_%D0%93%D0%B0%D0%BB%D0%B8%D0%BD%D0%B0_%D0%86%D0%B3%D0%BE%D1%80%D1%96%D0%B2%D0%BD%D0%B0"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Амелін.jpg",
+                "name": "Анатолій Амелін",
+                "desr": "Український Економіст. Співзасновник та директор економічних програм аналітичного центру “Український інститут майбутнього” Очолював Групу компаній “Альтана Капітал”. Працював у Національній Комісії з цінних паперів та фондового ринку (з 2011 року Член Національної Комісії).",
+                "name_en": "",
+                "desr_en": "",
+                "fb": "https://www.facebook.com/anatoliy.amelin",
+                "wiki": ""
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Федоров.jpg",
+                "name": "Михайло Федоров",
+                "desr": "Віцепрем'єр-міністр, міністр цифрової трансформації України в уряді Олексія Гончарука та Дениса Шмигаля. Ініціатор електронного сервісу державних послуг Дія. Наймолодший міністр в історії української політики. Народний депутат України IX скликання. ",
+                "name_en": "",
+                "desr_en": "",
+                "fb": "https://www.facebook.com/fedorov1991",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%A4%D0%B5%D0%B4%D0%BE%D1%80%D0%BE%D0%B2_%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE_%D0%90%D0%BB%D1%8C%D0%B1%D0%B5%D1%80%D1%82%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Шуляк.jpg",
+                "name": "Шуляк Олена",
+                "desr": " Голова партії «Слуга народу» \r\nНародна депутатка України Верховної Ради України IX скликання, заступниця голови Комітету ВР з питань організації державної влади, місцевого самоврядування, регіонального розвитку та містобудування, голова Координаційної ради з вирішення проблемних питань у сфері містобудування при Президентові України, магістерка з бізнес-адміністрування, сертифікована аудиторка (з 1999 р.). В минулому топ-менеджерка у девелопменті та будівництві, віце-президент з фінансів української філії міжнародної організації Young Presidents’ Organization, екс-керівниця Наглядової ради Української будівельної спільноти (Ukrainian Building Community), екс-членкиня правління  Офісу ефективного регулювання, екс-підприємиця, співзасновниця Спілки українських підприємців.",
+                "name_en": "Olena Shulyak",
+                "desr_en": "Head of the \"Servant of the People\" party.\r\nMember of the Parliament of Ukraine of the 9th convocation, deputy head of the Committee of the Verkhovna Rada of Ukraine on the Organization of State Power, Local Self-Government, Regional Development and Urban Planning, head of the Coordinating Council for Solving Problematic Issues in the Field of Urban Planning under the President of Ukraine, master's degree in business administration, certified auditor ( since 1999). In the past, she was a top manager in development and construction, vice president of finance of the Ukrainian branch of the international organization Young Presidents' Organization, ex-head of the Supervisory Board of the Ukrainian Building Community, ex-member of the board of the Office of Effective Regulation, ex-entrepreneur, co-founder of the Union of Ukrainian ",
+                "fb": "https://www.facebook.com/ShuliakOlena",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%A8%D1%83%D0%BB%D1%8F%D0%BA_%D0%9E%D0%BB%D0%B5%D0%BD%D0%B0_%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D1%96%D1%97%D0%B2%D0%BD%D0%B0"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Зубко.jpg",
+                "name": "Зубко Геннадій",
+                "desr": "Віце-прем'єр-міністр — Міністр регіонального розвитку, будівництва та житлово-комунального господарства. Працював на вищезазначеній посаді  в другому уряді Арсенія Яценюка. 14 квітня 2016 увійшов до складу нового уряду Володимира Гройсмана. Брав активну участь у проведенні реформи децентралізації, яка передбачає зміни у галузях освіти, охорони здоров'я, соціальної політики, державного управління, органів місцевого самоврядування, розвитку міської інфраструктури, заходи з енергоефективності.",
+                "name_en": "Zubko Gennadiy",
+                "desr_en": "Deputy Prime Minister — Minister of Regional Development, Construction and Housing and Communal Services. He worked in the above position in the second government of Arseniy Yatsenyuk. On April 14, 2016, he joined the new government of Volodymyr Groysman. He took an active part in the decentralization reform, which involves changes in the fields of education, health care, social policy, state administration, local self-government bodies, urban infrastructure development, and energy efficiency measures.",
+                "fb": "https://www.facebook.com/profile.php?id=100018747485124",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%97%D1%83%D0%B1%D0%BA%D0%BE_%D0%93%D0%B5%D0%BD%D0%BD%D0%B0%D0%B4%D1%96%D0%B9_%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Ілларіонов.jpg",
+                "name": "Ілларіонов Андрій",
+                "desr": "Працював радником з економічних питань двох прем’єр-міністрів і президента Росії.  Був шерпою (особистим представником) російського президента в «Групі Семи» і «Групі Восьми». Зіграв ключову роль у створенні Стабілізаційного фонду в Росії, введення 13%-ного прибуткового податку, раптову реформу державних фінансів, дострокову виплату державного боргу, перетворення «Групи семи» на «Групу восьми» і вступ до неї Росії. У результаті здійснення розробленої ним політики середньорічні темпи економічного зростання в Росії склали 7%, що дозволило за 10 років подвоїти російський ВВП і збільшити споживання російських громадян на душу населення в 2,3 рази. ",
+                "name_en": "Andrei Illarionov",
+                "desr_en": "Worked as an economic adviser with two Prime ministers and the President of Russia. He was a sherpa (personal representative) of the Russian president in \"Group Seven\" and \"Group Eight\". He played a key role in the creation of the Stabilization Fund in Russia, the introduction of a 13% income tax, the sudden reform of public finances, the early repayment of the public debt, the transformation of the Group of Seven into the Group of Eight, and Russia's entry into it. As a result of the implementation of the policy developed by him, the average annual rate of economic growth in Russia was 7%, which made it possible to double the Russian GDP in 10 years and increase the consumption of Russian citizens per capita by 2.3 times.",
+                "fb": "https://www.facebook.com/andrei.illarionov.7",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%86%D0%BB%D0%BB%D0%B0%D1%80%D1%96%D0%BE%D0%BD%D0%BE%D0%B2_%D0%90%D0%BD%D0%B4%D1%80%D1%96%D0%B9_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Єнін.jpg",
+                "name": "Єнін Євгеній ",
+                "desr": "Український дипломат і правник. Перший заступник Міністра внутрішніх справ України  з 6 вересня 2021 року. Член Комісії при Президентові України з питань громадянства. Агент України у справах України проти РФ у міжнародних судах. Обіймав посаду заступника Міністра закордонних справ України з 15 квітня 2020 року по 6 вересня 2021 року, посаду заступника Генерального прокурора України з 2016 по 2019 роки, радника-посланника Посольства України в Італії (2012—2016).",
+                "name_en": "Yevgeny Yenin",
+                "desr_en": "Ukrainian diplomat and lawyer. First Deputy Minister of Internal Affairs of Ukraine from September 6, 2021. Member of the Commission under the President of Ukraine on citizenship issues. Agent of Ukraine in cases of Ukraine against the Russian Federation in international courts. He held the position of Deputy Minister of Foreign Affairs of Ukraine from April 15, 2020 to September 6, 2021, the position of Deputy Prosecutor General of Ukraine from 2016 to 2019, adviser-envoy of the Embassy of Ukraine in Italy (2012-2016).",
+                "fb": "https://www.facebook.com/eugene.enin",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%84%D0%BD%D1%96%D0%BD_%D0%84%D0%B2%D0%B3%D0%B5%D0%BD%D1%96%D0%B9_%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Єхануров.jpg",
+                "name": "Єхануров Юрій ",
+                "desr": "Український політик, з липня 2009 по лютий 2010 — перший заступник Глави Секретаріату Президента України, з грудня 2007 по червень 2009 — Міністр оборони України. В 2005–2006 — Прем'єр-міністр України. Народний депутат України 3-го, 4-го, 5-го та 6-го скликань.",
+                "name_en": "Yekhanurov Yury",
+                "desr_en": "Ukrainian politician, from July 2009 to February 2010 - first deputy head of the Secretariat of the President of Ukraine, from December 2007 to June 2009 - Minister of Defense of Ukraine. In 2005–2006 — Prime Minister of Ukraine. Member of the Parliament of Ukraine of the 3rd, 4th, 5th and 6th convocations.",
+                "fb": "https://www.facebook.com/yekhanurov",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%84%D1%85%D0%B0%D0%BD%D1%83%D1%80%D0%BE%D0%B2_%D0%AE%D1%80%D1%96%D0%B9_%D0%86%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Войтек-Кутила.jpg",
+                "name": "Кутила Войтек ",
+                "desr": "Радник президента NIK (Вища палата контролю Республіки Польща), Віце-президент Вищої аудиторської служби Республіки Польща у 2012-2019 роках. Працював за проектами аудиту NIK, пов’язаними з виконанням державного бюджету, інфраструктурою, регіональним розвитком, фондами ЄС, навколишнім середовищем, сільським господарством. Контролював відносини NIK з міжнародними партнерами ",
+                "name_en": "",
+                "desr_en": "",
+                "fb": "",
+                "wiki": ""
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Загороднюк.jpg",
+                "name": "Загороднюк Андрій",
+                "desr": "15-й Міністр оборони України. Український підприємець, з 2014 волонтер, з 2015 керівник, потім член проектного офісу реформ при Міністерстві Оборони України, з липня 2019 член наглядової ради «Укроборонпрому».",
+                "name_en": "Andriy Zagorodnyuk",
+                "desr_en": "the 15th Minister of Defense of Ukraine. Ukrainian entrepreneur, a volunteer since 2014. Manager since 2015, then a member of the reform project office at the Ministry of Defense of Ukraine, since July 2019 a member of the Supervisory board of Ukroboronprom.",
+                "fb": "https://www.facebook.com/andrew.zagorodnyuk.7",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BD%D1%8E%D0%BA_%D0%90%D0%BD%D0%B4%D1%80%D1%96%D0%B9_%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Саєнко.jpg",
+                "name": "Саєнко Олександр",
+                "desr": "Заслужений юрист України. Займав посаду Міністра Кабінету Міністрів України з 14 квітня 2016 року до 29 серпня 2019 року. В Уряді Володимира Гройсмана відповідав за реалізацію пріоритетних реформ та координацію роботи Секретаріату Кабміну і за взаємодію з Верховною Радою України. Очолював Офіс реформ Прем'єр-міністра України. Входив до складу Номінаційного комітету з відбору керівників особливо важливих для економіки державних підприємств.",
+                "name_en": "Sayenko Oleksandr",
+                "desr_en": "Honored lawyer of Ukraine. Minister of the Cabinet of Ministers of Ukraine from April 14, 2016 to August 29, 2019. In the Government of Volodymyr Groysman, he was responsible for the implementation of priority reforms and coordination of the work of the Secretariat of the Cabinet of Ministers and for interaction with the Verkhovna Rada of Ukraine. Head the Office of Reforms of the Prime Minister of Ukraine. He was a member of the Nomination Committee for the selection of managers of especially important for the economy of state-owned enterprises.",
+                "fb": "https://www.facebook.com/OSaienko",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%A1%D0%B0%D1%94%D0%BD%D0%BA%D0%BE_%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_%D0%A1%D0%B5%D1%80%D0%B3%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Лещенко.jpg",
+                "name": "Лещенко Роман",
+                "desr": "Міністр аграрної політики та продовольства України з 17 грудня 2020 до 24 березня 2022 року, Голова Державної служби України з питань геодезії, картографії та кадастру (2020 р.), Уповноважений Президента України з земельних питань з 1 жовтня 2019 до 15 червня 2021 року",
+                "name_en": "Leshchenko Roman",
+                "desr_en": "Minister of Agrarian Policy and Food of Ukraine ( December 17, 2020 - March 24, 2022) Head of the State Service of Ukraine for Geodesy, Cartography and Cadaster (2020), Commissioner of the President of Ukraine for Land Affairs from October 1, 2019 to June 15, 2021 year.",
+                "fb": "https://www.facebook.com/RM.Leshchenko",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%9B%D0%B5%D1%89%D0%B5%D0%BD%D0%BA%D0%BE_%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD_%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Оніщук.jpg",
+                "name": "Оніщук Ольга",
+                "desr": " З вересня 2019 року по червень 2021 року обіймала посаду заступника Міністра юстиції України з питань державної реєстрації, опікувалася антирейдерським напрямом і питаннями державної реєстрації та нотаріату. Входила до складу Вищої кваліфікаційної комісії нотаріату,  працювала на посаді заступника голови ВККН.",
+                "name_en": "Olga Onishchuk ",
+                "desr_en": "From September 2019 to June 2021, she held the position of the Deputy Minister of Justice of Ukraine for state registration issues, took care of the anti-raider direction and issues of state registration and notary. She was a member of the High Qualification Commission of the Notary, worked as a deputy chairman of the High Qualification Commission of the Notary.",
+                "fb": "https://www.facebook.com/profile.php?id=100006056078422",
+                "wiki": ""
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Повов.jpg",
+                "name": "Попов Ігор ",
+                "desr": " Народний депутат України 8-го скликання.  Перший заступник Голови Національного агентства України з питань державної служби (з вересня 2011 до липня 2013), заступник Голови Секретаріату Президента України, Представник Президента України у Верховній Раді України (2009—2010). Голова правління Всеукраїнської громадської організації «Комітет виборців України» .",
+                "name_en": "Popov Ihor ",
+                "desr_en": "Member of the Parliament of Ukraine of the 8th convocation. First Deputy Head of the National Agency of Ukraine for Civil Service (from September 2011 to July 2013), Deputy Head of the Secretariat of the President of Ukraine, Representative of the President of Ukraine in the Verkhovna Rada of Ukraine (2009-2010). Chairman of the board of the All-Ukrainian public organization \"Committee of Voters of Ukraine\".",
+                "fb": "https://www.facebook.com/igor.popov.5283",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%9F%D0%BE%D0%BF%D0%BE%D0%B2_%D0%86%D0%B3%D0%BE%D1%80_%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Камельчук.jpg",
+                "name": "Камельчук Юрій",
+                "desr": "Народний депутат України 9-го скликання. Член депутатської фракції Слуга народу. Коуч з розвитку. Засновник бізнес-спільноти Ukrainian Business Community, Платформи розвитку бізнесу «Бізнес Актив» та Cardinal University. Камельчук є стратегічним радником українських та міжнародних стартапів, благодійних фондів, керівників малого та середнього бізнесу. Організатор бізнес-форумів та семінарів.",
+                "name_en": "Yuriy Kamelchuk",
+                "desr_en": "Member of the Parliament of Ukraine of the 9th convocation. Member of the Servant of the People parliamentary faction. Development coach. Founder of the business community Ukrainian Business Community, Business Development Platform \"Business Active\" and Cardinal University. Kamelchuk is a strategic advisor to Ukrainian and international startups, charitable foundations, and managers of small and medium-sized businesses. Organizer of business forums and seminars.",
+                "fb": "https://www.facebook.com/kamelchuk",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%9A%D0%B0%D0%BC%D0%B5%D0%BB%D1%8C%D1%87%D1%83%D0%BA_%D0%AE%D1%80%D1%96%D0%B9_%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Криклій.jpg",
+                "name": "Криклій Владислав ",
+                "desr": "Міністр інфраструктури України з 29 серпня 2019 до 18 травня 2021. Начальник Головного сервісного центру МВС України з листопада 2015 року. Головний реформатор сервісних центрів МВС.",
+                "name_en": "Krykliy Vladyslav",
+                "desr_en": "Minister of Infrastructure of Ukraine ( August 29, 2019 to May 18, 2021). Head of the Main Service Center of the Ministry of Internal Affairs of Ukraine since November 2015. The main reformer of service centers of the Ministry of Internal Affairs.",
+                "fb": "https://www.facebook.com/vladyslav.kryklii",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%9A%D1%80%D0%B8%D0%BA%D0%BB%D1%96%D0%B9_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D1%81%D0%BB%D0%B0%D0%B2_%D0%90%D1%80%D1%82%D1%83%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Нойхауз.jpg",
+                "name": "Нойгауз Норберт",
+                "desr": "Німецький політолог . Колишній віце-мер німецького міста Трір. Один із теоретиків християнсько-демократичного руху Німеччини.",
+                "name_en": "Norbert Neuhaus",
+                "desr_en": "German political scientist. Former vice-mayor of the German city of Trier. One of the theorists of the Christian-democratic movement in Germany.",
+                "fb": "https://www.facebook.com/norbert.neuhaus.71",
+                "wiki": ""
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Фролов.jpg",
+                "name": "Фролов Павло ",
+                "desr": "Головний консультант Апарату Верховної Ради України. Народний депутат України IX скликання від  партії Слуга народу. Працював начальником самостійного Відділу забезпечення взаємодії з Верховною Радою України та координації законотворчої роботи Державного комітету природних ресурсів України.\r\n",
+                "name_en": "Pavlo Frolov ",
+                "desr_en": "Chief-consultant of the Staff of the Verkhovna Rada of Ukraine. Member of the Parliament of Ukraine of the 9th convocation from the” Servant of the People” party. He worked as the head of the independent Department for ensuring interaction with the Verkhovna Rada of Ukraine and coordinating the law-making work of the State Committee for Natural Resources of Ukraine.",
+                "fb": "https://www.facebook.com/pavlo.frolov.5",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%A4%D1%80%D0%BE%D0%BB%D0%BE%D0%B2_%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE_%D0%92%D0%B0%D0%BB%D0%B5%D1%80%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Денисенко.jpg",
+                "name": "Денисенко Вадим ",
+                "desr": "Журналіст, бізнесмен, народний депутат України 8 скликання. Виконавчий директор Українського Інституту Майбутнього. Засновник і головний редактор ЕспресоTV. Автор монографії “Модерн як поле експерименту”, двох збірок оповідань: “У пошуках банальних істин” та “Кілька історій про кохання”, а також співавтор книги “Політики не брешуть”.",
+                "name_en": "Denysenko Vadym",
+                "desr_en": "Journalist, businessman, Member of the Parliament of Ukraine of the 8th convocation. Executive Director of the Ukrainian Future Institute. Founder and editor-in-chief of EspressoTV. Author of the monograph \"Modern as a Field of Experimentation\", two collections of short stories: \"In Search of Banal Truths\" and \"Several Love Stories\", as well as co-author of the book \"Politicians don't Lie\".",
+                "fb": "https://www.facebook.com/vadym.denysenko.1",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%94%D0%B5%D0%BD%D0%B8%D1%81%D0%B5%D0%BD%D0%BA%D0%BE_%D0%92%D0%B0%D0%B4%D0%B8%D0%BC_%D0%86%D0%B3%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Андрусів.jpg",
+                "name": "Андрусів Віктор",
+                "desr": "Політичний та громадський діяч, заступник Голови Донецької військово-цивільної адміністрації з гуманітарних питань (2015-2016), радник голови Міністерства внутрішніх справ України та керівника Офісу Президента, Засновник волонтерського проєкту «Добробат», координатор проєкту «Ищи своих», кандидат політичних наук, аналітик і публіцист.",
+                "name_en": "Viktor Andrusiv",
+                "desr_en": "Political and public figure, Deputy Head of the Donetsk military-civilian administration for humanitarian issues (2015-2016), adviser to the head of the Ministry of Internal Affairs of Ukraine and the head of the President's Office, founder of the \"Dobrobat\" volunteer project, coordinator of the \"Ищи своих\" ( “Look for Your Own”) project, candidate of political science, analyst and publicist.",
+                "fb": "https://www.facebook.com/victor.andrusiv",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%90%D0%BD%D0%B4%D1%80%D1%83%D1%81%D1%96%D0%B2_%D0%92%D1%96%D0%BA%D1%82%D0%BE%D1%80_%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Галасюк.jpg",
+                "name": "Галасюк Віктор",
+                "desr": "Народний депутат України VIII скликання, голова парламентського Комітету з питань промислової політики та підприємництва, співголова депутатської групи Верховної Ради України з міжпарламентських зв’язків з США, заступник голови Української частини Парламентського Комітету Асоціації.  Визнаний №2 в рейтингу ефективності законотворчої діяльності серед більше ніж 400 депутатів VIII скликання. Є автором-розробником понад 20 прийнятих парламентом економічних законів, спрямованих на поліпшення інвестиційного клімату, підтримку малого та середнього підприємництва, розвиток промисловості та сприяння експорту.",
+                "name_en": "Viktor Halasiuk",
+                "desr_en": "Member of the Parliament of Ukraine of the 8th convocation, chairman of the Parliamentary Committee on Industrial Policy and Entrepreneurship, co-chairman of the parliamentary group of the Verkhovna Rada of Ukraine on inter-parliamentary relations with the USA, deputy chairman of the Ukrainian part of the Parliamentary Committee of the Association. Recognized No. 2 in the rating of effectiveness of law-making activity among more than 400 deputies of the 8th convocation. He is the author-developer of more than 20 economic laws adopted by the parliament aimed at improving the investment climate, supporting small and medium-sized enterprises, developing industry and promoting exports.",
+                "fb": "https://www.facebook.com/Halasiuk",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%93%D0%B0%D0%BB%D0%B0%D1%81%D1%8E%D0%BA_%D0%92%D1%96%D0%BA%D1%82%D0%BE%D1%80_%D0%92%D0%B0%D0%BB%D0%B5%D1%80%D1%96%D0%B9%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Бно-Айріян.jpg",
+                "name": "Бно-Айріян Михайло ",
+                "desr": "Український дипломат, управлінець, заступник директора ДП НЕК «Укренерго» з комунікацій та міжнародного співробітництва, режисер. З 10 липня до 28 жовтня 2019 року — Голова Київської ОДА. Автор проєкту «7 фільмів Бно-Айріяна».",
+                "name_en": "Mykhailo Bno-Airiian",
+                "desr_en": "Ukrainian diplomat, manager, deputy director of SE NEC \"Ukrenergo\" for communications and international cooperation, director. From July 10 to October 28, 2019 — Head of the Kyiv Regional State Administration. The author of the project \"7 films of Bno-Airiian\".",
+                "fb": "https://www.facebook.com/BnoAiriian",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%91%D0%BD%D0%BE-%D0%90%D0%B9%D1%80%D1%96%D1%8F%D0%BD_%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE_%D0%9A%D0%B0%D1%80%D0%B5%D0%BD%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Громенко.jpg",
+                "name": "Громенко Сергій",
+                "desr": "Український історик, публіцист та громадський діяч, кандидат історичних наук, співробітник Українського інституту національної пам'яті (2014—2016), оглядач проєкту Крим.Реалії від Радіо Свобода, учасник громадського просвітницького проєкту з популяризації історії України «Лікбез. Історичний фронт». Лавреат V Міжнародного конкурсу ім. Єжи Ґедройця (2011), фіналіст ХХІ Всеукраїнського рейтингу «Книжка року 2019»",
+                "name_en": "Hromenko Serhiy",
+                "desr_en": "Ukrainian historic scientist, publicist and public figure, candidate of historical sciences, employee of the Ukrainian Institute of National Remembrance (2014-2016), columnist of the Krym.Realii project from Radio Liberty, participant of the public educational project to popularize the history of Ukraine \"Likbez. Historical front\". Winner of the 5th International Competition named after Jerzy Gedroitsa (2011), finalist of the 21st All-Ukrainian \"Book of the Year 2019\" rating.",
+                "fb": "https://www.facebook.com/sergii.gromenko",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%93%D1%80%D0%BE%D0%BC%D0%B5%D0%BD%D0%BA%D0%BE_%D0%A1%D0%B5%D1%80%D0%B3%D1%96%D0%B9_%D0%92%D1%96%D0%BA%D1%82%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Шкрум.jpg",
+                "name": "Шкрум Альона",
+                "desr": "Народний депутат України VIII скл. Юрист-міжнародник за фахом, здобула три дипломи про вищу освіту, громадська діячка, у тому числі у сфері захисту і забезпечення прав внутрішньо переміщених осіб.",
+                "name_en": "Alyona Shkrum ",
+                "desr_en": "Member of the Parliament of Ukraine VIII convocation International lawyer by profession, obtained three diplomas of higher education, public activist, including in the field of protection and ensuring the rights of internally displaced persons.",
+                "fb": "https://www.facebook.com/alyxrum",
+                "wiki": "https://uk.wikipedia.org/wiki/%D0%A8%D0%BA%D1%80%D1%83%D0%BC_%D0%90%D0%BB%D1%8C%D0%BE%D0%BD%D0%B0_%D0%86%D0%B2%D0%B0%D0%BD%D1%96%D0%B2%D0%BD%D0%B0"
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Луценко.jpg",
+                "name": "Луценко Дмитро",
+                "desr": "Кандидат юридичних наук, адвокат. Керівник офісу секретаря національної інвестиційної ради України",
+                "name_en": "Dmytro Lutsenko ",
+                "desr_en": "candidate of legal sciences, lawyer. Head of the Office of the Secretary of the National Investment Council of Ukraine",
+                "fb": "https://www.facebook.com/profile.php?id=100001647587563",
+                "wiki": ""
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Чебаненко.jpg",
+                "name": "Чебаненко Олександр ",
+                "desr": "Директор програми “Право” Українського Інституту Майбутнього. Магістр права (Університет Амстердаму (LLM) та Московський Державний Університет), адвокат. Брав участь в розробці законопроєктів за наступними напрямками: лобіювання, спеціальна конфіскація, інформаційна безпека, азартні ігри, корисні копалини, державні закупівлі, електронна комерція, оподаткування, суд присяжних тощо.",
+                "name_en": "Oleksandr Chebanenko",
+                "desr_en": "Director of the \"Law\" program of the Ukrainian Future Institute. Master of Laws (University of Amsterdam (LLM) and Moscow State University), lawyer. Participated in the development of draft laws in the following areas: lobbying, special confiscation, information security, gambling, minerals, public procurement, e-commerce, taxation, jury trial, etc.",
+                "fb": "https://www.facebook.com/profile.php?id=100011748034990",
+                "wiki": ""
+            },
+            {
+                "photo": "https://kspa.com.ua/wp-content/uploads/2022/11/Тишкевич.jpg",
+                "name": "Тишкевич Ігор",
+                "desr": "Експерт програми “Міжнародна і внутрішня політика” Українського Інституту Майбутнього. У якості аналітика співпрацював із Білоруським інститутом стратегічних досліджень (BISS) та Belarus Security Blog. Надавав консультаційні послуги з політичної реклами для National Democratic Institute. Обіймав посаду голови правління Агентства регіонального розвитку «Варута» (Білорусь), виконавчого директора в Асамблеї депутатів місцевих рад.Розробив низку навчальних програм та тренінгів з комунікацій, політичних кампаній.",
+                "name_en": "Ihor Tyshkevich",
+                "desr_en": "Expert of the \"International and Domestic Policy\" program of the Ukrainian Future Institute. As an analyst, he cooperated with the Belarusian Institute of Strategic Studies (BISS) and the Belarus Security Blog. Provided consulting services on political advertising for the National Democratic Institute. He held the position of chairman of the board of the Regional Development Agency \"Varuta\" (Belarus), executive director of the Assembly of Deputies of Local Councils. Developed a number of educational programs and trainings on communications and political campaigns.",
+                "fb": "https://www.facebook.com/Ihar.Tyshkevich",
+                "wiki": ""
+            }
+        ]
+        let isEn = false;
+        const path = 'https://kspa.com.ua/wp-content/themes/kspa/'
+        const singleLot = {
+            id: 2,
+            name: 'Мирні послання',
+            start_price: '10000',
+            min_step: '5',
+            finish_date: '12.02.2023',
+            current_price: '12000'
+        }
+    </script>
+</head>
+<body class="body">
+<div class="page-container">
+    <div class="progress-bar pos-a">
+        <div id="progress-bar"></div>
+    </div>
+
+    <header class="header flex --align-center">
+
+    <div class="header__wrapper w-100 flex --align-center">
+        <a href="#" class="logo">
+            <svg class="icon">
+                <use xlink:href="#logo"></use>
+            </svg>
+        </a>
+
+        <nav class="header__menu text-uppercase f-weight_500 flex">
+            <ul class="menu flex">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Case Studies</a>
+                </li>
+                <li>
+                    <a href="#">Industries</a>
+                </li>
+                <li>
+                    <a href="#">Contacts</a>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+
+            </ul>
+            <button class="btn btn_secondary">Call us now</button>
+            <button class="btn btn_main">Get a quote</button>
+            <ul class="social-links flex flex">
+                <li><a href="#"> <span class="icon-Instagram"></span></a></li>
+                <li><a href="#"> <span class="icon-Facebook"></span></a></li>
+                <li><a href="#"> <span class="icon-Telegram"></span></a></li>
+<!--                <li><a href="#"> <span class="icon-Instagram"></span></a></li>-->
+            </ul>
+        </nav>
+        <button class="header__mobile text-uppercase --align-center">
+            <span>Menu</span>
+            <div class="burger flex --dir-col --just-center">
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+
+    </div>
+
+</header>
+    <main class="linkedin-page">
+
+        <section data-aos="fade-down" class="main-screen main-screen__linkedin flex">
+            <div class="shadow"></div>
+            <div class="container pos-r">
+
+                <div class="row --align-center">
+                    <div class="col-lg-6">
+                        <h1 class="mb_24" data-typing-string>
+                            LinkedIn
+                            Promotion</h1>
+                        <div class="h4 text-color_gray mb_l">Получите десятки новых заявок от клиентов с помощью
+                            Linkedin, а также найдите общий язык с партнерами по бизнесу
+                        </div>
+                    </div>
+                    <div class="offset-lg-1 col-lg-5">
+                        <div class="image">
+                            <picture><source srcset="assets/img/linkedin_logo.webp" type="image/webp"><img src="assets/img/linkedin_logo.png" alt=""></picture>
+                        </div>
+                        <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="shadow"></div>
+            </div>
+        </section>
+        <section data-aos="fade-up" class="section section__title_adaptive section__audit">
+            <div class="container">
+                <div class="row --just-center mb_l">
+                    <div class="col-md-8 text-center">
+                        <h2 class="section__title">
+                            Получи аудит своей компании бесплатно
+                        </h2>
+                        <div class="section__subtitle text-color_gray">
+                            Запланируй митинг на бесплатный аудит вашей компании, где мы разберём базовую стратегию
+                            работы и просчитаем бюджет на работу.
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 col-lg-6 flex --just-center">
+                        <form action="" class="form form-section">
+                            <div class="form__items">
+                                <div class="form__item form__item_row ">
+                                    <div class="form__input pos-r">
+                                        <input type="text" id="name" name="name" placeholder="Enter your name">
+                                        <div class="form__message">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form__item form__item_row ">
+                                    <div class="form__input pos-r">
+                                        <input type="email" id="email" name="email"
+                                               placeholder="Enter your email ">
+                                        <div class="form__message">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form__item form__item_row ">
+                                    <div class="form__input form__input_tel pos-r">
+                                        <input type="text" id="phone" name="tel"
+                                               placeholder="Enter your phone ">
+                                        <div class="form__message">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form__item form__item_row ">
+                                    <div class="form__input pos-r">
+                                        <input type="text" readonly id="date" name="date"
+                                               placeholder="Сonvenient time to call">
+                                    </div>
+                                </div>
+
+                                <div class="form__item form__item_row ">
+
+                                    <div class="form__input pos-r">
+                                        <textarea id="message" placeholder="Your request "></textarea>
+                                    </div>
+                                    <div class="form__message">
+
+                                    </div>
+                                </div>
+                                <div class="form__item form__item_row ">
+                                    <button type="submit" class="btn btn_main w-100">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-7 col-lg-6 flex --just-center">
+                        <div data-date></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section data-aos="fade-up" class="section  section__info">
+            <div class="shadow shadow_big"></div>
+            <div class="container">
+                <div class="info">
+                    <div class="row">
+                        <div class="col-md-7 col-lg-5">
+                            <h2 class="mb_16-24">LinkedIn</h2>
+                            <div>Особая соцсеть, созданная специально для участников бизнес-сообщества по всему миру.
+                                Подавляющее большинство пользователей работает в компаниях, занимающих лидерские позиции
+                                в своих отраслях, поэтому раскрутка LinkedIn полезна для выхода и продвижения на новые
+                                рынки.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-aos="fade-up" class="section section__title_adaptive section__why why">
+            <div class="shadow shadow_big"></div>
+            <div class="container">
+                <div class="row --just-center mb_l">
+                    <div class="col-md-8 text-center">
+                        <h2 class="section__title">
+                            Почему стоит выбрать продвижение в LinkedIn
+                        </h2>
+                        <div class="section__subtitle text-color_gray">
+                            Запланируй митинг на бесплатный аудит вашей компании, где мы разберём базовую стратегию
+                            работы и просчитаем бюджет на работу.
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 col-lg-6 flex --just-center why__img">
+                        <div class="circle"></div>
+                        <div class="image">
+                            <svg class="icon" viewBox="0 0 391 311" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g opacity="0.21">
+    <path d="M208.353 61.7508C215.737 58.8168 223.226 56.126 230.787 53.6217C238.374 51.1902 246.025 48.9695 253.765 46.9919C261.505 45.0305 269.334 43.3934 277.228 42.0318C285.122 40.662 293.089 39.6408 301.121 39.0087C309.153 38.4008 317.242 38.2387 325.363 38.6358C333.476 39.0654 341.637 40.0137 349.701 42.0155C351.703 42.5829 353.738 43.0287 355.715 43.7419L358.706 44.7388L361.648 45.9302C362.134 46.1328 362.629 46.3192 363.115 46.538L364.558 47.2351C365.514 47.7132 366.495 48.1428 367.435 48.6615C369.307 49.7394 371.204 50.7769 372.97 52.0898L374.316 53.03C374.77 53.338 375.175 53.7189 375.613 54.0674C376.455 54.7888 377.339 55.4533 378.149 56.2233L380.524 58.6061C381.302 59.4166 381.983 60.3324 382.704 61.1997C383.45 62.0507 384.058 63.0233 384.682 63.9796L385.614 65.4142C385.922 65.8924 386.149 66.4273 386.424 66.9298C387.494 68.956 388.451 71.0551 389.115 73.2596C390.501 77.6443 391.101 82.2479 390.987 86.7299C390.923 91.2361 390.145 95.6127 389.034 99.8191C386.708 108.208 382.899 115.867 378.465 122.934C374.016 130.001 368.942 136.55 363.472 142.669C358.001 148.78 352.198 154.543 346.135 159.973C321.821 181.645 294.143 198.803 265.249 213.011C250.75 220.054 235.902 226.327 220.746 231.798C205.565 237.196 190.101 241.872 174.354 245.447C158.606 249.005 142.599 251.647 126.373 252.7C110.172 253.746 93.6945 253.422 77.4281 249.92C69.3233 248.129 61.2428 245.487 53.7296 241.24C51.8493 240.195 50.0338 238.995 48.2588 237.731C46.5082 236.418 44.7819 235.056 43.2014 233.5C41.6129 231.96 40.0973 230.323 38.7681 228.516C37.4227 226.733 36.215 224.828 35.21 222.81C33.1433 218.822 31.8628 214.429 31.3441 210.037C30.8173 205.628 31.0604 201.227 31.8141 197.004C32.576 192.781 33.8404 188.729 35.3965 184.855C36.9445 180.973 38.8248 177.277 40.932 173.759C41.9532 171.976 43.1042 170.282 44.2145 168.572L45.9733 166.068L46.8567 164.82L47.7806 163.604C50.1878 160.33 52.8218 157.258 55.4721 154.211C60.8537 148.205 66.5919 142.572 72.6462 137.328C78.6843 132.076 84.9655 127.132 91.4332 122.472C97.9333 117.852 104.563 113.451 111.379 109.367C105.001 114.1 98.7194 118.955 92.6814 124.077C86.6108 129.159 80.7592 134.475 75.1992 140.06C69.6555 145.66 64.3307 151.447 59.4759 157.574C57.0931 160.67 54.7346 163.774 52.6192 167.024L51.8087 168.232L51.0388 169.464L49.5151 171.928C48.5668 173.605 47.578 175.259 46.727 176.977C45.8193 178.671 45.0331 180.405 44.2226 182.124L43.1285 184.75C42.7475 185.617 42.472 186.516 42.1397 187.4C40.8997 190.95 39.9595 194.565 39.4813 198.187C38.4844 205.417 39.538 212.663 43.015 218.636C46.4271 224.625 51.9708 229.326 58.4304 232.641C64.8899 235.996 72.1437 238.104 79.5596 239.522C86.9918 240.916 94.6508 241.548 102.334 241.694C110.026 241.848 117.758 241.54 125.473 240.835C140.913 239.417 156.288 236.693 171.436 232.989C186.592 229.294 201.545 224.682 216.215 219.276C230.893 213.895 245.311 207.759 259.357 200.886C273.411 194.054 287.1 186.468 300.246 178.087C313.408 169.739 326.019 160.549 337.706 150.401C343.558 145.336 349.126 139.987 354.337 134.362C359.524 128.721 364.363 122.796 368.521 116.523C372.679 110.258 376.099 103.588 378.214 96.7231C380.289 89.8664 380.873 82.7666 379.025 76.3314C377.128 69.9286 373.043 64.2066 367.273 59.9921L366.203 59.1897L365.668 58.7925L365.092 58.4359L362.799 56.9933C362.021 56.5313 361.186 56.1261 360.392 55.6884L359.176 55.04C358.763 54.8374 358.333 54.6591 357.912 54.4727L355.375 53.338L352.757 52.333C351.031 51.6198 349.191 51.1335 347.408 50.5337C340.146 48.3697 332.511 47.1054 324.803 46.3516C317.088 45.606 309.275 45.4439 301.453 45.6141C285.787 45.8897 270.112 47.9078 254.559 50.6553C238.998 53.4596 223.599 57.285 208.353 61.7508Z" fill="#7C6FE6"/>
+  </g>
+  <g filter="url(#filter0_d_349_27283)">
+    <path d="M248.325 276.456L217.875 292.487L187.425 276.456C137.718 250.285 106.264 196.421 106.264 137.45V51.709H329.487V137.45C329.487 196.421 298.032 250.293 248.325 276.456Z" fill="#7C6FE6"/>
+  </g>
+  <path d="M244.411 263.489L217.779 277.51L191.146 263.489C147.664 240.601 120.156 193.479 120.156 141.9V66.9062H315.41V141.9C315.401 193.479 287.886 240.601 244.411 263.489Z" fill="url(#paint0_linear_349_27283)"/>
+  <path opacity="0.39" d="M174.873 88.9672C178.301 95.7104 174.557 105.331 166.517 110.623C158.412 115.956 148.783 115.024 144.998 108.378C141.132 101.603 144.861 91.5689 153.322 86.1305C161.719 80.7408 171.372 82.0862 174.873 88.9672Z" fill="#F0F3F4"/>
+  <path opacity="0.39" d="M143.247 111.394C146.441 112.796 147.754 117.886 146.214 122.741C144.682 127.571 140.889 130.416 137.704 129.111C134.486 127.79 133.084 122.741 134.608 117.813C136.139 112.853 140.022 109.976 143.247 111.394Z" fill="#F0F3F4"/>
+  <g opacity="0.65">
+    <path opacity="0.39" d="M228.46 250.002C225.031 243.259 228.776 233.638 236.816 228.346C244.921 223.013 254.549 223.945 258.334 230.591C262.2 237.366 258.472 247.4 250.01 252.838C241.614 258.228 231.961 256.883 228.46 250.002Z" fill="#F0F3F4"/>
+    <path opacity="0.39" d="M260.085 227.575C256.891 226.172 255.578 221.083 257.118 216.228C258.65 211.397 262.443 208.553 265.628 209.857C268.846 211.179 270.248 216.228 268.724 221.156C267.193 226.116 263.31 228.993 260.085 227.575Z" fill="#F0F3F4"/>
+  </g>
+  <path d="M175.546 113.866H175.4C167.238 113.866 162.019 108.281 162.019 101.295C162.019 94.1627 167.457 88.7244 175.691 88.7244C183.999 88.7244 189.145 94.1627 189.218 101.295C189.291 108.273 183.999 113.866 175.546 113.866ZM187.678 196.656H163.413V123.794H187.678V196.656ZM274.951 196.656H250.758V157.688C250.758 147.906 247.225 141.219 238.48 141.219C231.785 141.219 227.822 145.701 226.055 150.045C225.463 151.666 225.244 153.798 225.244 156.002V196.664H201.051C201.343 130.634 201.051 123.802 201.051 123.802H225.244V134.387H225.098C228.259 129.386 233.998 122.108 247.087 122.108C263.045 122.108 274.951 132.547 274.951 154.9V196.656Z" fill="white"/>
+  <path d="M205.073 53.0798C212.116 49.8135 219.24 46.7175 226.437 43.8159C233.659 40.9549 240.961 38.2966 248.345 35.8813C263.112 31.0752 278.243 27.2578 293.659 25.0371C301.366 23.951 309.147 23.3026 316.944 23.2783L319.87 23.2864C320.842 23.3026 321.815 23.3594 322.796 23.3999C323.768 23.4485 324.749 23.4566 325.721 23.5377L328.639 23.7808L330.098 23.9024L331.549 24.0888L334.458 24.4697C335.423 24.6075 336.387 24.8101 337.344 24.9803C338.3 25.1667 339.273 25.3045 340.221 25.5558L343.074 26.2447C344.03 26.4635 344.954 26.8039 345.894 27.0714C347.791 27.5901 349.598 28.3681 351.446 29.049C355.053 30.6132 358.53 32.5178 361.715 34.8844C368.004 39.6663 372.843 46.5554 374.731 54.3036C375.218 56.2244 375.574 58.1858 375.744 60.1634C375.955 62.1328 375.979 64.1185 375.923 66.0961C375.769 70.0432 375.201 73.9659 374.253 77.7833C372.381 85.4342 369.293 92.7042 365.63 99.6095C358.238 113.412 348.626 125.853 338.162 137.378C327.659 148.903 316.19 159.496 304.155 169.368C292.103 179.223 279.467 188.357 266.386 196.786C240.183 213.571 212.319 227.836 183.109 238.64C168.504 244.021 153.551 248.528 138.289 251.688C123.044 254.817 107.418 256.697 91.7839 255.789C83.987 255.311 76.1821 254.087 68.7257 251.567C65.0136 250.27 61.3989 248.665 58.0354 246.599C56.3577 245.561 54.7448 244.41 53.2211 243.154C51.7217 241.865 50.2629 240.52 48.9823 239.004C46.3726 236.022 44.322 232.561 42.8956 228.873C41.4691 225.178 40.6992 221.255 40.4884 217.324C40.2777 213.393 40.6019 209.454 41.2908 205.596C41.9878 201.738 42.9928 197.945 44.3301 194.274C46.9642 186.915 50.5222 179.936 54.5908 173.307C58.6433 166.661 63.2144 160.347 68.1016 154.301C77.876 142.208 88.8418 131.137 100.472 120.852C88.9715 131.267 78.1354 142.46 68.5311 154.641C63.7331 160.728 59.2511 167.066 55.296 173.728C51.3246 180.366 47.8882 187.344 45.3676 194.63C44.087 198.27 43.1144 202.006 42.4579 205.791C41.8095 209.576 41.5177 213.426 41.7528 217.243C41.9797 221.06 42.7497 224.837 44.1437 228.379C45.5377 231.913 47.5234 235.219 50.044 238.064C51.2841 239.507 52.6943 240.796 54.1451 242.019C55.6283 243.219 57.1844 244.321 58.8134 245.31C62.0797 247.288 65.6053 248.827 69.2282 250.067C76.5144 252.483 84.1897 253.634 91.873 254.055C99.5726 254.468 107.305 254.144 114.988 253.366C122.671 252.604 130.314 251.348 137.884 249.776C153.024 246.607 167.88 242.092 182.388 236.711C211.411 225.899 239.113 211.634 265.162 194.89C278.195 186.526 290.79 177.473 302.793 167.698C314.78 157.908 326.2 147.404 336.647 135.992C347.053 124.58 356.601 112.269 363.911 98.6856C367.542 91.8937 370.557 84.7615 372.422 77.3294C373.362 73.6174 373.937 69.8243 374.115 66.015C374.18 64.1104 374.172 62.2058 373.978 60.3174C373.824 58.4208 373.499 56.5486 373.046 54.7088C371.295 47.3091 366.756 40.7604 360.751 36.1083C357.711 33.8146 354.356 31.9505 350.855 30.4025C349.063 29.7298 347.305 28.9598 345.449 28.4411C344.525 28.1655 343.625 27.8332 342.693 27.6144L339.897 26.9174C338.973 26.658 338.017 26.5203 337.068 26.3338C336.12 26.1636 335.18 25.9529 334.232 25.8151L331.371 25.418L329.936 25.2235L328.493 25.0938L325.608 24.8344C324.644 24.7453 323.679 24.7291 322.715 24.6724C321.75 24.6318 320.786 24.567 319.821 24.5427L316.928 24.5184C309.196 24.4859 301.472 25.0938 293.797 26.0988C278.438 28.1331 263.306 31.756 248.507 36.3838C241.107 38.7099 233.788 41.2791 226.535 44.051C219.305 46.8796 212.149 49.8946 205.073 53.0798Z" fill="url(#paint1_linear_349_27283)"/>
+  <g filter="url(#filter1_d_349_27283)">
+    <path d="M157.406 201.107C133.27 201.107 113.526 220.851 113.526 244.987C113.526 269.123 133.27 288.866 157.406 288.866C181.542 288.866 201.285 269.123 201.285 244.987C201.285 220.851 181.542 201.107 157.406 201.107Z" fill="url(#paint2_linear_349_27283)"/>
+  </g>
+  <path opacity="0.42" d="M157.405 208.961C137.589 208.961 121.379 225.171 121.379 244.987C121.379 264.803 137.589 281.013 157.405 281.013C177.221 281.013 193.431 264.803 193.431 244.987C193.423 225.171 177.213 208.961 157.405 208.961Z" fill="url(#paint3_linear_349_27283)"/>
+  <path opacity="0.9" d="M157.686 280.321C177.162 280.321 192.95 264.533 192.95 245.057C192.95 225.581 177.162 209.793 157.686 209.793C138.21 209.793 122.422 225.581 122.422 245.057C122.422 264.533 138.21 280.321 157.686 280.321Z" fill="url(#paint4_linear_349_27283)"/>
+  <path opacity="0.83" d="M144.713 225.754C147.875 224.152 149.536 221.069 148.421 218.869C147.307 216.669 143.839 216.184 140.677 217.786C137.514 219.388 135.854 222.47 136.968 224.67C138.083 226.871 141.55 227.356 144.713 225.754Z" fill="#F0F3F4"/>
+  <path d="M173.271 254.939C173.247 255.62 172.979 256.212 172.46 256.69C171.942 257.176 171.342 257.403 170.661 257.387L161.819 257.103C161.778 258.497 161.243 259.672 160.222 260.629C159.201 261.585 157.993 262.039 156.599 261.998C155.205 261.958 154.03 261.423 153.074 260.402C152.117 259.381 151.663 258.173 151.704 256.779L142.862 256.495C142.181 256.471 141.589 256.203 141.111 255.693C140.625 255.174 140.398 254.574 140.414 253.894C141.087 253.359 141.703 252.799 142.262 252.216C142.821 251.624 143.405 250.862 144.012 249.914C144.62 248.966 145.147 247.937 145.585 246.834C146.022 245.732 146.395 244.387 146.703 242.798C147.011 241.218 147.19 239.508 147.254 237.676C147.319 235.674 148.146 233.842 149.743 232.173C151.339 230.503 153.39 229.522 155.902 229.239C155.805 228.987 155.764 228.728 155.772 228.461C155.789 227.934 155.983 227.496 156.364 227.14C156.745 226.783 157.199 226.613 157.726 226.629C158.253 226.645 158.69 226.848 159.047 227.221C159.403 227.602 159.574 228.055 159.557 228.582C159.549 228.842 159.485 229.101 159.371 229.344C161.859 229.79 163.845 230.9 165.328 232.667C166.811 234.434 167.525 236.314 167.46 238.316C167.403 240.148 167.476 241.858 167.678 243.463C167.881 245.059 168.173 246.429 168.538 247.564C168.902 248.698 169.364 249.752 169.907 250.741C170.458 251.73 170.993 252.532 171.512 253.156C172.055 253.764 172.631 254.364 173.271 254.939ZM144.021 254.007L169.68 254.826C166.309 250.765 164.728 245.238 164.955 238.235C164.98 237.562 164.842 236.865 164.55 236.144C164.258 235.423 163.821 234.734 163.253 234.069C162.686 233.405 161.9 232.853 160.903 232.408C159.906 231.962 158.804 231.719 157.58 231.678C156.356 231.638 155.229 231.808 154.216 232.197C153.195 232.578 152.377 233.08 151.769 233.713C151.153 234.337 150.683 235.001 150.342 235.706C150.002 236.403 149.824 237.092 149.799 237.765C149.572 244.751 147.643 250.173 144.021 254.007ZM156.988 260.11C156.996 259.899 156.891 259.794 156.68 259.786C155.902 259.762 155.246 259.462 154.703 258.886C154.16 258.311 153.9 257.63 153.925 256.852C153.933 256.641 153.827 256.536 153.617 256.528C153.406 256.52 153.301 256.625 153.292 256.836C153.26 257.8 153.576 258.627 154.233 259.324C154.889 260.021 155.7 260.386 156.656 260.418C156.867 260.426 156.98 260.321 156.988 260.11Z" fill="white"/>
+  <g filter="url(#filter2_d_349_27283)">
+    <path d="M345.431 81.1592C321.295 81.1592 301.552 100.903 301.552 125.039C301.552 149.175 321.295 168.918 345.431 168.918C369.567 168.918 389.311 149.175 389.311 125.039C389.311 100.903 369.567 81.1592 345.431 81.1592Z" fill="url(#paint5_linear_349_27283)"/>
+  </g>
+  <path opacity="0.42" d="M345.431 89.011C325.615 89.011 309.405 105.221 309.405 125.037C309.405 144.853 325.615 161.063 345.431 161.063C365.247 161.063 381.457 144.853 381.457 125.037C381.449 105.221 365.239 89.011 345.431 89.011Z" fill="url(#paint6_linear_349_27283)"/>
+  <path opacity="0.9" d="M345.714 160.373C365.19 160.373 380.978 144.585 380.978 125.109C380.978 105.633 365.19 89.8447 345.714 89.8447C326.238 89.8447 310.45 105.633 310.45 125.109C310.45 144.585 326.238 160.373 345.714 160.373Z" fill="url(#paint7_linear_349_27283)"/>
+  <path opacity="0.83" d="M332.745 105.8C335.907 104.198 337.568 101.116 336.453 98.9156C335.339 96.7153 331.871 96.2304 328.709 97.8324C325.546 99.4345 323.886 102.517 325 104.717C326.115 106.917 329.582 107.402 332.745 105.8Z" fill="#F0F3F4"/>
+  <path d="M369.114 122.409C369.025 125.383 367.915 128.098 365.783 130.562C363.652 133.018 360.807 134.931 357.241 136.284C353.675 137.638 349.8 138.254 345.635 138.124C344.435 138.083 343.203 137.978 341.923 137.808C338.446 140.693 334.45 142.646 329.936 143.651C329.093 143.862 328.112 144.024 326.994 144.13H326.864C326.604 144.122 326.378 144.024 326.183 143.838C325.98 143.651 325.851 143.416 325.794 143.117V143.092C325.745 143.019 325.745 142.922 325.786 142.784C325.835 142.646 325.851 142.565 325.843 142.533C325.834 142.501 325.875 142.42 325.964 142.29C326.053 142.16 326.11 142.087 326.126 142.063C326.143 142.039 326.207 141.966 326.313 141.852C326.418 141.739 326.491 141.658 326.523 141.625C326.645 141.496 326.921 141.204 327.342 140.766C327.764 140.328 328.072 140.012 328.258 139.818C328.444 139.623 328.72 139.299 329.085 138.829C329.449 138.359 329.741 137.938 329.96 137.549C330.179 137.159 330.422 136.665 330.697 136.057C330.973 135.449 331.216 134.809 331.427 134.128C328.785 132.524 326.726 130.578 325.251 128.293C323.768 126.007 323.071 123.576 323.152 121.015C323.217 118.794 323.889 116.687 325.17 114.693C326.442 112.707 328.128 111.005 330.227 109.595C332.326 108.185 334.807 107.099 337.668 106.321C340.529 105.543 343.519 105.202 346.631 105.299C349.744 105.397 352.71 105.915 355.514 106.872C358.327 107.82 360.734 109.06 362.744 110.6C364.754 112.132 366.326 113.931 367.485 115.998C368.636 118.048 369.179 120.188 369.114 122.409ZM356.26 110.657C353.261 109.376 350.019 108.679 346.526 108.574C343.033 108.468 339.759 108.963 336.687 110.057C333.615 111.151 331.151 112.683 329.303 114.644C327.455 116.606 326.499 118.762 326.426 121.104C326.369 123.017 326.921 124.864 328.096 126.639C329.263 128.414 330.941 129.962 333.129 131.3L335.317 132.653L334.547 135.093C334.085 136.633 333.445 138.092 332.618 139.453C335.252 138.456 337.643 137.062 339.807 135.287L340.942 134.347L342.401 134.55C343.576 134.72 344.686 134.825 345.732 134.858C349.217 134.963 352.499 134.469 355.571 133.375C358.643 132.28 361.107 130.749 362.955 128.787C364.803 126.826 365.767 124.67 365.832 122.328C365.905 119.985 365.078 117.781 363.352 115.706C361.625 113.615 359.259 111.937 356.26 110.657ZM338.673 119.159C339.297 119.815 339.588 120.601 339.564 121.509C339.54 122.417 339.191 123.179 338.535 123.803C337.87 124.427 337.092 124.719 336.184 124.694C335.277 124.67 334.515 124.321 333.891 123.665C333.267 123 332.975 122.222 332.999 121.315C333.024 120.407 333.372 119.645 334.029 119.021C334.693 118.397 335.471 118.105 336.379 118.129C337.287 118.154 338.049 118.494 338.673 119.159ZM348.52 119.459C349.144 120.123 349.436 120.901 349.411 121.809C349.387 122.717 349.039 123.479 348.382 124.103C347.718 124.727 346.939 125.018 346.032 124.994C345.124 124.97 344.362 124.621 343.738 123.965C343.114 123.3 342.822 122.522 342.847 121.614C342.871 120.707 343.219 119.945 343.876 119.321C344.532 118.697 345.319 118.405 346.226 118.429C347.134 118.454 347.896 118.794 348.52 119.459ZM358.367 119.758C358.991 120.423 359.283 121.201 359.259 122.109C359.235 123.017 358.886 123.778 358.23 124.402C357.565 125.027 356.787 125.318 355.879 125.294C354.971 125.27 354.21 124.921 353.585 124.265C352.961 123.6 352.67 122.822 352.694 121.914C352.718 121.007 353.067 120.245 353.731 119.621C354.388 118.997 355.174 118.705 356.082 118.729C356.981 118.753 357.751 119.094 358.367 119.758Z" fill="white"/>
+  <g filter="url(#filter3_d_349_27283)">
+    <path d="M47.9781 169.104C32.5385 169.104 19.9111 181.732 19.9111 197.171C19.9111 212.611 32.5385 225.239 47.9781 225.239C63.4178 225.239 76.0451 212.611 76.0451 197.171C76.0451 181.732 63.4097 169.104 47.9781 169.104Z" fill="url(#paint8_linear_349_27283)"/>
+  </g>
+  <path opacity="0.42" d="M47.9805 174.128C35.3045 174.128 24.9385 184.494 24.9385 197.17C24.9385 209.846 35.3045 220.212 47.9805 220.212C60.6564 220.212 71.0225 209.846 71.0225 197.17C71.0225 184.494 60.6483 174.128 47.9805 174.128Z" fill="url(#paint9_linear_349_27283)"/>
+  <path opacity="0.9" d="M48.1612 219.774C60.6184 219.774 70.7169 209.675 70.7169 197.218C70.7169 184.761 60.6184 174.662 48.1612 174.662C35.704 174.662 25.6055 184.761 25.6055 197.218C25.6055 209.675 35.704 219.774 48.1612 219.774Z" fill="url(#paint10_linear_349_27283)"/>
+  <path opacity="0.83" d="M39.8693 184.881C41.8899 183.858 42.949 181.885 42.235 180.476C41.5209 179.066 39.3041 178.753 37.2835 179.777C35.263 180.8 34.2038 182.773 34.9179 184.182C35.6319 185.592 37.8488 185.905 39.8693 184.881Z" fill="#F0F3F4"/>
+  <path d="M60.1979 202.704C60.1574 203.863 59.7035 204.836 58.8525 205.606L56.6399 207.648C55.8051 208.418 54.8082 208.791 53.6411 208.742C52.4659 208.702 51.4933 208.248 50.7234 207.397L47.838 204.277C47.06 203.442 46.6953 202.445 46.7439 201.286C46.7844 200.095 47.2545 199.098 48.1379 198.295L46.906 196.966C46.0388 197.785 45.0176 198.174 43.8343 198.133C42.6753 198.093 41.7027 197.647 40.9165 196.804L38.0069 193.667C37.2207 192.825 36.856 191.82 36.8965 190.661C36.9371 189.502 37.391 188.529 38.242 187.759L40.4546 185.717C41.2894 184.939 42.2863 184.574 43.4534 184.622C44.6286 184.663 45.6011 185.117 46.3711 185.968L49.2564 189.088C50.0344 189.923 50.3992 190.92 50.3506 192.079C50.31 193.27 49.8399 194.267 48.9565 195.07L50.1885 196.399C51.0557 195.58 52.0769 195.191 53.2602 195.232C54.4192 195.272 55.3917 195.718 56.1779 196.561L59.0875 199.697C59.8737 200.54 60.2384 201.545 60.1979 202.704ZM47.5706 191.982C47.5868 191.593 47.4652 191.26 47.1978 190.977L44.3125 187.856C44.0531 187.573 43.7289 187.427 43.3399 187.411C42.9589 187.394 42.6267 187.516 42.3349 187.767L40.1222 189.81C39.8386 190.069 39.6927 190.393 39.6765 190.766C39.6603 191.155 39.7819 191.487 40.0493 191.771L42.9589 194.907C43.2102 195.175 43.5344 195.321 43.9315 195.337C44.3368 195.353 44.6934 195.215 44.9932 194.924C44.9689 194.891 44.8798 194.802 44.7258 194.648C44.5718 194.494 44.4745 194.381 44.4259 194.324C44.3773 194.267 44.3044 194.17 44.2152 194.04C44.1261 193.911 44.0693 193.789 44.0369 193.659C44.0045 193.538 43.9964 193.4 43.9964 193.254C44.0126 192.865 44.1585 192.541 44.4421 192.282C44.7258 192.022 45.0581 191.892 45.4471 191.909C45.593 191.917 45.7227 191.933 45.8442 191.974C45.9658 192.014 46.0874 192.079 46.209 192.176C46.3305 192.273 46.4197 192.346 46.4764 192.403C46.5332 192.46 46.6304 192.565 46.7763 192.727C46.9222 192.889 47.0033 192.987 47.0357 193.011C47.3842 192.735 47.5544 192.387 47.5706 191.982ZM57.4098 202.599C57.426 202.21 57.2964 201.878 57.037 201.594L54.1274 198.457C53.868 198.174 53.5438 198.028 53.1548 198.012C52.7496 197.995 52.393 198.141 52.0931 198.441C52.1174 198.474 52.2066 198.563 52.3605 198.717C52.5064 198.871 52.6118 198.984 52.6604 199.041C52.7091 199.098 52.782 199.195 52.8712 199.325C52.9603 199.454 53.017 199.576 53.0494 199.706C53.0819 199.827 53.09 199.965 53.09 200.111C53.0737 200.5 52.9279 200.824 52.6442 201.083C52.3605 201.343 52.0282 201.464 51.6392 201.456C51.4933 201.448 51.3637 201.432 51.2421 201.391C51.1205 201.351 50.9989 201.286 50.8774 201.189C50.7558 201.091 50.6666 201.019 50.6099 200.962C50.5531 200.905 50.4559 200.8 50.31 200.638C50.1641 200.475 50.075 200.378 50.0506 200.354C49.7183 200.646 49.5482 200.986 49.532 201.399C49.5158 201.788 49.6373 202.121 49.9048 202.404L52.7901 205.525C53.0413 205.792 53.3655 205.938 53.7627 205.954C54.1517 205.971 54.484 205.857 54.7677 205.614L56.9803 203.572C57.2478 203.296 57.3936 202.98 57.4098 202.599Z" fill="white"/>
+  <g filter="url(#filter4_d_349_27283)">
+    <path d="M271.68 7.39844C260.471 7.39844 251.305 16.565 251.305 27.774C251.305 38.9829 260.471 48.1495 271.68 48.1495C282.889 48.1495 292.056 38.9829 292.056 27.774C292.056 16.565 282.889 7.39844 271.68 7.39844Z" fill="url(#paint11_linear_349_27283)"/>
+  </g>
+  <path opacity="0.42" d="M271.679 11.0459C262.48 11.0459 254.95 18.5753 254.95 27.7743C254.95 36.9732 262.48 44.5026 271.679 44.5026C280.878 44.5026 288.407 36.9732 288.407 27.7743C288.407 18.5753 280.878 11.0459 271.679 11.0459Z" fill="url(#paint12_linear_349_27283)"/>
+  <path opacity="0.9" d="M271.808 44.1771C280.85 44.1771 288.18 36.8472 288.18 27.8053C288.18 18.7635 280.85 11.4336 271.808 11.4336C262.766 11.4336 255.437 18.7635 255.437 27.8053C255.437 36.8472 262.766 44.1771 271.808 44.1771Z" fill="url(#paint13_linear_349_27283)"/>
+  <path opacity="0.83" d="M265.795 18.8355C267.264 18.0912 268.036 16.659 267.518 15.6368C267 14.6145 265.389 14.3892 263.92 15.1336C262.45 15.878 261.679 17.3102 262.197 18.3324C262.714 19.3547 264.325 19.5799 265.795 18.8355Z" fill="#F0F3F4"/>
+  <path d="M273.558 29.4455C274.409 29.5671 275.09 29.9723 275.6 30.6531C276.111 31.3339 276.305 32.1039 276.184 32.9549C276.062 33.8059 275.657 34.4867 274.976 34.9973C274.295 35.5079 273.525 35.7024 272.674 35.5809C271.823 35.4593 271.143 35.0541 270.632 34.3733C270.121 33.6924 269.927 32.9225 270.048 32.0715C270.056 31.9985 270.081 31.8851 270.113 31.7473L266.912 29.5266C266.247 29.9885 265.51 30.1669 264.699 30.0534C263.848 29.9318 263.167 29.5266 262.657 28.8458C262.146 28.165 261.952 27.395 262.073 26.544C262.195 25.693 262.6 25.0122 263.281 24.5016C263.962 23.991 264.732 23.7965 265.583 23.918C266.385 24.0315 267.041 24.4043 267.552 25.0446L271.256 23.8127C271.264 23.6668 271.272 23.5614 271.28 23.4804C271.402 22.6294 271.807 21.9486 272.488 21.438C273.169 20.9273 273.939 20.7328 274.79 20.8544C275.641 20.976 276.321 21.3812 276.832 22.062C277.343 22.7428 277.537 23.5128 277.416 24.3638C277.294 25.2148 276.889 25.8956 276.208 26.4062C275.527 26.9168 274.757 27.1113 273.906 26.9898C273.104 26.8763 272.447 26.5035 271.937 25.8632L268.241 27.0951C268.233 27.241 268.225 27.3464 268.217 27.4274C268.209 27.5004 268.184 27.6138 268.152 27.7516L271.353 29.9723C272.018 29.5104 272.755 29.3321 273.558 29.4455Z" fill="white"/>
+  <defs>
+    <filter id="filter0_d_349_27283" x="87.0214" y="44.4931" width="248.879" height="266.434" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dx="-6.41409" dy="5.61232"/>
+      <feGaussianBlur stdDeviation="6.41409"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_349_27283"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_349_27283" result="shape"/>
+    </filter>
+    <filter id="filter1_d_349_27283" x="94.2841" y="193.892" width="113.415" height="113.415" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dx="-6.41409" dy="5.61232"/>
+      <feGaussianBlur stdDeviation="6.41409"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_349_27283"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_349_27283" result="shape"/>
+    </filter>
+    <filter id="filter2_d_349_27283" x="282.31" y="73.9433" width="113.415" height="113.415" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dx="-6.41409" dy="5.61232"/>
+      <feGaussianBlur stdDeviation="6.41409"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_349_27283"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_349_27283" result="shape"/>
+    </filter>
+    <filter id="filter3_d_349_27283" x="0.668875" y="161.889" width="81.7904" height="81.7904" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dx="-6.41409" dy="5.61232"/>
+      <feGaussianBlur stdDeviation="6.41409"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_349_27283"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_349_27283" result="shape"/>
+    </filter>
+    <filter id="filter4_d_349_27283" x="232.062" y="0.18259" width="66.4074" height="66.4073" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dx="-6.41409" dy="5.61232"/>
+      <feGaussianBlur stdDeviation="6.41409"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_349_27283"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_349_27283" result="shape"/>
+    </filter>
+    <linearGradient id="paint0_linear_349_27283" x1="307.005" y1="93.2317" x2="118.905" y2="88.4197" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#382ED8"/>
+      <stop offset="1" stop-color="#9169FB"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear_349_27283" x1="361.506" y1="52.3708" x2="38.5749" y2="39.5246" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#382ED8"/>
+      <stop offset="1" stop-color="#9169FB"/>
+    </linearGradient>
+    <linearGradient id="paint2_linear_349_27283" x1="197.508" y1="212.077" x2="112.973" y2="209.745" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#382ED8"/>
+      <stop offset="1" stop-color="#9169FB"/>
+    </linearGradient>
+    <linearGradient id="paint3_linear_349_27283" x1="119.108" y1="280.163" x2="155.989" y2="246.286" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" stop-opacity="0"/>
+      <stop offset="0.5027" stop-color="white"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paint4_linear_349_27283" x1="189.914" y1="218.609" x2="121.977" y2="216.734" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#382ED8"/>
+      <stop offset="1" stop-color="#9169FB"/>
+    </linearGradient>
+    <linearGradient id="paint5_linear_349_27283" x1="385.533" y1="92.1291" x2="300.999" y2="89.7964" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#382ED8"/>
+      <stop offset="1" stop-color="#9169FB"/>
+    </linearGradient>
+    <linearGradient id="paint6_linear_349_27283" x1="307.134" y1="160.213" x2="344.015" y2="126.336" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" stop-opacity="0"/>
+      <stop offset="0.5027" stop-color="white"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paint7_linear_349_27283" x1="377.942" y1="98.6607" x2="310.006" y2="96.7861" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#382ED8"/>
+      <stop offset="1" stop-color="#9169FB"/>
+    </linearGradient>
+    <linearGradient id="paint8_linear_349_27283" x1="73.6288" y1="176.121" x2="19.5573" y2="174.629" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#382ED8"/>
+      <stop offset="1" stop-color="#9169FB"/>
+    </linearGradient>
+    <linearGradient id="paint9_linear_349_27283" x1="23.4841" y1="219.669" x2="47.0736" y2="198.001" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" stop-opacity="0"/>
+      <stop offset="0.5027" stop-color="white"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paint10_linear_349_27283" x1="68.775" y1="180.301" x2="25.3211" y2="179.102" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#382ED8"/>
+      <stop offset="1" stop-color="#9169FB"/>
+    </linearGradient>
+    <linearGradient id="paint11_linear_349_27283" x1="290.302" y1="12.4923" x2="251.048" y2="11.4092" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#382ED8"/>
+      <stop offset="1" stop-color="#9169FB"/>
+    </linearGradient>
+    <linearGradient id="paint12_linear_349_27283" x1="253.892" y1="44.1102" x2="271.019" y2="28.378" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" stop-opacity="0"/>
+      <stop offset="0.5027" stop-color="white"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="paint13_linear_349_27283" x1="286.771" y1="15.5265" x2="255.23" y2="14.6562" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#382ED8"/>
+      <stop offset="1" stop-color="#9169FB"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-lg-6 flex --just-center ">
+                        <ul class="check-list why__text">
+                            <li>
+                                <span class="check-list__icon pos-r"> <svg viewBox="0 0 24 24" fill="none"
+                                                                           xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.25 6.75L9.75 17.2495L4.5 12" stroke="url(#paint0_linear_349_27363)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round"/>
+        <defs>
+            <linearGradient id="paint0_linear_349_27363" x1="19.572" y1="8.06244" x2="4.41515" y2="7.43506"
+                            gradientUnits="userSpaceOnUse">
+                <stop stop-color="#382ED8"/>
+                <stop offset="1" stop-color="#9169FB"/>
+            </linearGradient>
+        </defs>
+    </svg></span> <span>
+                                Высокий уровень платежеспособности аудитории.
+                            </span>
+                            </li>
+                            <li>
+                                <span class="check-list__icon pos-r"> <svg viewBox="0 0 24 24" fill="none"
+                                                                           xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.25 6.75L9.75 17.2495L4.5 12" stroke="url(#paint0_linear_349_27363)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round"/>
+        <defs>
+            <linearGradient id="paint0_linear_349_27363" x1="19.572" y1="8.06244" x2="4.41515" y2="7.43506"
+                            gradientUnits="userSpaceOnUse">
+                <stop stop-color="#382ED8"/>
+                <stop offset="1" stop-color="#9169FB"/>
+            </linearGradient>
+        </defs>
+    </svg></span> <span>
+                             Средний доход пользователя LinkedIn в полтора раза выше, чем у поклонника Facebook.
+                            </span>
+                            </li>
+                            <li>
+                                <span class="check-list__icon pos-r"> <svg viewBox="0 0 24 24" fill="none"
+                                                                           xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.25 6.75L9.75 17.2495L4.5 12" stroke="url(#paint0_linear_349_27363)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round"/>
+        <defs>
+            <linearGradient id="paint0_linear_349_27363" x1="19.572" y1="8.06244" x2="4.41515" y2="7.43506"
+                            gradientUnits="userSpaceOnUse">
+                <stop stop-color="#382ED8"/>
+                <stop offset="1" stop-color="#9169FB"/>
+            </linearGradient>
+        </defs>
+    </svg></span> <span>
+                           Высокая степень вовлеченности пользователей. Более чем для 65% участников, LinkedIn является основной платформой для делового общения с покупателями, партнерами, коллегами.
+                            </span>
+                            </li>
+                            <li>
+                                <span class="check-list__icon pos-r"> <svg viewBox="0 0 24 24" fill="none"
+                                                                           xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.25 6.75L9.75 17.2495L4.5 12" stroke="url(#paint0_linear_349_27363)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round"/>
+        <defs>
+            <linearGradient id="paint0_linear_349_27363" x1="19.572" y1="8.06244" x2="4.41515" y2="7.43506"
+                            gradientUnits="userSpaceOnUse">
+                <stop stop-color="#382ED8"/>
+                <stop offset="1" stop-color="#9169FB"/>
+            </linearGradient>
+        </defs>
+    </svg></span> <span>
+                          Доверие пользователей. 9 из 10 пользователей считают Linkedin полезной платформой для решения повседневных задач по работе и не только. </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="section how-work">
+            <div class="container">
+                <h2 class="mb_40-32 text-center" data-aos="fade-up">
+                    Как мы работаем?
+                </h2>
+                <div class="how-work__wrapper">
+                    <div data-aos="fade-up" class="row --align-center">
+                        <div class="col-lg-5 pos-r">
+                            <div class="shadow"></div>
+                            <div class="how-work__image image">
+                                <picture><source srcset="assets/img/linkedin_1.webp" type="image/webp"><img src="assets/img/linkedin_1.png" alt=""></picture>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 ">
+                            <div class="how-work__text ml_auto">
+                                <p> Изучаем рынок компании-заказчика, анализируем целевую аудиторию, составляем портреты
+                                    для
+                                    ее
+                                    отдельных сегментов, изучаем конкурентов (сильные и слабые стороны).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" class="row --align-center">
+                        <div class="col-lg-7 ">
+                            <div class="how-work__text">
+                                <p> Аудит существующих профилей компании и ее сотрудников или создание профиля. Мы
+                                    проводим
+                                    их
+                                    аудит и составляем список рекомендаций по их улучшению. Если аккаунта нет мы
+                                    регистрируем в
+                                    «ЛинкедИн» сообщество и личный профиль компании, подключаем нужные модули, загружаем
+                                    элементы визуального оформления (дизайн шапки, подложки для постов, аватар),
+                                    прописываем
+                                    описание компании, добавляем контакты</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 pos-r">
+                            <div class="shadow"></div>
+                            <div class="how-work__image image ml_auto">
+                                <picture><source srcset="assets/img/linkedin_2.webp" type="image/webp"><img src="assets/img/linkedin_2.png" alt=""></picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" class="row --align-center">
+                        <div class="col-lg-5 pos-r">
+                            <div class="shadow"></div>
+                            <div class="how-work__image image">
+                                <picture><source srcset="assets/img/linkedin_3.webp" type="image/webp"><img src="assets/img/linkedin_3.png" alt=""></picture>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 ">
+                            <div class="how-work__text ml_auto">
+                                <p>
+                                    Разрабатываем стратегию продвижения исходя из информации, собранной на предыдущем
+                                    этапе,
+                                    формируем подробную стратегию продвижения для компании:
+                                </p>
+                                <ul>
+                                    <li>Прописываем цели продвижения;
+                                    </li>
+                                    <li>На основе преимуществ предложения компании и интересов целевой аудитории
+                                        выбираем
+                                        основные выгоды, о которых будем говорить в профиле и рекламных материалах;
+                                    </li>
+                                    <li> Планируем инструменты продвижения, рекламные площадки;</li>
+                                    <li>Концепцию рекламных объявлений;</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" class="row --align-center">
+                        <div class="col-lg-7 ">
+                            <div class="how-work__text">
+                                <h3>
+                                    Разрабатываем контент-стратегию
+                                </h3>
+                                <p>Создаем контент план на месяц под каждый сегмент аудитории: темы, новости компании,
+                                    предложения. Ежедневно публикуем 2 поста: текст+ дизайн+ хештеги+ отметки людей,
+                                    которых
+                                    нам нужно вовлечь</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 pos-r">
+                            <div class="shadow"></div>
+                            <div class="how-work__image image ml_auto">
+                                <picture><source srcset="assets/img/linkedin_4.webp" type="image/webp"><img src="assets/img/linkedin_4.png" alt=""></picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" class="row --align-center">
+                        <div class="col-lg-5 pos-r">
+                            <div class="shadow"></div>
+                            <div class="how-work__image image">
+                                <picture><source srcset="assets/img/linkedin_5.webp" type="image/webp"><img src="assets/img/linkedin_5.png" alt=""></picture>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 ">
+                            <div class="how-work__text ml_auto">
+                                <h3>Разрабатываем рекламную стратегию</h3>
+                                <p>
+                                    Для привлечения новых подписчиков и роста профиля/сообщества компании, готовим
+                                    цепляющие
+                                    тексты для рекламных объявлений и постов, создаем привлекательные иллюстрации к ним,
+                                    настраиваем метки UTM для ссылок в объявлениях и постах.
+                                </p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" class="row --align-center">
+                        <div class="col-lg-7 ">
+                            <div class="how-work__text">
+                                <h3>
+                                    Тестируем подготовленную рекламную кампанию
+                                </h3>
+                                <p>Запускаем тестовую рекламу, чтобы проверить эффективность запланированной концепции,
+                                    анализируем итоги. По результатам отключаем неэффективные аудитории, корректируем
+                                    содержание и оформление объявлений при необходимости.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 pos-r">
+                            <div class="shadow"></div>
+                            <div class="how-work__image image ml_auto">
+                                <picture><source srcset="assets/img/linkedin_6.webp" type="image/webp"><img src="assets/img/linkedin_6.png" alt=""></picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" class="row --align-center">
+                        <div class="col-lg-5 pos-r">
+                            <div class="shadow"></div>
+                            <div class="how-work__image image">
+                                <picture><source srcset="assets/img/linkedin_7.webp" type="image/webp"><img src="assets/img/linkedin_7.png" alt=""></picture>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 ">
+                            <div class="how-work__text ml_auto">
+                                <h3>Запускаем основную кампанию по продвижению</h3>
+                                <p>
+                                    После внесения правок в настройки рекламы по результатам тестов мы запускаем
+                                    полноценную
+                                    кампанию по продвижению в LinkedIn. Анализируем полученные результаты на основе
+                                    информации от систем сбора веб-аналитики.
+                                </p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" class="row --align-center">
+                        <div class="col-lg-7 ">
+                            <div class="how-work__text">
+                                <h3>
+                                    Подготовка ежемесячного отчёта
+                                </h3>
+                                <p>Формируем подробный иллюстрированный отчет для заказчика по эффективности работы и ее
+                                    ключевым показателям. Анализируем работу и делаем план на следующий месяц для
+                                    повышения
+                                    эффективности работы, вносим коррективы в стратегию продвижения, если это
+                                    необходимо.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 pos-r">
+                            <div class="shadow"></div>
+                            <div class="how-work__image image ml_auto">
+                                <picture><source srcset="assets/img/linkedin_8.webp" type="image/webp"><img src="assets/img/linkedin_8.png" alt=""></picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-aos="fade-up" class="section  section__cases cases">
+            <div class="container">
+                <div class="row --just-center mb_l">
+                    <div class="col-md-8 text-center">
+                        <h2 class="section__title">
+                            Кейсы
+                        </h2>
+                        <div class="section__subtitle text-color_gray">
+                            мы поможем решить проблемы вашего бизнеса, качественно вывести продукт на рынок и настроить
+                            поток продаж
+                        </div>
+                    </div>
+                </div>
+                <div class="cases-slider" data-swiper="cases">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-lg-5 offset-lg-1">
+                                    <div class="cases__item">
+                                        <div class="image">
+                                            <picture><source srcset="assets/img/img.webp" type="image/webp"><img src="assets/img/img.png" alt=""></picture>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-5 offset-lg-1">
+                                    <div class="cases__item">
+                                        <h4 class="f-weight_600 title">Explorer Yacht</h4>
+                                        <div class="descr">
+                                            Компания-создатель яхт люкс класса созданная Рикардо Радисом. Explorer
+                                            создаёт комфортабельные яхты, которые были преобретены счастливыми
+                                            обладателями благодаря нашему продвижению онлайн и офлайн
+                                        </div>
+                                        <div class="flex">
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-calendar"></span><span>2019</span>
+                                            </div>
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-cards"></span><span>Яхты</span>
+                                            </div>
+
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-bag"></span><span>SMM, Marketing, Website Development</span>
+                                            </div>
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-clock"></span><span>2 months</span>
+                                            </div>
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-people"></span><span>13</span>
+                                            </div>
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-map"></span><span>Италия</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="row">
+                                <div class="col-lg-5 offset-lg-1">
+                                    <div class="cases__item">
+                                        <h4 class="f-weight_600 title">Explorer Yacht</h4>
+                                        <div class="descr">
+                                            Компания-создатель яхт люкс класса созданная Рикардо Радисом. Explorer
+                                            создаёт комфортабельные яхты, которые были преобретены счастливыми
+                                            обладателями благодаря нашему продвижению онлайн и офлайн
+                                        </div>
+                                        <div class="flex">
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-calendar"></span><span>2019</span>
+                                            </div>
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-cards"></span><span>Яхты</span>
+                                            </div>
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-clock"></span><span>2 months</span>
+                                            </div>
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-people"></span><span>13</span>
+                                            </div>
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-bag"></span><span>SMM, Marketing, Website Development</span>
+                                            </div>
+                                            <div class="label flex-inline --just-center --align-center">
+                                                <span class="icon-map"></span><span>Италия</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="cases__item">
+                                        <div class="image">
+                                            <picture><source srcset="assets/img/img.webp" type="image/webp"><img src="assets/img/img.png" alt=""></picture>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="section see-more">
+            <div class="container">
+                <div class="row --align-center">
+                    <div class="offset-lg-1 col-lg-3 col-5">
+                        <h2 class="f-weight_400">See more <br>
+                            of our cases</h2>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="arrow">
+                            <svg class="arrow" viewBox="0 0 316 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M314.87 8.70779C315.251 8.31726 315.251 7.6841 314.87 7.29358L308.671 0.929613C308.291 0.539088 307.673 0.539088 307.293 0.929613C306.912 1.32014 306.912 1.9533 307.293 2.34383L312.804 8.00068L307.293 13.6575C306.912 14.0481 306.912 14.6812 307.293 15.0717C307.673 15.4623 308.291 15.4623 308.671 15.0717L314.87 8.70779ZM0.5 9.00071L314.182 9.00068V7.00068L0.5 7.00071L0.5 9.00071Z"
+                                      fill="url(#paint_linear)"/>
+                                <defs>
+                                    <linearGradient id="paint_linear" x1="301.611" y1="2.47771" x2="76.5166"
+                                                    y2="-130.222"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#382ED8"/>
+                                        <stop offset="1" stop-color="#9169FB"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="offset-lg-1 col-lg-2 col-7">
+                        <a href="#" class="btn btn_main">Find out more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section__cost cost">
+
+            <div class="container">
+                <h2 class="mb_l">Стоимость услуги</h2>
+                <div class="row cost__items">
+
+                    <div class="col-md-6 col-lg-5">
+                        <ul class="circle__list">
+                            <li>
+                                Аудит или создание/оформление аккаунта
+                            </li>
+                            <li>
+                                Анализ рынка
+                            </li>
+                            <li>
+                                Создание фирменного стиля
+                            </li>
+                            <li>Разработка рекламной стратегии</li>
+                            <li>Разработка контент стратегии</li>
+                            <li>
+                                Ежедневные публикации
+                            </li>
+                            <li>Копирайтинг</li>
+                            <li>Дизайн</li>
+                            <li>Поиск и сбор потенциально заинтересованных контактов в вашей компании- ежедневный
+                                контакт с ними
+                            </li>
+                            <li>Укрепление имиджа компании, руководителя и членов команды</li>
+                            <li>Работа с органическим трафиком</li>
+                            <li>Разработка и запуск рекламных кампаний</li>
+                            <li>Привлечение заявок и клиентов</li>
+                        </ul>
+                    </div>
+                    <div class="offset-lg-1 col-lg-6 col-md-6 flex --just-center">
+                        <div class="circle"></div>
+                        <div class="image">
+                            <picture><source srcset="assets/img/magic.webp" type="image/webp"><img src="assets/img/magic.png" alt=""></picture>
+                        </div>
+                        <div class="shadow"></div>
+                    </div>
+
+                </div>
+                <div class="see-more">
+
+                    <div class="row --align-center">
+                        <div class="offset-lg-1 col-lg-3 col-5">
+                            <h2 class="f-weight_400">$1000/месяц</h2>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="arrow">
+                                <svg class="arrow" viewBox="0 0 316 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M314.87 8.70779C315.251 8.31726 315.251 7.6841 314.87 7.29358L308.671 0.929613C308.291 0.539088 307.673 0.539088 307.293 0.929613C306.912 1.32014 306.912 1.9533 307.293 2.34383L312.804 8.00068L307.293 13.6575C306.912 14.0481 306.912 14.6812 307.293 15.0717C307.673 15.4623 308.291 15.4623 308.671 15.0717L314.87 8.70779ZM0.5 9.00071L314.182 9.00068V7.00068L0.5 7.00071L0.5 9.00071Z"
+                                          fill="url(#paint_linear)"/>
+                                    <defs>
+                                        <linearGradient id="paint_linear" x1="301.611" y1="2.47771" x2="76.5166"
+                                                        y2="-130.222"
+                                                        gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#382ED8"/>
+                                            <stop offset="1" stop-color="#9169FB"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="offset-lg-1 col-lg-2 col-7">
+                            <a href="#" class="btn btn_main">Find out more</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <section data-aos="fade-up" class="section section__audit audit">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-lg-5">
+                        <div class="shadow"></div>
+                        <h2 class="mb_24-32">Получи аудит своей компании бесплатно</h2>
+                        <div class="image"><picture><source srcset="assets/img/dragon_2.webp" type="image/webp"><img src="assets/img/dragon_2.png" alt=""></picture></div>
+                    </div>
+                    <div class="col-md-6 col-lg-5 offset-md-1 offset-lg-2">
+                        <div class="mb_16-8">Project inquiries</div>
+                        <a href="tel:+(352) 565-5589" class="audit__link h2 text-color_accent">(352) 565-5589</a>
+                        <a href="mailto:info@pixelcomarketing.com" class="audit__link text-color_accent">mailto:info@pixelcomarketing.com</a>
+                        <a href="#" class="audit__link"></a>
+                        <form action="" class="form audit-form">
+                            <div class="form__items">
+                                <div class="form__item form__item_row ">
+                                    <div class="form__input pos-r">
+                                        <input type="text" id="name-audit" name="name" placeholder="Enter your name">
+                                        <div class="form__message">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form__item form__item_row ">
+                                    <div class="form__input pos-r">
+                                        <input type="email" id="email-audit" name="email"
+                                               placeholder="Enter your email ">
+                                        <div class="form__message">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form__item form__item_row ">
+                                    <div class="form__input form__input_tel pos-r">
+                                        <input type="text" id="phone-audit" name="tel"
+                                               placeholder="Enter your phone ">
+                                        <div class="form__message">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--                                <div class="form__item form__item_row ">-->
+                                <!--                                    <div class="form__input pos-r">-->
+                                <!--                                        <input type="date" id="date-audit" name="date" placeholder="Сonvenient time to call">-->
+                                <!--                                    </div>-->
+                                <!--                                </div>-->
+
+                                <div class="form__item form__item_row ">
+
+                                    <div class="form__input pos-r">
+                                        <textarea id="message-audit" placeholder="Your request "></textarea>
+                                        <span class="icon-12 pos-a close-icon hide "></span>
+                                        <span class="icon-12 pos-a icon-check hide "></span>
+                                    </div>
+                                    <div class="form__message">
+
+                                    </div>
+                                </div>
+                                <div class="form__item form__item_row ">
+                                    <button type="submit" class="btn btn_main w-100">
+                                        Get Proposal
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__menu flex ">
+            <a href="№" class="logo_footer logo">
+                <svg class="icon">
+                    <use xlink:href="#logo"></use>
+                </svg>
+            </a>
+            <ul class="menu flex">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Case Studies</a>
+                </li>
+                <li>
+                    <a href="#">Industries</a>
+                </li>
+                <li>
+                    <a href="#">Contacts</a>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="footer__copyrighting flex --align-center --just-between">
+            <div class="text">© 2023 PixelCo Corp. All rights reserved.</div>
+            <ul class="social-links flex">
+                <li class="social-link"><a href="#"><span class="icon-Instagram icon-32"></span></a></li>
+                <li class="social-link"><a href="#"><span class="icon-Facebook icon-32"></span></a></li>
+                <li class="social-link"><a href="#"><span class="icon-Telegram icon-32"></span></a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</footer>
+</div>
+<div class="modal  hide ">
+
+    <div class="modal__wrapper pos-r">
+        <div class="modal__body pos-r">
+
+        </div>
+
+
+    </div>
+</div>
+<!--<div class="none">-->
+
+<svg width="0" height="0" class="none">
+    <symbol id="logo" viewBox="0 0 162 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect y="17" width="5" height="5" fill="white"/>
+        <rect x="7" y="17" width="5" height="5" fill="white"/>
+        <rect x="14" y="17" width="5" height="5" fill="white"/>
+        <rect x="21" y="17" width="5" height="5" fill="white"/>
+        <rect x="21" y="24" width="5" height="5" fill="white"/>
+        <rect x="21" y="31" width="5" height="5" fill="white"/>
+        <rect x="14" y="24" width="5" height="5" fill="white"/>
+        <rect x="14" y="31" width="5" height="5" fill="white"/>
+        <rect x="7" y="24" width="5" height="5" fill="white"/>
+        <rect x="80" y="17" width="6" height="6" fill="white"/>
+        <path d="M41.553 16.21C38.7425 16.21 36.3555 17.1725 34.7385 19.136V16.441H30.157V44.469H34.9695V34.4975C36.625 36.384 38.935 37.2695 41.553 37.2695C47.559 37.2695 51.9865 33.1115 51.9865 26.7205C51.9865 20.368 47.559 16.21 41.553 16.21ZM41.014 33.15C37.549 33.15 34.8925 30.6475 34.8925 26.7205C34.8925 22.7935 37.549 20.291 41.014 20.291C44.479 20.291 47.097 22.7935 47.097 26.7205C47.097 30.6475 44.479 33.15 41.014 33.15Z"
+              fill="white"/>
+        <path d="M71.5 38H65.5L73 28L65.5 17H72L86 38H80L76 32L71.5 38Z" fill="white"/>
+        <path d="M110.062 27.7205C110.062 21.06 105.365 16.979 99.2815 16.979C92.9675 16.979 88.232 21.445 88.232 27.6435C88.232 33.8035 92.8905 38.308 100.052 38.308C103.786 38.308 106.674 37.153 108.599 34.9585L105.403 31.4935C103.979 32.841 102.4 33.4955 100.206 33.4955C97.0485 33.4955 94.854 31.917 94.2765 29.3375H109.946C109.985 28.837 110.062 28.1825 110.062 27.7205ZM99.32 21.522C102.015 21.522 103.979 23.216 104.402 25.834H94.1995C94.623 23.1775 96.5865 21.522 99.32 21.522Z"
+              fill="white"/>
+        <path d="M140.473 34.3324C139.083 35.9541 137.232 37.1135 135.166 37.6558C133.101 38.1982 130.919 38.0977 128.911 37.3678C126.904 36.6378 125.168 35.3132 123.933 33.5706C122.698 31.8281 122.024 29.7504 122.001 27.6148C121.977 25.4792 122.606 23.3872 123.802 21.6181C124.999 19.8489 126.706 18.4866 128.697 17.713C130.687 16.9394 132.867 16.7913 134.944 17.2883C137.021 17.7854 138.897 18.904 140.322 20.495L135.763 24.5775C135.169 23.9137 134.386 23.447 133.52 23.2397C132.653 23.0323 131.744 23.0941 130.913 23.4169C130.083 23.7396 129.37 24.3079 128.871 25.046C128.372 25.7841 128.11 26.6569 128.12 27.5479C128.129 28.4389 128.411 29.3057 128.926 30.0327C129.441 30.7597 130.165 31.3123 131.003 31.6169C131.84 31.9214 132.751 31.9633 133.612 31.737C134.474 31.5108 135.247 31.0271 135.826 30.3505L140.473 34.3324Z"
+              fill="white"/>
+        <path d="M162 27.5C162 33.299 157.299 38 151.5 38C145.701 38 141 33.299 141 27.5C141 21.701 145.701 17 151.5 17C157.299 17 162 21.701 162 27.5ZM147.099 27.5C147.099 29.9306 149.069 31.901 151.5 31.901C153.931 31.901 155.901 29.9306 155.901 27.5C155.901 25.0694 153.931 23.099 151.5 23.099C149.069 23.099 147.099 25.0694 147.099 27.5Z"
+              fill="white"/>
+        <rect x="113" y="7" width="6" height="31" fill="white"/>
+        <path d="M126 14H123V6H128V11H126V14Z" fill="white" stroke="white"/>
+        <rect x="57" y="18" width="5.5" height="20" fill="white"/>
+        <circle cx="60" cy="12" r="3" fill="white"/>
+    </symbol>
+    <symbol id="check" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.25 6.75L9.75 17.2495L4.5 12" stroke="url(#paint0_linear_349_27363)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <defs>
+            <linearGradient id="paint0_linear_349_27363" x1="19.572" y1="8.06244" x2="4.41515" y2="7.43506" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#382ED8"/>
+                <stop offset="1" stop-color="#9169FB"/>
+            </linearGradient>
+        </defs>
+    </symbol>
+
+    <symbol id="close" viewBox="0 0 30 30" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22.5 7.5L7.5 22.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7.5 7.5L22.5 22.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"
+            viewBox="0 0 100 100" id="spinner">
+        <g transform="rotate(0 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.9166666666666666s"
+                         repeatCount="indefinite"></animate>
+            </rect>
+        </g>
+        <g transform="rotate(30 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.8333333333333334s"
+                         repeatCount="indefinite"></animate>
+            </rect>
+        </g>
+        <g transform="rotate(60 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.75s"
+                         repeatCount="indefinite">
+                </animate>
+            </rect>
+        </g>
+        <g transform="rotate(90 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.6666666666666666s"
+                         repeatCount="indefinite"></animate>
+            </rect>
+        </g>
+        <g transform="rotate(120 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.5833333333333334s"
+                         repeatCount="indefinite"></animate>
+            </rect>
+        </g>
+        <g transform="rotate(150 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.5s"
+                         repeatCount="indefinite">
+                </animate>
+            </rect>
+        </g>
+        <g transform="rotate(180 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.4166666666666667s"
+                         repeatCount="indefinite"></animate>
+            </rect>
+        </g>
+        <g transform="rotate(210 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.3333333333333333s"
+                         repeatCount="indefinite"></animate>
+            </rect>
+        </g>
+        <g transform="rotate(240 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.25s"
+                         repeatCount="indefinite">
+                </animate>
+            </rect>
+        </g>
+        <g transform="rotate(270 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.16666666666666666s"
+                         repeatCount="indefinite"></animate>
+            </rect>
+        </g>
+        <g transform="rotate(300 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="-0.08333333333333333s"
+                         repeatCount="indefinite"></animate>
+            </rect>
+        </g>
+        <g transform="rotate(330 50 50)">
+            <rect x="47" y="24" rx="3" ry="6" width="6" height="12" fill="#fff">
+                <animate attributeName="opacity" values="1;0" keyTimes="0;1" dur="1s" begin="0s"
+                         repeatCount="indefinite">
+                </animate>
+            </rect>
+        </g>
+    </symbol>
+    <symbol class="arrow" viewBox="0 0 316 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M314.87 8.70779C315.251 8.31726 315.251 7.6841 314.87 7.29358L308.671 0.929613C308.291 0.539088 307.673 0.539088 307.293 0.929613C306.912 1.32014 306.912 1.9533 307.293 2.34383L312.804 8.00068L307.293 13.6575C306.912 14.0481 306.912 14.6812 307.293 15.0717C307.673 15.4623 308.291 15.4623 308.671 15.0717L314.87 8.70779ZM0.5 9.00071L314.182 9.00068V7.00068L0.5 7.00071L0.5 9.00071Z"
+              fill="url(#paint_linear)"/>
+        <defs>
+            <linearGradient id="paint_linear" x1="301.611" y1="2.47771" x2="76.5166" y2="-130.222"
+                            gradientUnits="userSpaceOnUse">
+                <stop stop-color="#382ED8"/>
+                <stop offset="1" stop-color="#9169FB"/>
+            </linearGradient>
+        </defs>
+    </symbol>
+    <symbol  id="linkedin_shield" viewBox="0 0 391 311" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.21">
+            <path d="M208.353 61.7508C215.737 58.8168 223.226 56.126 230.787 53.6217C238.374 51.1902 246.025 48.9695 253.765 46.9919C261.505 45.0305 269.334 43.3934 277.228 42.0318C285.122 40.662 293.089 39.6408 301.121 39.0087C309.153 38.4008 317.242 38.2387 325.363 38.6358C333.476 39.0654 341.637 40.0137 349.701 42.0155C351.703 42.5829 353.738 43.0287 355.715 43.7419L358.706 44.7388L361.648 45.9302C362.134 46.1328 362.629 46.3192 363.115 46.538L364.558 47.2351C365.514 47.7132 366.495 48.1428 367.435 48.6615C369.307 49.7394 371.204 50.7769 372.97 52.0898L374.316 53.03C374.77 53.338 375.175 53.7189 375.613 54.0674C376.455 54.7888 377.339 55.4533 378.149 56.2233L380.524 58.6061C381.302 59.4166 381.983 60.3324 382.704 61.1997C383.45 62.0507 384.058 63.0233 384.682 63.9796L385.614 65.4142C385.922 65.8924 386.149 66.4273 386.424 66.9298C387.494 68.956 388.451 71.0551 389.115 73.2596C390.501 77.6443 391.101 82.2479 390.987 86.7299C390.923 91.2361 390.145 95.6127 389.034 99.8191C386.708 108.208 382.899 115.867 378.465 122.934C374.016 130.001 368.942 136.55 363.472 142.669C358.001 148.78 352.198 154.543 346.135 159.973C321.821 181.645 294.143 198.803 265.249 213.011C250.75 220.054 235.902 226.327 220.746 231.798C205.565 237.196 190.101 241.872 174.354 245.447C158.606 249.005 142.599 251.647 126.373 252.7C110.172 253.746 93.6945 253.422 77.4281 249.92C69.3233 248.129 61.2428 245.487 53.7296 241.24C51.8493 240.195 50.0338 238.995 48.2588 237.731C46.5082 236.418 44.7819 235.056 43.2014 233.5C41.6129 231.96 40.0973 230.323 38.7681 228.516C37.4227 226.733 36.215 224.828 35.21 222.81C33.1433 218.822 31.8628 214.429 31.3441 210.037C30.8173 205.628 31.0604 201.227 31.8141 197.004C32.576 192.781 33.8404 188.729 35.3965 184.855C36.9445 180.973 38.8248 177.277 40.932 173.759C41.9532 171.976 43.1042 170.282 44.2145 168.572L45.9733 166.068L46.8567 164.82L47.7806 163.604C50.1878 160.33 52.8218 157.258 55.4721 154.211C60.8537 148.205 66.5919 142.572 72.6462 137.328C78.6843 132.076 84.9655 127.132 91.4332 122.472C97.9333 117.852 104.563 113.451 111.379 109.367C105.001 114.1 98.7194 118.955 92.6814 124.077C86.6108 129.159 80.7592 134.475 75.1992 140.06C69.6555 145.66 64.3307 151.447 59.4759 157.574C57.0931 160.67 54.7346 163.774 52.6192 167.024L51.8087 168.232L51.0388 169.464L49.5151 171.928C48.5668 173.605 47.578 175.259 46.727 176.977C45.8193 178.671 45.0331 180.405 44.2226 182.124L43.1285 184.75C42.7475 185.617 42.472 186.516 42.1397 187.4C40.8997 190.95 39.9595 194.565 39.4813 198.187C38.4844 205.417 39.538 212.663 43.015 218.636C46.4271 224.625 51.9708 229.326 58.4304 232.641C64.8899 235.996 72.1437 238.104 79.5596 239.522C86.9918 240.916 94.6508 241.548 102.334 241.694C110.026 241.848 117.758 241.54 125.473 240.835C140.913 239.417 156.288 236.693 171.436 232.989C186.592 229.294 201.545 224.682 216.215 219.276C230.893 213.895 245.311 207.759 259.357 200.886C273.411 194.054 287.1 186.468 300.246 178.087C313.408 169.739 326.019 160.549 337.706 150.401C343.558 145.336 349.126 139.987 354.337 134.362C359.524 128.721 364.363 122.796 368.521 116.523C372.679 110.258 376.099 103.588 378.214 96.7231C380.289 89.8664 380.873 82.7666 379.025 76.3314C377.128 69.9286 373.043 64.2066 367.273 59.9921L366.203 59.1897L365.668 58.7925L365.092 58.4359L362.799 56.9933C362.021 56.5313 361.186 56.1261 360.392 55.6884L359.176 55.04C358.763 54.8374 358.333 54.6591 357.912 54.4727L355.375 53.338L352.757 52.333C351.031 51.6198 349.191 51.1335 347.408 50.5337C340.146 48.3697 332.511 47.1054 324.803 46.3516C317.088 45.606 309.275 45.4439 301.453 45.6141C285.787 45.8897 270.112 47.9078 254.559 50.6553C238.998 53.4596 223.599 57.285 208.353 61.7508Z" fill="#7C6FE6"/>
+        </g>
+        <g filter="url(#filter0_d_349_27283)">
+            <path d="M248.325 276.456L217.875 292.487L187.425 276.456C137.718 250.285 106.264 196.421 106.264 137.45V51.709H329.487V137.45C329.487 196.421 298.032 250.293 248.325 276.456Z" fill="#7C6FE6"/>
+        </g>
+        <path d="M244.411 263.489L217.779 277.51L191.146 263.489C147.664 240.601 120.156 193.479 120.156 141.9V66.9062H315.41V141.9C315.401 193.479 287.886 240.601 244.411 263.489Z" fill="url(#paint0_linear_349_27283)"/>
+        <path opacity="0.39" d="M174.873 88.9672C178.301 95.7104 174.557 105.331 166.517 110.623C158.412 115.956 148.783 115.024 144.998 108.378C141.132 101.603 144.861 91.5689 153.322 86.1305C161.719 80.7408 171.372 82.0862 174.873 88.9672Z" fill="#F0F3F4"/>
+        <path opacity="0.39" d="M143.247 111.394C146.441 112.796 147.754 117.886 146.214 122.741C144.682 127.571 140.889 130.416 137.704 129.111C134.486 127.79 133.084 122.741 134.608 117.813C136.139 112.853 140.022 109.976 143.247 111.394Z" fill="#F0F3F4"/>
+        <g opacity="0.65">
+            <path opacity="0.39" d="M228.46 250.002C225.031 243.259 228.776 233.638 236.816 228.346C244.921 223.013 254.549 223.945 258.334 230.591C262.2 237.366 258.472 247.4 250.01 252.838C241.614 258.228 231.961 256.883 228.46 250.002Z" fill="#F0F3F4"/>
+            <path opacity="0.39" d="M260.085 227.575C256.891 226.172 255.578 221.083 257.118 216.228C258.65 211.397 262.443 208.553 265.628 209.857C268.846 211.179 270.248 216.228 268.724 221.156C267.193 226.116 263.31 228.993 260.085 227.575Z" fill="#F0F3F4"/>
+        </g>
+        <path d="M175.546 113.866H175.4C167.238 113.866 162.019 108.281 162.019 101.295C162.019 94.1627 167.457 88.7244 175.691 88.7244C183.999 88.7244 189.145 94.1627 189.218 101.295C189.291 108.273 183.999 113.866 175.546 113.866ZM187.678 196.656H163.413V123.794H187.678V196.656ZM274.951 196.656H250.758V157.688C250.758 147.906 247.225 141.219 238.48 141.219C231.785 141.219 227.822 145.701 226.055 150.045C225.463 151.666 225.244 153.798 225.244 156.002V196.664H201.051C201.343 130.634 201.051 123.802 201.051 123.802H225.244V134.387H225.098C228.259 129.386 233.998 122.108 247.087 122.108C263.045 122.108 274.951 132.547 274.951 154.9V196.656Z" fill="white"/>
+        <path d="M205.073 53.0798C212.116 49.8135 219.24 46.7175 226.437 43.8159C233.659 40.9549 240.961 38.2966 248.345 35.8813C263.112 31.0752 278.243 27.2578 293.659 25.0371C301.366 23.951 309.147 23.3026 316.944 23.2783L319.87 23.2864C320.842 23.3026 321.815 23.3594 322.796 23.3999C323.768 23.4485 324.749 23.4566 325.721 23.5377L328.639 23.7808L330.098 23.9024L331.549 24.0888L334.458 24.4697C335.423 24.6075 336.387 24.8101 337.344 24.9803C338.3 25.1667 339.273 25.3045 340.221 25.5558L343.074 26.2447C344.03 26.4635 344.954 26.8039 345.894 27.0714C347.791 27.5901 349.598 28.3681 351.446 29.049C355.053 30.6132 358.53 32.5178 361.715 34.8844C368.004 39.6663 372.843 46.5554 374.731 54.3036C375.218 56.2244 375.574 58.1858 375.744 60.1634C375.955 62.1328 375.979 64.1185 375.923 66.0961C375.769 70.0432 375.201 73.9659 374.253 77.7833C372.381 85.4342 369.293 92.7042 365.63 99.6095C358.238 113.412 348.626 125.853 338.162 137.378C327.659 148.903 316.19 159.496 304.155 169.368C292.103 179.223 279.467 188.357 266.386 196.786C240.183 213.571 212.319 227.836 183.109 238.64C168.504 244.021 153.551 248.528 138.289 251.688C123.044 254.817 107.418 256.697 91.7839 255.789C83.987 255.311 76.1821 254.087 68.7257 251.567C65.0136 250.27 61.3989 248.665 58.0354 246.599C56.3577 245.561 54.7448 244.41 53.2211 243.154C51.7217 241.865 50.2629 240.52 48.9823 239.004C46.3726 236.022 44.322 232.561 42.8956 228.873C41.4691 225.178 40.6992 221.255 40.4884 217.324C40.2777 213.393 40.6019 209.454 41.2908 205.596C41.9878 201.738 42.9928 197.945 44.3301 194.274C46.9642 186.915 50.5222 179.936 54.5908 173.307C58.6433 166.661 63.2144 160.347 68.1016 154.301C77.876 142.208 88.8418 131.137 100.472 120.852C88.9715 131.267 78.1354 142.46 68.5311 154.641C63.7331 160.728 59.2511 167.066 55.296 173.728C51.3246 180.366 47.8882 187.344 45.3676 194.63C44.087 198.27 43.1144 202.006 42.4579 205.791C41.8095 209.576 41.5177 213.426 41.7528 217.243C41.9797 221.06 42.7497 224.837 44.1437 228.379C45.5377 231.913 47.5234 235.219 50.044 238.064C51.2841 239.507 52.6943 240.796 54.1451 242.019C55.6283 243.219 57.1844 244.321 58.8134 245.31C62.0797 247.288 65.6053 248.827 69.2282 250.067C76.5144 252.483 84.1897 253.634 91.873 254.055C99.5726 254.468 107.305 254.144 114.988 253.366C122.671 252.604 130.314 251.348 137.884 249.776C153.024 246.607 167.88 242.092 182.388 236.711C211.411 225.899 239.113 211.634 265.162 194.89C278.195 186.526 290.79 177.473 302.793 167.698C314.78 157.908 326.2 147.404 336.647 135.992C347.053 124.58 356.601 112.269 363.911 98.6856C367.542 91.8937 370.557 84.7615 372.422 77.3294C373.362 73.6174 373.937 69.8243 374.115 66.015C374.18 64.1104 374.172 62.2058 373.978 60.3174C373.824 58.4208 373.499 56.5486 373.046 54.7088C371.295 47.3091 366.756 40.7604 360.751 36.1083C357.711 33.8146 354.356 31.9505 350.855 30.4025C349.063 29.7298 347.305 28.9598 345.449 28.4411C344.525 28.1655 343.625 27.8332 342.693 27.6144L339.897 26.9174C338.973 26.658 338.017 26.5203 337.068 26.3338C336.12 26.1636 335.18 25.9529 334.232 25.8151L331.371 25.418L329.936 25.2235L328.493 25.0938L325.608 24.8344C324.644 24.7453 323.679 24.7291 322.715 24.6724C321.75 24.6318 320.786 24.567 319.821 24.5427L316.928 24.5184C309.196 24.4859 301.472 25.0938 293.797 26.0988C278.438 28.1331 263.306 31.756 248.507 36.3838C241.107 38.7099 233.788 41.2791 226.535 44.051C219.305 46.8796 212.149 49.8946 205.073 53.0798Z" fill="url(#paint1_linear_349_27283)"/>
+        <g filter="url(#filter1_d_349_27283)">
+            <path d="M157.406 201.107C133.27 201.107 113.526 220.851 113.526 244.987C113.526 269.123 133.27 288.866 157.406 288.866C181.542 288.866 201.285 269.123 201.285 244.987C201.285 220.851 181.542 201.107 157.406 201.107Z" fill="url(#paint2_linear_349_27283)"/>
+        </g>
+        <path opacity="0.42" d="M157.405 208.961C137.589 208.961 121.379 225.171 121.379 244.987C121.379 264.803 137.589 281.013 157.405 281.013C177.221 281.013 193.431 264.803 193.431 244.987C193.423 225.171 177.213 208.961 157.405 208.961Z" fill="url(#paint3_linear_349_27283)"/>
+        <path opacity="0.9" d="M157.686 280.321C177.162 280.321 192.95 264.533 192.95 245.057C192.95 225.581 177.162 209.793 157.686 209.793C138.21 209.793 122.422 225.581 122.422 245.057C122.422 264.533 138.21 280.321 157.686 280.321Z" fill="url(#paint4_linear_349_27283)"/>
+        <path opacity="0.83" d="M144.713 225.754C147.875 224.152 149.536 221.069 148.421 218.869C147.307 216.669 143.839 216.184 140.677 217.786C137.514 219.388 135.854 222.47 136.968 224.67C138.083 226.871 141.55 227.356 144.713 225.754Z" fill="#F0F3F4"/>
+        <path d="M173.271 254.939C173.247 255.62 172.979 256.212 172.46 256.69C171.942 257.176 171.342 257.403 170.661 257.387L161.819 257.103C161.778 258.497 161.243 259.672 160.222 260.629C159.201 261.585 157.993 262.039 156.599 261.998C155.205 261.958 154.03 261.423 153.074 260.402C152.117 259.381 151.663 258.173 151.704 256.779L142.862 256.495C142.181 256.471 141.589 256.203 141.111 255.693C140.625 255.174 140.398 254.574 140.414 253.894C141.087 253.359 141.703 252.799 142.262 252.216C142.821 251.624 143.405 250.862 144.012 249.914C144.62 248.966 145.147 247.937 145.585 246.834C146.022 245.732 146.395 244.387 146.703 242.798C147.011 241.218 147.19 239.508 147.254 237.676C147.319 235.674 148.146 233.842 149.743 232.173C151.339 230.503 153.39 229.522 155.902 229.239C155.805 228.987 155.764 228.728 155.772 228.461C155.789 227.934 155.983 227.496 156.364 227.14C156.745 226.783 157.199 226.613 157.726 226.629C158.253 226.645 158.69 226.848 159.047 227.221C159.403 227.602 159.574 228.055 159.557 228.582C159.549 228.842 159.485 229.101 159.371 229.344C161.859 229.79 163.845 230.9 165.328 232.667C166.811 234.434 167.525 236.314 167.46 238.316C167.403 240.148 167.476 241.858 167.678 243.463C167.881 245.059 168.173 246.429 168.538 247.564C168.902 248.698 169.364 249.752 169.907 250.741C170.458 251.73 170.993 252.532 171.512 253.156C172.055 253.764 172.631 254.364 173.271 254.939ZM144.021 254.007L169.68 254.826C166.309 250.765 164.728 245.238 164.955 238.235C164.98 237.562 164.842 236.865 164.55 236.144C164.258 235.423 163.821 234.734 163.253 234.069C162.686 233.405 161.9 232.853 160.903 232.408C159.906 231.962 158.804 231.719 157.58 231.678C156.356 231.638 155.229 231.808 154.216 232.197C153.195 232.578 152.377 233.08 151.769 233.713C151.153 234.337 150.683 235.001 150.342 235.706C150.002 236.403 149.824 237.092 149.799 237.765C149.572 244.751 147.643 250.173 144.021 254.007ZM156.988 260.11C156.996 259.899 156.891 259.794 156.68 259.786C155.902 259.762 155.246 259.462 154.703 258.886C154.16 258.311 153.9 257.63 153.925 256.852C153.933 256.641 153.827 256.536 153.617 256.528C153.406 256.52 153.301 256.625 153.292 256.836C153.26 257.8 153.576 258.627 154.233 259.324C154.889 260.021 155.7 260.386 156.656 260.418C156.867 260.426 156.98 260.321 156.988 260.11Z" fill="white"/>
+        <g filter="url(#filter2_d_349_27283)">
+            <path d="M345.431 81.1592C321.295 81.1592 301.552 100.903 301.552 125.039C301.552 149.175 321.295 168.918 345.431 168.918C369.567 168.918 389.311 149.175 389.311 125.039C389.311 100.903 369.567 81.1592 345.431 81.1592Z" fill="url(#paint5_linear_349_27283)"/>
+        </g>
+        <path opacity="0.42" d="M345.431 89.011C325.615 89.011 309.405 105.221 309.405 125.037C309.405 144.853 325.615 161.063 345.431 161.063C365.247 161.063 381.457 144.853 381.457 125.037C381.449 105.221 365.239 89.011 345.431 89.011Z" fill="url(#paint6_linear_349_27283)"/>
+        <path opacity="0.9" d="M345.714 160.373C365.19 160.373 380.978 144.585 380.978 125.109C380.978 105.633 365.19 89.8447 345.714 89.8447C326.238 89.8447 310.45 105.633 310.45 125.109C310.45 144.585 326.238 160.373 345.714 160.373Z" fill="url(#paint7_linear_349_27283)"/>
+        <path opacity="0.83" d="M332.745 105.8C335.907 104.198 337.568 101.116 336.453 98.9156C335.339 96.7153 331.871 96.2304 328.709 97.8324C325.546 99.4345 323.886 102.517 325 104.717C326.115 106.917 329.582 107.402 332.745 105.8Z" fill="#F0F3F4"/>
+        <path d="M369.114 122.409C369.025 125.383 367.915 128.098 365.783 130.562C363.652 133.018 360.807 134.931 357.241 136.284C353.675 137.638 349.8 138.254 345.635 138.124C344.435 138.083 343.203 137.978 341.923 137.808C338.446 140.693 334.45 142.646 329.936 143.651C329.093 143.862 328.112 144.024 326.994 144.13H326.864C326.604 144.122 326.378 144.024 326.183 143.838C325.98 143.651 325.851 143.416 325.794 143.117V143.092C325.745 143.019 325.745 142.922 325.786 142.784C325.835 142.646 325.851 142.565 325.843 142.533C325.834 142.501 325.875 142.42 325.964 142.29C326.053 142.16 326.11 142.087 326.126 142.063C326.143 142.039 326.207 141.966 326.313 141.852C326.418 141.739 326.491 141.658 326.523 141.625C326.645 141.496 326.921 141.204 327.342 140.766C327.764 140.328 328.072 140.012 328.258 139.818C328.444 139.623 328.72 139.299 329.085 138.829C329.449 138.359 329.741 137.938 329.96 137.549C330.179 137.159 330.422 136.665 330.697 136.057C330.973 135.449 331.216 134.809 331.427 134.128C328.785 132.524 326.726 130.578 325.251 128.293C323.768 126.007 323.071 123.576 323.152 121.015C323.217 118.794 323.889 116.687 325.17 114.693C326.442 112.707 328.128 111.005 330.227 109.595C332.326 108.185 334.807 107.099 337.668 106.321C340.529 105.543 343.519 105.202 346.631 105.299C349.744 105.397 352.71 105.915 355.514 106.872C358.327 107.82 360.734 109.06 362.744 110.6C364.754 112.132 366.326 113.931 367.485 115.998C368.636 118.048 369.179 120.188 369.114 122.409ZM356.26 110.657C353.261 109.376 350.019 108.679 346.526 108.574C343.033 108.468 339.759 108.963 336.687 110.057C333.615 111.151 331.151 112.683 329.303 114.644C327.455 116.606 326.499 118.762 326.426 121.104C326.369 123.017 326.921 124.864 328.096 126.639C329.263 128.414 330.941 129.962 333.129 131.3L335.317 132.653L334.547 135.093C334.085 136.633 333.445 138.092 332.618 139.453C335.252 138.456 337.643 137.062 339.807 135.287L340.942 134.347L342.401 134.55C343.576 134.72 344.686 134.825 345.732 134.858C349.217 134.963 352.499 134.469 355.571 133.375C358.643 132.28 361.107 130.749 362.955 128.787C364.803 126.826 365.767 124.67 365.832 122.328C365.905 119.985 365.078 117.781 363.352 115.706C361.625 113.615 359.259 111.937 356.26 110.657ZM338.673 119.159C339.297 119.815 339.588 120.601 339.564 121.509C339.54 122.417 339.191 123.179 338.535 123.803C337.87 124.427 337.092 124.719 336.184 124.694C335.277 124.67 334.515 124.321 333.891 123.665C333.267 123 332.975 122.222 332.999 121.315C333.024 120.407 333.372 119.645 334.029 119.021C334.693 118.397 335.471 118.105 336.379 118.129C337.287 118.154 338.049 118.494 338.673 119.159ZM348.52 119.459C349.144 120.123 349.436 120.901 349.411 121.809C349.387 122.717 349.039 123.479 348.382 124.103C347.718 124.727 346.939 125.018 346.032 124.994C345.124 124.97 344.362 124.621 343.738 123.965C343.114 123.3 342.822 122.522 342.847 121.614C342.871 120.707 343.219 119.945 343.876 119.321C344.532 118.697 345.319 118.405 346.226 118.429C347.134 118.454 347.896 118.794 348.52 119.459ZM358.367 119.758C358.991 120.423 359.283 121.201 359.259 122.109C359.235 123.017 358.886 123.778 358.23 124.402C357.565 125.027 356.787 125.318 355.879 125.294C354.971 125.27 354.21 124.921 353.585 124.265C352.961 123.6 352.67 122.822 352.694 121.914C352.718 121.007 353.067 120.245 353.731 119.621C354.388 118.997 355.174 118.705 356.082 118.729C356.981 118.753 357.751 119.094 358.367 119.758Z" fill="white"/>
+        <g filter="url(#filter3_d_349_27283)">
+            <path d="M47.9781 169.104C32.5385 169.104 19.9111 181.732 19.9111 197.171C19.9111 212.611 32.5385 225.239 47.9781 225.239C63.4178 225.239 76.0451 212.611 76.0451 197.171C76.0451 181.732 63.4097 169.104 47.9781 169.104Z" fill="url(#paint8_linear_349_27283)"/>
+        </g>
+        <path opacity="0.42" d="M47.9805 174.128C35.3045 174.128 24.9385 184.494 24.9385 197.17C24.9385 209.846 35.3045 220.212 47.9805 220.212C60.6564 220.212 71.0225 209.846 71.0225 197.17C71.0225 184.494 60.6483 174.128 47.9805 174.128Z" fill="url(#paint9_linear_349_27283)"/>
+        <path opacity="0.9" d="M48.1612 219.774C60.6184 219.774 70.7169 209.675 70.7169 197.218C70.7169 184.761 60.6184 174.662 48.1612 174.662C35.704 174.662 25.6055 184.761 25.6055 197.218C25.6055 209.675 35.704 219.774 48.1612 219.774Z" fill="url(#paint10_linear_349_27283)"/>
+        <path opacity="0.83" d="M39.8693 184.881C41.8899 183.858 42.949 181.885 42.235 180.476C41.5209 179.066 39.3041 178.753 37.2835 179.777C35.263 180.8 34.2038 182.773 34.9179 184.182C35.6319 185.592 37.8488 185.905 39.8693 184.881Z" fill="#F0F3F4"/>
+        <path d="M60.1979 202.704C60.1574 203.863 59.7035 204.836 58.8525 205.606L56.6399 207.648C55.8051 208.418 54.8082 208.791 53.6411 208.742C52.4659 208.702 51.4933 208.248 50.7234 207.397L47.838 204.277C47.06 203.442 46.6953 202.445 46.7439 201.286C46.7844 200.095 47.2545 199.098 48.1379 198.295L46.906 196.966C46.0388 197.785 45.0176 198.174 43.8343 198.133C42.6753 198.093 41.7027 197.647 40.9165 196.804L38.0069 193.667C37.2207 192.825 36.856 191.82 36.8965 190.661C36.9371 189.502 37.391 188.529 38.242 187.759L40.4546 185.717C41.2894 184.939 42.2863 184.574 43.4534 184.622C44.6286 184.663 45.6011 185.117 46.3711 185.968L49.2564 189.088C50.0344 189.923 50.3992 190.92 50.3506 192.079C50.31 193.27 49.8399 194.267 48.9565 195.07L50.1885 196.399C51.0557 195.58 52.0769 195.191 53.2602 195.232C54.4192 195.272 55.3917 195.718 56.1779 196.561L59.0875 199.697C59.8737 200.54 60.2384 201.545 60.1979 202.704ZM47.5706 191.982C47.5868 191.593 47.4652 191.26 47.1978 190.977L44.3125 187.856C44.0531 187.573 43.7289 187.427 43.3399 187.411C42.9589 187.394 42.6267 187.516 42.3349 187.767L40.1222 189.81C39.8386 190.069 39.6927 190.393 39.6765 190.766C39.6603 191.155 39.7819 191.487 40.0493 191.771L42.9589 194.907C43.2102 195.175 43.5344 195.321 43.9315 195.337C44.3368 195.353 44.6934 195.215 44.9932 194.924C44.9689 194.891 44.8798 194.802 44.7258 194.648C44.5718 194.494 44.4745 194.381 44.4259 194.324C44.3773 194.267 44.3044 194.17 44.2152 194.04C44.1261 193.911 44.0693 193.789 44.0369 193.659C44.0045 193.538 43.9964 193.4 43.9964 193.254C44.0126 192.865 44.1585 192.541 44.4421 192.282C44.7258 192.022 45.0581 191.892 45.4471 191.909C45.593 191.917 45.7227 191.933 45.8442 191.974C45.9658 192.014 46.0874 192.079 46.209 192.176C46.3305 192.273 46.4197 192.346 46.4764 192.403C46.5332 192.46 46.6304 192.565 46.7763 192.727C46.9222 192.889 47.0033 192.987 47.0357 193.011C47.3842 192.735 47.5544 192.387 47.5706 191.982ZM57.4098 202.599C57.426 202.21 57.2964 201.878 57.037 201.594L54.1274 198.457C53.868 198.174 53.5438 198.028 53.1548 198.012C52.7496 197.995 52.393 198.141 52.0931 198.441C52.1174 198.474 52.2066 198.563 52.3605 198.717C52.5064 198.871 52.6118 198.984 52.6604 199.041C52.7091 199.098 52.782 199.195 52.8712 199.325C52.9603 199.454 53.017 199.576 53.0494 199.706C53.0819 199.827 53.09 199.965 53.09 200.111C53.0737 200.5 52.9279 200.824 52.6442 201.083C52.3605 201.343 52.0282 201.464 51.6392 201.456C51.4933 201.448 51.3637 201.432 51.2421 201.391C51.1205 201.351 50.9989 201.286 50.8774 201.189C50.7558 201.091 50.6666 201.019 50.6099 200.962C50.5531 200.905 50.4559 200.8 50.31 200.638C50.1641 200.475 50.075 200.378 50.0506 200.354C49.7183 200.646 49.5482 200.986 49.532 201.399C49.5158 201.788 49.6373 202.121 49.9048 202.404L52.7901 205.525C53.0413 205.792 53.3655 205.938 53.7627 205.954C54.1517 205.971 54.484 205.857 54.7677 205.614L56.9803 203.572C57.2478 203.296 57.3936 202.98 57.4098 202.599Z" fill="white"/>
+        <g filter="url(#filter4_d_349_27283)">
+            <path d="M271.68 7.39844C260.471 7.39844 251.305 16.565 251.305 27.774C251.305 38.9829 260.471 48.1495 271.68 48.1495C282.889 48.1495 292.056 38.9829 292.056 27.774C292.056 16.565 282.889 7.39844 271.68 7.39844Z" fill="url(#paint11_linear_349_27283)"/>
+        </g>
+        <path opacity="0.42" d="M271.679 11.0459C262.48 11.0459 254.95 18.5753 254.95 27.7743C254.95 36.9732 262.48 44.5026 271.679 44.5026C280.878 44.5026 288.407 36.9732 288.407 27.7743C288.407 18.5753 280.878 11.0459 271.679 11.0459Z" fill="url(#paint12_linear_349_27283)"/>
+        <path opacity="0.9" d="M271.808 44.1771C280.85 44.1771 288.18 36.8472 288.18 27.8053C288.18 18.7635 280.85 11.4336 271.808 11.4336C262.766 11.4336 255.437 18.7635 255.437 27.8053C255.437 36.8472 262.766 44.1771 271.808 44.1771Z" fill="url(#paint13_linear_349_27283)"/>
+        <path opacity="0.83" d="M265.795 18.8355C267.264 18.0912 268.036 16.659 267.518 15.6368C267 14.6145 265.389 14.3892 263.92 15.1336C262.45 15.878 261.679 17.3102 262.197 18.3324C262.714 19.3547 264.325 19.5799 265.795 18.8355Z" fill="#F0F3F4"/>
+        <path d="M273.558 29.4455C274.409 29.5671 275.09 29.9723 275.6 30.6531C276.111 31.3339 276.305 32.1039 276.184 32.9549C276.062 33.8059 275.657 34.4867 274.976 34.9973C274.295 35.5079 273.525 35.7024 272.674 35.5809C271.823 35.4593 271.143 35.0541 270.632 34.3733C270.121 33.6924 269.927 32.9225 270.048 32.0715C270.056 31.9985 270.081 31.8851 270.113 31.7473L266.912 29.5266C266.247 29.9885 265.51 30.1669 264.699 30.0534C263.848 29.9318 263.167 29.5266 262.657 28.8458C262.146 28.165 261.952 27.395 262.073 26.544C262.195 25.693 262.6 25.0122 263.281 24.5016C263.962 23.991 264.732 23.7965 265.583 23.918C266.385 24.0315 267.041 24.4043 267.552 25.0446L271.256 23.8127C271.264 23.6668 271.272 23.5614 271.28 23.4804C271.402 22.6294 271.807 21.9486 272.488 21.438C273.169 20.9273 273.939 20.7328 274.79 20.8544C275.641 20.976 276.321 21.3812 276.832 22.062C277.343 22.7428 277.537 23.5128 277.416 24.3638C277.294 25.2148 276.889 25.8956 276.208 26.4062C275.527 26.9168 274.757 27.1113 273.906 26.9898C273.104 26.8763 272.447 26.5035 271.937 25.8632L268.241 27.0951C268.233 27.241 268.225 27.3464 268.217 27.4274C268.209 27.5004 268.184 27.6138 268.152 27.7516L271.353 29.9723C272.018 29.5104 272.755 29.3321 273.558 29.4455Z" fill="white"/>
+        <defs>
+            <filter id="filter0_d_349_27283" x="87.0214" y="44.4931" width="248.879" height="266.434" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dx="-6.41409" dy="5.61232"/>
+                <feGaussianBlur stdDeviation="6.41409"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_349_27283"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_349_27283" result="shape"/>
+            </filter>
+            <filter id="filter1_d_349_27283" x="94.2841" y="193.892" width="113.415" height="113.415" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dx="-6.41409" dy="5.61232"/>
+                <feGaussianBlur stdDeviation="6.41409"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_349_27283"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_349_27283" result="shape"/>
+            </filter>
+            <filter id="filter2_d_349_27283" x="282.31" y="73.9433" width="113.415" height="113.415" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dx="-6.41409" dy="5.61232"/>
+                <feGaussianBlur stdDeviation="6.41409"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_349_27283"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_349_27283" result="shape"/>
+            </filter>
+            <filter id="filter3_d_349_27283" x="0.668875" y="161.889" width="81.7904" height="81.7904" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dx="-6.41409" dy="5.61232"/>
+                <feGaussianBlur stdDeviation="6.41409"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_349_27283"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_349_27283" result="shape"/>
+            </filter>
+            <filter id="filter4_d_349_27283" x="232.062" y="0.18259" width="66.4074" height="66.4073" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dx="-6.41409" dy="5.61232"/>
+                <feGaussianBlur stdDeviation="6.41409"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_349_27283"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_349_27283" result="shape"/>
+            </filter>
+            <linearGradient id="paint0_linear_349_27283" x1="307.005" y1="93.2317" x2="118.905" y2="88.4197" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#382ED8"/>
+                <stop offset="1" stop-color="#9169FB"/>
+            </linearGradient>
+            <linearGradient id="paint1_linear_349_27283" x1="361.506" y1="52.3708" x2="38.5749" y2="39.5246" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#382ED8"/>
+                <stop offset="1" stop-color="#9169FB"/>
+            </linearGradient>
+            <linearGradient id="paint2_linear_349_27283" x1="197.508" y1="212.077" x2="112.973" y2="209.745" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#382ED8"/>
+                <stop offset="1" stop-color="#9169FB"/>
+            </linearGradient>
+            <linearGradient id="paint3_linear_349_27283" x1="119.108" y1="280.163" x2="155.989" y2="246.286" gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0"/>
+                <stop offset="0.5027" stop-color="white"/>
+                <stop offset="1" stop-color="white" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="paint4_linear_349_27283" x1="189.914" y1="218.609" x2="121.977" y2="216.734" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#382ED8"/>
+                <stop offset="1" stop-color="#9169FB"/>
+            </linearGradient>
+            <linearGradient id="paint5_linear_349_27283" x1="385.533" y1="92.1291" x2="300.999" y2="89.7964" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#382ED8"/>
+                <stop offset="1" stop-color="#9169FB"/>
+            </linearGradient>
+            <linearGradient id="paint6_linear_349_27283" x1="307.134" y1="160.213" x2="344.015" y2="126.336" gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0"/>
+                <stop offset="0.5027" stop-color="white"/>
+                <stop offset="1" stop-color="white" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="paint7_linear_349_27283" x1="377.942" y1="98.6607" x2="310.006" y2="96.7861" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#382ED8"/>
+                <stop offset="1" stop-color="#9169FB"/>
+            </linearGradient>
+            <linearGradient id="paint8_linear_349_27283" x1="73.6288" y1="176.121" x2="19.5573" y2="174.629" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#382ED8"/>
+                <stop offset="1" stop-color="#9169FB"/>
+            </linearGradient>
+            <linearGradient id="paint9_linear_349_27283" x1="23.4841" y1="219.669" x2="47.0736" y2="198.001" gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0"/>
+                <stop offset="0.5027" stop-color="white"/>
+                <stop offset="1" stop-color="white" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="paint10_linear_349_27283" x1="68.775" y1="180.301" x2="25.3211" y2="179.102" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#382ED8"/>
+                <stop offset="1" stop-color="#9169FB"/>
+            </linearGradient>
+            <linearGradient id="paint11_linear_349_27283" x1="290.302" y1="12.4923" x2="251.048" y2="11.4092" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#382ED8"/>
+                <stop offset="1" stop-color="#9169FB"/>
+            </linearGradient>
+            <linearGradient id="paint12_linear_349_27283" x1="253.892" y1="44.1102" x2="271.019" y2="28.378" gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0"/>
+                <stop offset="0.5027" stop-color="white"/>
+                <stop offset="1" stop-color="white" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="paint13_linear_349_27283" x1="286.771" y1="15.5265" x2="255.23" y2="14.6562" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#382ED8"/>
+                <stop offset="1" stop-color="#9169FB"/>
+            </linearGradient>
+        </defs>
+    </symbol>
+
+</svg>
+<!--</div>-->
+
+
+
+
+
+
+<script src="app.min.js?_v=20230601013335"></script>
+</body>
+</html>

@@ -1,4 +1,7 @@
 .see-more {
+  position: relative;
+  z-index: 1;
+
   h2 {
     font-size: gem(40);
     line-height: gem(48);

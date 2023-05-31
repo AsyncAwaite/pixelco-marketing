@@ -9,6 +9,16 @@ section {
 
   &__title {
     margin-bottom: gem(24);
+
+    &_adaptive {
+      .row {
+        .text-center {
+          @media all and (max-width: 576px) {
+            text-align: left;
+          }
+        }
+      }
+    }
   }
 
   &__benefits {
@@ -31,7 +41,31 @@ section {
     }
   }
 
+  &__audit {
+    .form {
+      max-width: 4.7rem;
+      width: 100%;
+    }
 
+    .col-md-7 {
+      @media all and (max-width: 992px) {
+        justify-content: flex-end;
+      }
+      @media all and (max-width: 576px) {
+        justify-content: center;
+        margin-bottom: gem(32);
+      }
+    }
+
+    .row {
+      + .row {
+        @media all and (max-width: 576px) {
+          flex-direction: column-reverse;
+          padding-top: gem(8);
+        }
+      }
+    }
+  }
 
 
 }

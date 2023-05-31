@@ -1,81 +1,260 @@
 .main-screen {
-  align-items: center;
+
   height: calc(100vh - var(--header-height));
 
-  .circle {
-    right: var(--container-gap);
-    top: 50%;
-    width: gem(552);
-    height: gem(544);
-    transform: translateY(-50%);
-  }
+  &__main {
+    align-items: center;
 
-  h1 {
-    //margin-top: gem(80);
-  }
-
-  .image {
-    height: gem(547);
-  }
-
-  .shadow {
-    width: gem(1413);
-    height: 150%;
-    right: -36%;
-    top: -24%;
-    animation: animatedOpacity 6s ease-in-out infinite;
-  }
-
-  @media all and (max-width: 992px) {
-    .row {
-      flex-direction: column-reverse;
-    }
-    .image {
-      height: 40vh;
-      margin-bottom: gem(50);
-    }
     .circle {
-      top: gem(32);
-      transform: none;
-      width: gem(452);
-      height: gem(444);
-      right: calc(var(--container-gap) + #{gem(32)});
+      right: var(--container-gap);
+      top: 50%;
+      width: gem(552);
+      height: gem(544);
+      transform: translateY(-50%);
     }
+
+    .image {
+      height: gem(547);
+    }
+
     .shadow {
-      width: calc(#{gem(1413)} / 2);
-      height: calc(125% / 2);
-      right: -10%;
-      top: -10%;
+      width: gem(1413);
+      height: 150%;
+      right: -36%;
+      top: -24%;
+      animation: animatedOpacity 6s ease-in-out infinite;
     }
-  }
-  @media all and (max-width: 576px) {
-    //height: 100%;
-    //padding: gem(40) 0;
-    .col-lg-6 {
-      &:last-child {
-        position: relative;
+
+    @media all and (max-width: 992px) {
+      .row {
+        flex-direction: column-reverse;
+      }
+      .image {
+        height: 40vh;
+        margin-bottom: gem(50);
+      }
+      .circle {
+        top: gem(32);
+        transform: none;
+        width: gem(452);
+        height: gem(444);
+        right: calc(var(--container-gap) + #{gem(32)});
+      }
+      .shadow {
+        width: calc(#{gem(1413)} / 2);
+        height: calc(125% / 2);
+        right: -10%;
+        top: -10%;
       }
     }
-    .circle {
-      width: 29.2vh;
-      top: 0;
-      right: 0;
-      //width: gem(243);
-      height: 29vh;
-      //height: gem(242);
+    @media all and (max-width: 576px) {
+      //height: 100%;
+      //padding: gem(40) 0;
+      .col-lg-6 {
+        &:last-child {
+          position: relative;
+        }
+      }
+      .circle {
+        width: 29.2vh;
+        top: 0;
+        right: 0;
+        //width: gem(243);
+        height: 29vh;
+        //height: gem(242);
+      }
+      .image {
+        height: 29vh;
+        //height: gem(242);
+        margin-bottom: gem(34);
+      }
+      .btn {
+        width: 100%;
+      }
+      .shadow {
+        width: calc(#{gem(1413)} / 4);
+        height: calc(125% / 4);
+      }
+
     }
-    .image {
-      height: 29vh;
-      //height: gem(242);
-      margin-bottom: gem(34);
-    }
-    .btn {
-      width: 100%;
-    }
+  }
+
+  &__linkedin {
     .shadow {
-      width: calc(#{gem(1413)} / 4);
-      height: calc(125% / 4);
+      z-index: -1;
+
+      &:first-child {
+        width: gem(550);
+        height: gem(550);
+        bottom: 0;
+        left: 0;
+        transform: translate(-50%, 25%);
+        @media all and (max-width: 576px) {
+          display: none;
+
+        }
+      }
+
     }
 
+    .container {
+      position: relative;
+
+      .shadow {
+        width: 100%;
+        height: gem(1140);
+        top: 0;
+        transform: translate(0%, -20%);
+        @media all and (max-width: 992px) {
+          height: 100%;
+        }
+        @media all and (max-width: 576px) {
+          width: gem(600);
+          height: gem(600);
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+      }
+    }
+
+    .row {
+      margin-top: gem(107);
+      position: relative;
+      z-index: 1;
+
+      &::before, &::after {
+
+        top: 0;
+        right: 0;
+        content: '';
+        position: absolute;
+        background: url('@img/linkedin_logo.png') no-repeat center  / contain;
+      }
+
+      &::before {
+        width: gem(47);
+        height: gem(47);
+        right: gem(50);
+        top: gem(-105);
+      }
+
+      &::after {
+        width: gem(42);
+        height: gem(42);
+        right: gem(37);
+        top: gem(-40);
+      }
+
+      @media all and (max-width: 992px) {
+        &::before, &::after {
+          content: none;
+        }
+      }
+      @media all and (max-width: 576px) {
+        margin-top: gem(48);
+      }
+    }
+
+    &::before {
+      width: 100%;
+      height: gem(537);
+      bottom: gem(-60);
+      left: gem(-120);
+      content: '';
+      position: absolute;
+      background: url('@img/linkedin_stroke.png') no-repeat center  / contain;
+      @media all and (max-width: 576px) {
+        content: none;
+      }
+    }
+
+    .circle {
+      width: gem(146);
+      height: gem(144);
+      right: var(--container-gap-decrement);
+    }
+
+    .image {
+      width: gem(324);
+      height: gem(311);
+
+      &::after {
+        width: gem(63);
+        height: gem(62);
+        top: 0;
+        right: 0;
+        content: '';
+        position: absolute;
+        background: url('@img/linkedin_logo.png') no-repeat center  / contain;
+        transform: translate(60%, -60%);
+      }
+
+      @media all and (max-width: 992px) {
+        transform: translate(50%);
+      }
+      @media all and (max-width: 576px) {
+        width: gem(200);
+        height: gem(200);
+        transform: none;
+      }
+    }
+
+    @media all and (max-width: 576px) {
+      .row {
+        height: 100%;
+        align-items: flex-start;
+        margin-top: 0;
+        padding-top: gem(48);
+      }
+
+      .col-lg-6 {
+        margin-bottom: gem(24);
+
+        + div {
+          display: flex;
+          justify-content: center;
+          position: relative;
+
+          .circle {
+            width: gem(87);
+            height: gem(87);
+            right: auto;
+            left: 0;
+            transform: translate(80%, -20%);
+            z-index: -1;
+          }
+        }
+      }
+    }
   }
+
+  &__instagram {
+    .image {
+      width: gem(470);
+      height: gem(470);
+    }
+
+    @media all and (max-width: 992px) {
+      .row {
+        flex-direction: column-reverse;
+        padding-top: gem(64);
+      }
+      .shadow {
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    @media all and (max-width: 574px) {
+      .row {
+        padding-top: gem(40);
+      }
+      .image {
+        width: gem(251);
+        height: gem(251);
+      }
+    }
+  }
+
 }
