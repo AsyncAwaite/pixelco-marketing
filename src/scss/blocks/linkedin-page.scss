@@ -28,7 +28,8 @@
     @media all and (max-width: 576px) {
       min-height: gem(334);
       padding: gem(24);
-      background: linear-gradient(132.5deg, #345D93 0%, #3662A1 100%);
+
+      background: linear-gradient(132.5deg, #345D93 0%, #3662A1 100%)!important;
     }
 
     h2 + div {

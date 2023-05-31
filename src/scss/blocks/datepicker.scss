@@ -60,14 +60,8 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    max-height: calc((6 * var(--cell-width)) - 0.1rem);
+    max-height: calc(5 * var(--cell-width) + 0.5rem);
     padding: gem(10) gem(15);
-    @media all and (max-width: 992px) {
-      max-height: calc((6 * var(--cell-width)));
-    }
-    @media all and (max-width: 576px) {
-      max-height: calc((6 * var(--cell-width)) + 0.1rem);
-    }
   }
 
   &-day {
