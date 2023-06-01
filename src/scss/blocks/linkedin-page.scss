@@ -17,10 +17,22 @@
 
   .info {
     padding: gem(40);
-    background: url('@img/linkedin_info.png') no-repeat center  / contain;
+    background: linear-gradient(100.43deg, #345D93 0.69%, #457DD0 100%);
     border-radius: gem(24);
     min-height: gem(500);
     height: 100%;
+    position: relative;
+
+    &::before {
+      width: 50%;
+      height: 100%;
+      bottom: 0;
+      right: 0;
+      content: '';
+      position: absolute;
+      background: url('@img/linkedin_info.png') no-repeat bottom right / contain;
+    }
+
     @media all and (max-width: 992px) {
       background-size: cover;
       background-position-x: 20%;
@@ -28,8 +40,10 @@
     @media all and (max-width: 576px) {
       min-height: gem(334);
       padding: gem(24);
+      &::before {
+        content: none;
+      }
 
-      background: linear-gradient(132.5deg, #345D93 0%, #3662A1 100%)!important;
     }
 
     h2 + div {
@@ -39,7 +53,8 @@
       }
     }
   }
-  .how-work{
+
+  .how-work {
     &::before {
       width: 60.4%;
       height: 100%;

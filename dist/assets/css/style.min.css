@@ -3275,13 +3275,24 @@ section {
   top: 0;
   left: -3rem
 }
-.no-webp .linkedin-page .info {
-  background: url(../img/linkedin_info.png) no-repeat center/contain; }
 .linkedin-page .info {
   padding: .4rem;
+  background: -o-linear-gradient(349.57deg,#345d93 .69%,#457dd0 100%);
+  background: linear-gradient(100.43deg,#345d93 .69%,#457dd0 100%);
   border-radius: .24rem;
   min-height: 5rem;
-  height: 100%
+  height: 100%;
+  position: relative
+}
+.no-webp .linkedin-page .info::before {
+  background: url(../img/linkedin_info.png) no-repeat bottom right/contain; }
+.linkedin-page .info::before {
+  width: 50%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  content: "";
+  position: absolute
 }
 .linkedin-page .info h2 + div {
   width: calc(100% - .4rem)
@@ -5227,9 +5238,10 @@ section {
   }
   .linkedin-page .info {
     min-height: 3.34rem;
-    padding: .24rem;
-    background: -o-linear-gradient(317.5deg,#345d93 0,#3662a1 100%)!important;
-    background: linear-gradient(132.5deg,#345d93 0,#3662a1 100%)!important
+    padding: .24rem
+  }
+  .linkedin-page .info::before {
+    content: none
   }
   .linkedin-page .info h2 + div {
     width: calc(100% - .24rem)
@@ -5388,7 +5400,7 @@ section {
 .webp .main-screen__linkedin .image::after { background: url(../img/linkedin_logo.webp) no-repeat center/contain; }
 .webp .cases__item .image::before { background: url(../img/display.webp) no-repeat center/contain; }
 .webp .mount { background: url(../img/mount.webp) no-repeat center var(--section-padding)/contain; }
-.webp .linkedin-page .info { background: url(../img/linkedin_info.webp) no-repeat center/contain; }
+.webp .linkedin-page .info::before { background: url(../img/linkedin_info.webp) no-repeat bottom right/contain; }
 .webp .linkedin-page .how-work::before { background: url(../img/stroke_linkedin_bg.webp) no-repeat center/contain; }
 .webp .instagram-page .section__info::before { background: url(../img/info_bg.webp) no-repeat center/contain; }
 .webp .instagram-page .how-work::before { background: url(../img/instagram_stroke.webp) no-repeat center/contain; }
