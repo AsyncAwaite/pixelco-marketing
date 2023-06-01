@@ -33,43 +33,7 @@ window.addEventListener("DOMContentLoaded", () => {
         // const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
         // const lastDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
         //
-        if (getElement('[data-date]')) {
-            flatpickr(getElement('[data-date]'), {
-                inline: true,
-                altFormat: "j F Y",
-                dateFormat: "Y-m-d",
-                locale: {
-                    firstDayOfWeek: 1 // 1 represents Monday
-                },
-                // defaultDate: 'today',
-                // minDate: firstDayOfMonth,
-                // maxDate: lastDayOfMonth,
-                onReady: function (selectedDates, dateStr, instance) {
-                    // Get all the calendar days
-                    const days = instance.calendarContainer.querySelectorAll('.flatpickr-day');
 
-                    // Remove the "today" class from the current date
-                    for (let i = 0; i < days.length; i++) {
-                        if (days[i].classList.contains('today')) {
-                            days[i].classList.remove('today');
-                            days[i].classList.add('selected');
-                        }
-                    }
-
-                },
-                onChange: function (selectedDates, dateStr, instance) {
-
-                    this._input.offsetParent.querySelector('.form-section').querySelector('[name="date"]').value = instance.calendarContainer.querySelector('.selected').ariaLabel;
-                    const days = instance.calendarContainer.querySelectorAll('.flatpickr-day');
-                    days.forEach(day => {
-                        if (day.classList.contains('today')) {
-                            day.classList.remove('today');
-                        }
-                    })
-                }
-            });
-
-        }
 
         AOS.init({
             duration: 800,
@@ -77,7 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         });
         const stringEl = getElement('[data-typing-string]');
-        stringEl.style.minHeight = stringEl.offsetHeight  + 'px';
+        stringEl.style.minHeight = stringEl.offsetHeight + 'px';
         const string = stringEl.innerText;
         stringEl.innerText = '';
         stringEl.style.opacity = 1;
@@ -111,7 +75,6 @@ window.addEventListener("DOMContentLoaded", () => {
         console.log(e);
     }
 });
-
 
 
 function headerFixed() {

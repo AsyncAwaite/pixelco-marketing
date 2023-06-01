@@ -1,7 +1,7 @@
 .footer {
   padding-top: var(--section-padding);
   position: relative;
-  z-index: 1;
+
 
   &__menu {
     justify-content: space-between;
@@ -24,6 +24,7 @@
       align-items: start;
       .logo {
         margin-bottom: gem(32);
+        z-index: 0;
       }
       .menu {
         flex-direction: row;

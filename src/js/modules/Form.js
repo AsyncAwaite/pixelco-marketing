@@ -3,6 +3,7 @@ import modalsEvents from "./modalsEvents.js";
 import Modal from "./modal.js";
 import {translateFields, lang} from "./base.js";
 import {getElement} from "./helpers.js";
+import flatpickr from "flatpickr";
 
 
 let validRegex =
@@ -51,6 +52,7 @@ class Form {
         this.inputs = this.form.querySelectorAll("input");
         this.path = `${path}/assets/services/telegramSend.php`;
         this.authPath = `${path}/assets/services/sendPulse.php`;
+        this.date = this.form.querySelector('[data-form-date]') ? this.form.querySelector('[data-form-date]') : null;
         this.telInput = this.form.querySelector("[name='tel']") ? this.form.querySelector("[name='tel']") : this.form.querySelector('.tel')
         this.mask = this.telInput ? new IMask(this.telInput, maskOptions) : null;
         this.textarea = this.form.querySelector('textarea') ? this.form.querySelector('textarea') : null;
@@ -413,12 +415,54 @@ class Form {
     }
 
     init() {
-        let dateParent = this.form.offsetParent.querySelector('[data-date]');
-        if (dateParent) {
-            let date = dateParent.nextElementSibling.querySelector('.selected')
-            this.form.querySelector('[name="date"]').value = date.ariaLabel
 
-            console.dir()
+
+        // let dateParent = this.form.offsetParent.querySelector('[data-date]');
+        // if (dateParent) {
+        //     let date = dateParent.nextElementSibling.querySelector('.selected')
+        //     this.form.querySelector('[name="date"]').value = date.ariaLabel
+        //
+        //     console.dir()
+        // }
+        // flatpickr-input
+        if (this.date) {
+            flatpickr(this.date, {
+                altInput: true,
+                altFormat: "j F Y",
+                dateFormat: "Y-m-d",
+                // inline: true,
+                // appendTo: this.date.parentElement,
+                static: true,
+                locale: {
+                    firstDayOfWeek: 1 // 1 represents Monday
+                },
+                // defaultDate: 'today',
+                // minDate: firstDayOfMonth,
+                // maxDate: lastDayOfMonth,
+                onReady: function (selectedDates, dateStr, instance) {
+                    // // Get all the calendar days
+                    // const days = instance.calendarContainer.querySelectorAll('.flatpickr-day');
+                    //
+                    // // Remove the "today" class from the current date
+                    // for (let i = 0; i < days.length; i++) {
+                    //     if (days[i].classList.contains('today')) {
+                    //         days[i].classList.remove('today');
+                    //         days[i].classList.add('selected');
+                    //     }
+                    // }
+
+                },
+                onChange: function (selectedDates, dateStr, instance) {
+
+                    // this._input.offsetParent.querySelector('.form-section').querySelector('[name="date"]').value = instance.calendarContainer.querySelector('.selected').ariaLabel;
+                    // const days = instance.calendarContainer.querySelectorAll('.flatpickr-day');
+                    // days.forEach(day => {
+                    //     if (day.classList.contains('today')) {
+                    //         day.classList.remove('today');
+                    //     }
+                    // })
+                }
+            });
         }
 
         this.checkInputs();

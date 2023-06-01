@@ -1,23 +1,38 @@
 :root {
-  --cell-width: #{gem(56)};
-  @media all and (max-width: 992px) {
-    --cell-width: #{gem(44)};
-  }
-  @media all and (max-width: 576px) {
-    --cell-width: #{gem(40)};
-  }
+  --cell-width: #{gem(24)};
+  //@media all and (max-width: 992px) {
+  //  --cell-width: #{gem(44)};
+  //}
+  //@media all and (max-width: 576px) {
+  //  --cell-width: #{gem(40)};
+  //}
 }
 
 .flatpickr {
-  &-calendar.inline {
+  &-wrapper {
+    display: flex;
+  }
+
+  &-calendar {
+    &.static {
+      top: calc(100% + 0.16rem);
+    }
+
+    display: block;
+    width: 100%;
     background: transparent;
-    max-width: gem(470);
     border: none;
-    box-shadow: none;
+    box-shadow: gem(8) gem(3) gem(22) gem(10) rgba(0, 0, 0, 0.13);
+    border-radius: gem(16);
+    padding: gem(24);
     color: $white;
-    font-size: var(--body-size);
-    line-height: var(--body-line-height);
-    border-radius: 0;
+    background: $gradient;
+    font-size: var(--body-size-xs);
+    line-height: var(--body-line-xs);
+    @media all and (max-width: 576px) {
+      padding: gem(14);
+    }
+
 
     &::before, &::after {
       content: none;
@@ -25,92 +40,216 @@
 
     span.flatpickr-weekday {
       color: $white;
-      font-size: var(--body-size);
-      line-height: var(--body-line-height);
+      font-size: gem(10);
+      line-height: gem(12);
       font-weight: 500;
     }
 
-    .dayContainer {
-      display: grid;
-      grid-template-columns: repeat(7, var(--cell-width));
-      gap: gem(8);
 
-      justify-items: center;
+  }
+
+  &-months {
+    display: block;
+    position: relative;
+
+    .flatpickr-month {
+      font-size: gem(14);
+      line-height: gem(17);
+      color: $white;
       width: 100%;
-      max-width: 100%;
+      height: 0.37rem;
+      margin: 0;
+      width: 100%;
+      left: 0;
+      padding: 0;
+      display: flex;
+      position: relative;
 
+      &::after {
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        content: '';
+        position: absolute;
+        border: 0.8px solid #7C6FE6;
+        z-index: -1;
+      }
+
+      .flatpickr-current-month {
+        letter-spacing: 0.01em;
+        margin: 0;
+        width: 100%;
+        left: 0;
+        padding: 0;
+        height: auto;
+        display: flex;
+        font-size: gem(14);
+        line-height: gem(17);
+      }
+
+      .flatpickr-monthDropdown-months {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: transparent;
+        font-weight: 400;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        font-size: gem(14);
+        line-height: gem(17);
+      }
+
+      input {
+        font-weight: 400;
+      }
+
+      .numInputWrapper {
+        font-size: gem(14);
+        line-height: gem(17);
+        width: auto;
+        pointer-events: none;
+        cursor: default;
+        font-weight: 400;
+
+        span {
+          display: none;
+        }
+
+        &:hover {
+          background: transparent;
+        }
+
+      }
+
+
+    }
+
+    .flatpickr-next-month, .flatpickr-prev-month {
+      height: auto;
+      padding: 0;
+      top: gem(2.5);
+      font-size: gem(14);
+      line-height: gem(14);
+      padding: 0;
+      //transform: translateY(-50%);
+
+      svg {
+        fill: $white;
+        width: gem(10);
+        height: gem(14);
+      }
+
+      &:hover {
+        svg {
+          fill: $white;
+        }
+      }
+    }
+
+    .flatpickr-next-month {
+      right: 0;
+    }
+
+    .flatpickr-prev-month {
+      left: auto !important;
+      right: 0.45rem;
     }
   }
 
   &-rContainer {
     display: flex;
     flex-direction: column;
+    padding-top: gem(20);
+  }
+
+  &-innerContainer {
+    display: block;
+  }
+
+  &-weekdays {
+    height: auto;
+    margin-bottom: gem(20);
+  }
+
+  &-weekdaycontainer {
+    display: grid;
+    grid-template-columns: repeat(7, var(--cell-width));
+    justify-items: center;
+    gap: 0 0.42rem;
+    @media all and (max-width: 576px) {
+      gap: 0 0.2rem;
+    }
   }
 
 
-  &-months {
-    display: none;
-  }
-
-  &-input {
-    visibility: hidden;
-  }
+  //
+  //&-input {
+  //  visibility: hidden;
+  //}
 
   &-days {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    max-height: calc(5 * var(--cell-width) + 0.5rem);
-    padding: gem(10) gem(15);
+    max-height: calc(5 * var(--cell-width) + 0.64rem);
+
+    .dayContainer {
+      display: grid;
+      grid-template-columns: repeat(7, 0.24rem);
+      gap: 0.16rem 0.42rem;
+      justify-items: center;
+      width: 100%;
+      max-width: 100%;
+      @media all and (max-width: 576px) {
+        gap: 0.16rem 0.2rem;
+      }
+    }
   }
+
 
   &-day {
     width: var(--cell-width);
     height: var(--cell-width);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
     position: relative;
-    background: transprent;
-    border-radius: gem(8);
+    background: none;
     transition: all .35s linear;
     font-weight: 500;
-    font-size: var(--body-size);
-    line-height: var(--body-line-height);
+    font-size: gem(14);
+    line-height: gem(17);
     color: $white;
     max-width: 100%;
     border: none;
     transition: all .35s linear;
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: gem(8);
-      padding: gem(1);
-      background: $gradient;
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-    }
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
       background-color: rgba($gray-800, .6);
     }
 
     &.selected {
-      box-shadow: 0px 0px gem(20) rgba(134, 123, 229, 0.4);
-      background: $gradient !important;
-      border-radius: 50%;
-      border: none;
+
+      background: none !important;
+      //border-radius: 50%;
+      //border: none;
 
       &::before {
-        content: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
       }
 
       &:hover {
@@ -120,6 +259,7 @@
 
     &.prevMonthDay, &.nextMonthDay {
       color: rgba($gray-800, .7);
+      opacity: 0;
 
       &:hover {
         border: none;
@@ -128,25 +268,5 @@
     }
   }
 
-  &-weekdays {
 
-    border-radius: gem(8);
-    background: $gradient;
-    padding: 0 gem(15);
-    height: gem(60);
-    display: flex;
-    align-items: center;
-    @media all and (max-width: 992px) {
-      height: gem(50);
-    }
-
-  }
-
-  &-weekdaycontainer {
-    display: grid;
-    grid-template-columns: repeat(7, var(--cell-width));
-    justify-items: center;
-
-    gap: gem(8);
-  }
 }
