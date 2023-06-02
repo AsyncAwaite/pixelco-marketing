@@ -430,6 +430,7 @@ class Form {
                 altInput: true,
                 altFormat: "j F Y",
                 dateFormat: "Y-m-d",
+                disableMobile: true,
                 // inline: true,
                 // appendTo: this.date.parentElement,
                 static: true,
