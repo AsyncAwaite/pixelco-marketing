@@ -1,0 +1,36 @@
+.niche {
+  .col-6{
+    margin-bottom: gem(30);
+  }
+  &__item {
+    border-radius: gem(20);
+    border: 1px solid $gray-800;
+    padding: gem(24);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media all and (max-width: 576px){
+      padding: gem(24) gem(14);
+    }
+  }
+
+  &__icon {
+    font-size: gem(56);
+    line-height: gem(56);
+    color: $accent;
+  }
+
+  &__text {
+    font-size: var(--body-size-l);
+    line-height: var(--body-line-l);
+    color: #FBF8F8;
+    width: 80%;
+    @media all and (max-width: 992px){
+      width: 100%;
+    }
+  }
+  .btn{
+    width: auto;
+  }
+}

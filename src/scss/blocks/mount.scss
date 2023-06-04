@@ -3,6 +3,13 @@
   align-items: flex-end;
   background: url('@img/mount.png') no-repeat center var(--section-padding)  / contain;
   height: gem(940);
+  @media all and (min-width: 1720px) {
+    background-size: cover;
+    height: gem(1140);
+    .card {
+      margin-left: auto;
+    }
+  }
   @media all and (max-width: 992px) {
     height: 100%;
     background: none;

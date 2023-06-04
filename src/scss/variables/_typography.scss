@@ -32,7 +32,7 @@
     --font-size-h4: #{gem(18)};
     --font-size-h5: #{gem(16)};
     --font-size-h6: #{gem(14)};
-
+    --body-size-l: #{gem(15)};
     --body-size: #{gem(15)};
     --body-size-xs: #{gem(12)};
   }
@@ -45,6 +45,7 @@
   --line-height-h4: #{gem(34)};
 
   --body-line-height: #{gem(24)};
+  --body-line-l: #{gem(25.2)};
   --body-line-xs: #{gem(21)};
 
   @media all and (max-width: 992px) {
@@ -52,6 +53,7 @@
     --line-height-h2: #{gem(48)};
     --line-height-h3: #{gem(36)};
     --line-height-h4: #{gem(38)};
+
   }
   @media all and (max-width: 576px) {
     --line-height-h1: #{gem(48)};
@@ -60,6 +62,9 @@
     --line-height-h4: #{gem(22)};
 
     --body-line-height: #{gem(22.5)};
+    --body-line-l: #{gem(22.5)};
+
+
     --body-line-xs: #{gem(18)};
   }
 }

@@ -10,7 +10,8 @@
   position: relative;
   flex-shrink: 0;
   font-weight: 500;
-  //overflow: hidden;
+background: transparent;
+  border-color: transparent;
   text-transform: uppercase;
   border-radius: gem(12);
   font-size: gem(16);
@@ -77,6 +78,14 @@
       &::after {
         opacity: 1;
       }
+    }
+  }
+  &_outline{
+    border: 1px solid $white;
+    text-transform: none;
+    &:hover{
+      background-color:  $gray-900;
+      border-color: $gray-900;
     }
   }
 

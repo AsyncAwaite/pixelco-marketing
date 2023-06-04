@@ -4,6 +4,7 @@
   width: 100%;
   margin: 0 auto;
   max-width: 100%;
+  //max-width: gem(1170);
 
   //@media (max-width: 370px) {
   //  padding: 0 gem(15);
@@ -15,7 +16,7 @@
   flex-wrap: wrap;
 }
 .row {
-  --bs-gutter-x: gem(30);
+  --bs-gutter-x: #{gem(30)};
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
@@ -23,7 +24,7 @@
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
   @media all and (max-width: 576px){
-    --bs-gutter-x: gem(24);
+    --bs-gutter-x:  #{gem(24)};
   }
 }
 .row > * {

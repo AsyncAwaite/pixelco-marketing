@@ -1,4 +1,8 @@
 .audit {
+  .col-md-6{
+    display: flex;
+    flex-direction: column;
+  }
   .shadow {
     width: 56.7%;
     height: gem(826);
@@ -44,6 +48,11 @@
   .col-md-5 {
     @media all and (max-width: 576px) {
       position: relative;
+    }
+  }
+  &__link{
+    &:hover{
+      color: #fff;
     }
   }
 }

@@ -17,6 +17,7 @@
 html {
   //height: calc(var(--vh, 1vh) * 100);
   min-height: 100vh;
+
 }
 
 body {
@@ -28,11 +29,11 @@ body {
   font-weight: 400;
   position: relative;
   color: $white;
+
   background-color: $gray-900;
   //min-width: 100vh;
   //height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
   //height: calc(var(--vh, 1vh) * 100);
-
   &.active {
     overflow: hidden;
     touch-action: none;
@@ -72,7 +73,7 @@ button {
 
 
 .page-container {
-  overflow-x: hidden;
+overflow-x: hidden;
   display: flex;
   flex-direction: column;
 

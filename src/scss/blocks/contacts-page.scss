@@ -1,0 +1,120 @@
+.contacts-page {
+  .main-screen {
+    padding: gem(120) 0 gem(130);
+    @media all and (max-width: 992px) {
+      padding: gem(84) 0 gem(87);
+    }
+    @media all and (max-width: 576px) {
+      padding: gem(48) 0 gem(64);
+
+    }
+
+    .row {
+      &:first-child {
+        margin-bottom: gem(80);
+        @media all and (max-width: 992px) {
+          margin-bottom: gem(48);
+        }
+        @media all and (max-width: 576px) {
+          margin-bottom: gem(24);
+        }
+      }
+    }
+
+    .circle {
+      box-shadow: 3px 2px 20px rgba(135, 107, 229, 0.7);
+    }
+
+    .image {
+      width: gem(387);
+      height: gem(440);
+
+      img {
+        left: gem(70);
+        top: gem(30);
+      }
+
+      @media all and (max-width: 992px) {
+        margin: 0 auto gem(64);
+      }
+      @media all and (max-width: 576px) {
+        .circle {
+          display: none;
+        }
+
+        width: gem(251);
+        height: gem(251);
+        img {
+          left: 0;
+          top: 0;
+        }
+        &::before{
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          content: '';
+          position: absolute;
+          opacity: .8;
+          background: radial-gradient(50% 50% at 50% 50%, rgba(59, 49, 217, 0.4) 0%, rgba(59, 49, 217, 0) 100%);
+        }
+
+      }
+    }
+  }
+
+  &__links {
+    a {
+      width: gem(104);
+      height: gem(104);
+      margin-right: gem(24);
+      background-color: transparent;
+
+      span {
+        font-size: gem(40);
+        line-height: gem(40);
+      }
+
+      &:hover {
+        span {
+          &::before {
+            color: $accent;
+          }
+        }
+      }
+
+      @media all and (max-width: 992px) {
+        width: gem(88);
+        height: gem(88);
+        margin-right: gem(20);
+      }
+      @media all and (max-width: 576px) {
+        width: gem(72);
+        height: gem(72);
+        margin-right: gem(16);
+      }
+    }
+  }
+
+  .form {
+    margin-top: gem(32);
+
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: gem(32) gem(30);
+      @media all and (max-width: 576px) {
+        grid-template-columns: 1fr;
+        gap: gem(24);
+      }
+    }
+
+    .flatpickr-calendar {
+      right: 0;
+      min-width: 4.7rem;
+      @media all and (max-width: 576px) {
+        min-width: 100%;
+      }
+    }
+  }
+}

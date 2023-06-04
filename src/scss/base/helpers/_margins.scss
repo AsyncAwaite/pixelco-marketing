@@ -1,4 +1,14 @@
 .mb {
+  &_xl {
+    margin-bottom: gem(56);
+    @media all and (max-width: 992px) {
+      margin-bottom: gem(40);
+    }
+    @media all and (max-width: 576px) {
+      margin-bottom: gem(32);
+    }
+  }
+
   &_l {
     margin-bottom: gem(40);
     @media all and (max-width: 992px) {
@@ -7,6 +17,14 @@
     @media all and (max-width: 576px) {
       margin-bottom: gem(24);
     }
+  }
+
+  &_40 {
+    margin-bottom: gem(40);
+  }
+
+  &_32 {
+    margin-bottom: gem(32);
   }
 
   &_40-32 {
@@ -21,6 +39,16 @@
 
   &_24 {
     margin-bottom: gem(24);
+  }
+
+  &_24-16 {
+    margin-bottom: gem(24);
+    @media all and (max-width: 992px) {
+      margin-bottom: gem(20);
+    }
+    @media all and (max-width: 576px) {
+      margin-bottom: gem(16);
+    }
   }
 
   &_24-32 {
@@ -63,4 +91,7 @@
   &_auto {
     margin-left: auto;
   }
+}
+.mx{
+  margin: 0 auto;
 }

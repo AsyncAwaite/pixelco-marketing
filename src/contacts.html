@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Linkedin"
+})
+<body class="body">
+<div class="page-container">
+    <div class="progress-bar pos-a">
+        <div id="progress-bar"></div>
+    </div>
+
+    @@include('html/header.html',{})
+    <main class="contacts-page">
+
+        <section data-aos="fade-down" class="main-screen  flex">
+            <div class="shadow shadow_big"></div>
+            <div class="container pos-r">
+
+                <div class="row --just-center ">
+                    <div class="col-md-10 text-center">
+                        <h1 class="mb_24">
+                            Looking to collaborate?
+                        </h1>
+                        <div class="section__subtitle text-color_gray h4">
+                            Get in touch to find out how we can help
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" col-lg-6">
+
+                        <div class="image">       <div class="circle"></div><img src="@img/dragon_2.png" alt=""></div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="flex --dir-col">
+                            <div class="mb_16-8">
+                                <a href="tel:+(352) 565-5589"
+                                   class="audit__link h2 text-color_accent  flex-inline">(352) 565-5589</a>
+                            </div>
+                            <div class="mb_32">
+                                <a href="mailto:info@pixelcomarketing.com"
+                                   class="audit__link text-color_accent flex-inline ">mailto:info@pixelcomarketing.com</a>
+
+                            </div>
+                        </div>
+                        <div class="contacts-page__links">
+                            <a href="#" class="flex-inline brd_24 border-gradient --align-center --just-center"><span
+                                    class="icon-Instagram"></span></a>
+                            <a href="#" class="flex-inline brd_24 border-gradient --align-center --just-center"><span
+                                    class="icon-Facebook"></span></a>
+                            <a href="#" class="flex-inline brd_24 border-gradient --align-center --just-center"><span
+                                    class="icon-Telegram"></span></a>
+                        </div>
+
+                        <form action="" class="form audit-form">
+                            <div class="form__items">
+                                <div class="form__item  ">
+                                    <div class="form__input pos-r">
+                                        <input type="text" id="name-audit" name="name" placeholder="Enter your name">
+                                        <div class="form__message">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form__item  ">
+                                    <div class="form__input pos-r">
+                                        <input type="email" id="email-audit" name="email"
+                                               placeholder="Enter your email">
+                                        <div class="form__message">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form__item  ">
+                                    <div class="form__input form__input_tel pos-r">
+                                        <input type="text" id="phone-audit" name="tel"
+                                               placeholder="Enter your phone ">
+                                        <div class="form__message">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form__item  ">
+                                    <div class="form__input pos-r">
+                                        <input data-form-date type="date"
+                                               placeholder="Сonvenient time to call">
+                                    </div>
+                                </div>
+
+                                <div class="form__item form__item_row ">
+
+                                    <div class="form__input pos-r">
+                                        <textarea id="message-audit" placeholder="Your request "></textarea>
+                                        <span class="icon-12 pos-a close-icon hide "></span>
+                                        <span class="icon-12 pos-a icon-check hide "></span>
+                                    </div>
+                                    <div class="form__message">
+
+                                    </div>
+                                </div>
+                                <div class="form__item form__item_row ">
+                                    <button type="submit" class="btn btn_main w-100">
+                                        Назначить встречу
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    @@include('html/footer.html',{})
+</div>
+@@include('html/modal.html',{})
+@@include('html/svg.html',{})
+<script src="app.min.js"></script>
+</body>
+</html>

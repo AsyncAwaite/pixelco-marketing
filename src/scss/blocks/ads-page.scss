@@ -1,0 +1,219 @@
+.ads-page {
+  .main-screen {
+    min-height: 100%;
+    height: gem(654);
+
+    .shadow_big {
+      right: 0;
+      transform: translate(3rem, -50%);
+    }
+
+    &__image {
+      width: gem(550);
+      height: gem(536);
+    }
+
+    &__circle {
+      margin-top: gem(60);
+      position: relative;
+
+      .circle {
+        width: gem(130);
+        height: gem(130);
+
+
+        transform: none;
+
+      }
+
+      &::before {
+        width: gem(893);
+        height: gem(322.5);
+        top: gem(20);
+        left: 0;
+        content: '';
+        position: absolute;
+        background: url('@img/ads_stroke.png') no-repeat center  / contain;
+        z-index: -1;
+      }
+    }
+
+
+    @media all and (max-width: 992px) {
+      padding-top: gem(40);
+    }
+    @media all and (max-width: 576px) {
+      min-height: 100%;
+      &__circle {
+        display: none;
+      }
+      .image {
+        width: gem(251);
+        height: gem(251);
+      }
+    }
+
+  }
+
+  .section__info {
+    padding-top: 0;
+  }
+
+  .info {
+    padding: gem(64) gem(94);
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: gem(86);
+    display: grid;
+
+  }
+
+  .why {
+    &__text {
+      padding: 0;
+
+      li {
+        &:first-child {
+          padding-top: 0;
+        }
+      }
+
+      .image {
+        margin-left: auto;
+        width: gem(430);
+        height: gem(220);
+      }
+    }
+  }
+
+  #how-work {
+    .how-work {
+
+      &__wrapper {
+        position: relative;
+
+        &::before {
+
+          width: 100%;
+          height: calc(100% - #{gem(170)});
+          top: gem(170);
+          left: 50%;
+          transform: translate(-50%, 0);
+          content: '';
+          position: absolute;
+          background: url('@img/stroke_ads_bg.png') no-repeat center  / contain;
+          @media all and (max-width: 576px) {
+            content: none;
+
+          }
+        }
+        .row{
+          @media all and (max-width: 576px){
+          &::before{
+            content: none;
+          }
+          }
+        }
+      }
+
+      &__ads {
+        &_1 {
+          .how-work__text {
+            width: 100%;
+          }
+
+          position: relative;
+
+          .image {
+            position: absolute;
+            z-index: 1;
+
+            &:first-child {
+              top: gem(-80);
+              left: gem(-100);
+              width: gem(176);
+              height: gem(166);
+              @media all and (max-width: 992px) {
+                order: 2;
+                width: gem(120);
+                height: gem(120);
+                top: 0;
+                left: 0;
+                transform: translate(-50%, 50%);
+              }
+            }
+
+            &:last-child {
+              width: gem(236);
+              height: gem(214);
+              bottom: gem(-105);
+              right: gem(-150);
+              @media all and (max-width: 992px) {
+                right: 0;
+                bottom: 0;
+                order: 1;
+                transform: translate(0, 0);
+              }
+            }
+          }
+
+          @media all and (max-width: 992px) {
+            .col-lg-6 {
+              flex-direction: column-reverse;
+            }
+
+            .image {
+              position: relative;
+
+
+            }
+            .how-work__text {
+              order: 0;
+              text-align: left;
+            }
+            ~ .row {
+              flex-direction: column-reverse !important;
+
+              &:nth-child(odd) {
+                flex-direction: column !important;
+
+              }
+
+            }
+          }
+        }
+
+        &_2 {
+          position: relative;
+
+          .how-work__text {
+            width: 100%;
+          }
+
+          .image {
+            position: absolute;
+            width: gem(169);
+            height: gem(160);
+            bottom: gem(-50);
+            right: gem(-60);
+            @media all and (max-width: 576px) {
+              display: none;
+            }
+          }
+
+          @media all and (max-width: 992px) {
+            ~ .row {
+
+              flex-direction: column !important;
+
+              + .row {
+                flex-direction: column-reverse !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}

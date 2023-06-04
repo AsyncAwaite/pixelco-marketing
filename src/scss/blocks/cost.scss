@@ -1,9 +1,23 @@
 .cost {
   color: $white;
 
+  &__subtitle {
+    @media all and (max-width: 576px) {
+      text-align: center;
+      color: #8B89B0;
+    }
+  }
+
+  h2 {
+    @media all and (max-width: 576px) {
+      text-align: center;
+    }
+  }
+
   &__items {
     padding-bottom: gem(80);
     position: relative;
+    min-height: gem(590);
 
     .circle {
       width: gem(570);
@@ -66,6 +80,26 @@
           width: 100%;
           top: 0;
         }
+      }
+    }
+  }
+
+  .see-more {
+    .btn {
+      width: auto;
+    }
+
+    @media all and (max-width: 576px) {
+      .col-md-2 {
+        display: none;
+      }
+      &__btn {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .row{
+        padding-top: gem(16);
+        padding-bottom: gem(16);
       }
     }
   }

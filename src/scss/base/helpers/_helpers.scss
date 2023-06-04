@@ -79,6 +79,9 @@
   border-radius: 50%;
   background: $gradient;
 }
+.bgc_gradient{
+  background: $gradient;
+}
 
 .bgc_accent {
   background-color: $accent;
@@ -86,7 +89,30 @@
 .bgc_gray{
   background-color: $gray-900;
 }
+.border-gradient{
+  position: relative;
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: gem(12);
 
+    background: $gradient;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  &::before {
+    padding: gem(1);
+  }
+}
+.brd_24{
+  border-radius: gem(24);
+}
+.border{
+  border: 1px solid $gray-800;
+}
 
 @keyframes animatedOpacity {
   0% {

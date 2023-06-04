@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Linkedin"
+})
+<body class="body">
+
+<div class="page-container">
+    <div class="progress-bar pos-a">
+        <div id="progress-bar"></div>
+    </div>
+
+    @@include('html/header.html',{})
+    <main class="website-page">
+
+        <section data-aos="fade-down" class="main-screen main-screen__shadows  flex ">
+            <div class="shadow"></div>
+            <div class="container pos-r">
+
+                <div class="row --just-center">
+                    <div class="col-md-10 col-lg-6 text-center">
+                        <h1 class="mb_24" data-typing-string>
+                            Website development</h1>
+                        <div class="h4 text-color_gray">Разрабатываем сайты, которые завлекают и продают</div>
+
+
+                    </div>
+
+
+                </div>
+                <div class="shadow"></div>
+            </div>
+            <div class="shadow "></div>
+        </section>
+        <section class="section section__types types">
+            <div class="container">
+                <h2 class="text-center mb_xl">
+                    Типы сайтов
+                </h2>
+
+                <div class="types__item mb_40">
+                    <div class="image brd_24"><img src="@img/website_1.png" alt=""></div>
+                    <div class="content">
+                        <div class="h3 mb_16">Landing Page</div>
+                        <div class="text-color_gray mb_24">
+                            Это одностраничный веб-сайт, который создан с целью призыва пользователя выполнить
+                            конкретное действие, например, оформить заказ или подписаться на рассылку. Имеет яркий,
+                            привлекательный дизайн, краткую информацию о продукте или услуге, описание выгод для клиента
+                            и форму для оформления заявки или заказа
+                        </div>
+                        <div class="info flex mb_24">
+                            <div class="first">
+                                <div class="h4 text-color_accent">3 недели</div>
+                                <div class="text-color_gray">
+                                    Срок выполнения
+                                </div>
+                            </div>
+                            <div>
+                                <div class="h4 text-color_accent">1 страница</div>
+                                <div class="text-color_gray">
+                                    Количество
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price flex --just-between">
+                            <div class="h3">$1000-$1500</div>
+                            <button class="btn btn_main text-normal">
+                                Заказать
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="types__item mb_40">
+                    <div class="image brd_24"><img src="@img/website_2.png" alt=""></div>
+                    <div class="content">
+                        <div class="h3 mb_16">Сайт-визитка</div>
+                        <div class="text-color_gray mb_24">
+                            Это небольшой сайт из нескольких страниц: главная, о нас, услуги/продукты, контакты. Имеет
+                            простой и понятный дизайн, содержит необходимую информацию и позволяет быстро связаться с
+                            компанией. Основные потребители такого сайта - владельцы малого и среднего бизнеса, которым
+                            редко требуется вносить изменения в свой сайт
+                        </div>
+                        <div class="info flex mb_24">
+                            <div class="first">
+                                <div class="h4 text-color_accent">3-4 недели</div>
+                                <div class="text-color_gray">
+                                    Срок выполнения
+                                </div>
+                            </div>
+                            <div>
+                                <div class="h4 text-color_accent">4 страниц</div>
+                                <div class="text-color_gray">
+                                    Количество
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price flex --just-between">
+                            <div class="h3">$1800-$2500</div>
+                            <button class="btn btn_main text-normal">
+                                Заказать
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="types__item mb_40">
+                    <div class="image brd_24"><img src="@img/website_3.png" alt=""></div>
+                    <div class="content">
+                        <div class="h3 mb_16">Корпоративный сайт</div>
+                        <div class="text-color_gray mb_24">
+                            Хорошее решение для крупных компаний. 
+                            Основная цель сайта—  это усиление имиджа компании, представление своего продукта,
+                            привлечение новых клиентов/партнеров/сотрудников и быть удобным источником информации для
+                            них. Состоит из 6-8 страниц: главная, о компании, продукты/услуги, вакансии, FAQ, партнеры, 
+                            новости, контакты
+                        </div>
+                        <div class="info flex mb_24">
+                            <div class="first">
+                                <div class="h4 text-color_accent">6-8 недель</div>
+                                <div class="text-color_gray">
+                                    Срок выполнения
+                                </div>
+                            </div>
+                            <div>
+                                <div class="h4 text-color_accent">6-8 страниц</div>
+                                <div class="text-color_gray">
+                                    Количество
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price flex --just-between">
+                            <div class="h3">$3000-$4000</div>
+                            <button class="btn btn_main text-normal">
+                                Заказать
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="types__item mb_40">
+                    <div class="image brd_24"><img src="@img/website_4.png" alt=""></div>
+                    <div class="content">
+                        <div class="h3 mb_16">Интернет-магазин</div>
+                        <div class="text-color_gray mb_24">
+                            этот сайт, обладает широким ассортиментом товара, который могут заказать пользователи и
+                            оформить его доставку. Сайт обеспечивает безопасность покупок и защиту персональных данных
+                            покупателей, обладает ярким/стильным дизайном и включает в себя такие дополнительный функции
+                            в разработке как: политика конфиденциальности, корзина, каталог товаров, навигация/фильтры,
+                            личный кабинет пользователя, интеграция платёжных систем, интеграция систем доставки,
+                            аналитика
+                        </div>
+                        <div class="info flex mb_24">
+                            <div class="first">
+                                <div class="h4 text-color_accent">2-8 месяцев</div>
+                                <div class="text-color_accent">
+                                    (зависит от сложности магазина)
+                                </div>
+                                <div class="text-color_gray">
+                                    Срок выполнения
+                                </div>
+                            </div>
+                            <div>
+                                <div class="h4 text-color_accent">6-8 страниц</div>
+                                <div class="text-color_gray">
+                                    Количество
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price flex --just-between">
+                            <div class="h3">$5000+</div>
+                            <button class="btn btn_main text-normal">
+                                Заказать
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="types__item ">
+                    <div class="image brd_24"><img src="@img/website_5.png" alt=""></div>
+                    <div class="content">
+                        <div class="h3 mb_16">Магазин на Shopify</div>
+                        <div class="text-color_gray mb_24">
+                            Удобный сайт под розничный онлайн-магазин, который подходит для больших объемов продаж как
+                            для начинающих предпринимателей, так и для опытных бизнесменов, которые хотят расширить
+                            бизнес. Понятный интерфейс, яркий/стильный дизайн, богатый набор инструментов для управления
+                            магазином, интеграция с платежными и доставочными системами, аналитика для мониторинга
+                            продаж и повышения эффективности бизнеса
+                        </div>
+
+                        <div class="price flex --just-between">
+                            <div class="h3">$1800</div>
+                            <button class="btn btn_main text-normal">
+                                Заказать
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section data-aos="fade-up" class="section section__title_adaptive section__why why">
+            <div class="shadow shadow_big"></div>
+            <div class="container">
+                <div class="row --just-center mb_l">
+                    <div class="col-md-8 text-center">
+                        <h2 class="section__title">
+                            Почему вам следует выбрать нас
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 col-lg-6 flex --just-center why__img">
+                        <div class="circle"></div>
+                        <div class="image">
+                            @@include('html/website_shield.html',{})
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-lg-6 flex --just-center ">
+                        <ul class="check-list why__text">
+                            <li>
+                                <span class="check-list__icon pos-r"> <span
+                                        class="icon-check text-color_gradient">
+
+                                        </span></span> <span>
+                 Прозрачные условия работы </span>
+                            </li>
+                            <li>
+                                <span class="check-list__icon pos-r"> <span
+                                        class="icon-check text-color_gradient">
+
+                                        </span></span> <span>
+                         Отчетность на всех этапах </span>
+                            </li>
+                            <li>
+                                <span class="check-list__icon pos-r"> <span
+                                        class="icon-check text-color_gradient">
+
+                                        </span></span> <span>
+                                Максимально углубляемся в ваш бизнес</span></li>
+                            <li>
+                                <span class="check-list__icon pos-r"> <span
+                                        class="icon-check text-color_gradient">
+
+                                        </span></span> <span>
+                              Учим работать с сайтом и организовываем тех. поддержку </span></li>
+                            <li>
+                                <span class="check-list__icon pos-r"> <span
+                                        class="icon-check text-color_gradient">
+
+                                        </span></span> <span>
+                             Делаем индивидуальные дизайн и разработку</span></li>
+                            <li>
+                                <span class="check-list__icon pos-r"> <span
+                                        class="icon-check text-color_gradient">
+
+                                        </span></span> <span>
+                       Постоянная обратная связь</span></li>
+                            <li>
+                                <span class="check-list__icon pos-r"> <span
+                                        class="icon-check text-color_gradient">
+
+                                        </span></span> <span>
+                   Даем тестовый доступ к демо-версии сайта</span></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section data-aos="fade-up" class="section__promotion promotion">
+            <div class="container">
+                <div class="row promotion__wrapper">
+                    <div class="col-lg-5">
+
+                        <div class="title">
+                            <h2>
+                                Основные этапы создания сайта
+                            </h2>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="promotion__item flex">
+                            <h3 class="number">01</h3>
+                            <div class="point bgc_circle"></div>
+                            <div class="content">
+                                <h5 class="mb_16-8">Определение целей</h5>
+                                <div class="mb_24-16">Какие функции должен выполнять сайт? Какова будет его целевая
+                                    аудитория? Каких результатов вы хотите добиться? Мы поможем вам ответить на эти
+                                    вопросы на основе собственного опыта работы с десятками украинских и зарубежных
+                                    клиентов
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row promotion__wrapper --just-end">
+                    <div class="col-lg-6">
+                        <div class="promotion__item flex promotion__item_short">
+                            <h3 class="number">02</h3>
+                            <div class="point bgc_circle"></div>
+                            <div class="content">
+                                <h5 class="mb_16-8">Бизнес-анализ и бенчмаркинг</h5>
+                                <div class="mb_24-16">Каждый сайт мы создаем с нуля, учитывая сферу деятельности
+                                    клиента. Мы выясним, кто среди ваших конкурентов лучше представлен в интернете и что
+                                    именно ему помогло добиться таких результатов. Чем больше мы будем знать о вашем
+                                    бизнесе и его целевой аудитории — тем эффективнее будет конечный продукт
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row promotion__wrapper">
+                    <div class="col-lg-7 offset-lg-5">
+                        <div class="promotion__item flex">
+                            <h3 class="number">03</h3>
+                            <div class="point bgc_circle"></div>
+                            <div class="content">
+                                <h5 class="mb_16-8">UI/UX-дизайн</h5>
+                                <div class="mb_24-16">Мы составим пользовательские сценарии и спроектируем оптимальную
+                                    структуру сайта, которая будет управлять пользователем и позволит легко найти
+                                    нужное. Результатом этого этапа станут тщательно прорисованные макеты страниц сайта,
+                                    которые будут отражать философию вашей компании и вызвать положительные эмоции у
+                                    пользователей
+                                </div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row promotion__wrapper --just-end">
+                    <div class="col-lg-6">
+                        <div class="promotion__item flex promotion__item_short">
+                            <h3 class="number">04</h3>
+                            <div class="point bgc_circle"></div>
+                            <div class="content">
+                                <h5 class="mb_16-8">Адаптивная верстка и программирование</h5>
+                                <div class="mb_24-16">Благодаря качественной адаптивной верстке, каждый пользователь
+                                    сможет увидеть дизайн именно таким, каким его задумал дизайнер. Также мы привлекаем
+                                    свежие технологии для программирования, чтобы сайт работал исправно и не создавал
+                                    проблем ни вам, ни пользователям.
+                                </div>
+                                <div class="mb_16">Благодаря качественной адаптивной верстке, каждый пользователь
+                                    сможет увидеть дизайн именно таким, каким его задумал дизайнер. Также мы привлекаем
+                                    свежие технологии для программирования, чтобы сайт работал исправно и не создавал
+                                    проблем ни вам, ни пользователям.
+                                </div>
+
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row promotion__wrapper">
+                    <div class="col-lg-7 offset-lg-5">
+                        <div class="promotion__item flex">
+                            <h3 class="number">05</h3>
+                            <div class="point bgc_circle"></div>
+                            <div class="content">
+                                <h5 class="mb_16-8">Тестирование и запуск</h5>
+                                <div class="mb_24-16">Перед запуском проекта мы проведем тестирование сайта и с точки
+                                    зрения пользователя и с точки зрения администратора. Все ли на сайте отображается в
+                                    соответствии с дизайном? Корректно ли работают все формы? Приходят ли администратору
+                                    оповещения? Наша цель – сделать все, чтобы сайт работал так, как нужно вам
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-aos="fade-up" class="section section__technologies technologies">
+            <div class="container">
+                <div class="row --just-center mb_xl">
+                    <div class="col-md-8">
+                        <h2 class="text-center">Наши технологии</h2>
+                    </div>
+
+                </div>
+                <div class="row --just-center">
+                    <div class="col-md-10">
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/illustrator.png" alt="">
+                            </div>
+                            <div class="text-center">Adobe <br> Illustrator</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/photoshop.png" alt="">
+                            </div>
+                            <div class="text-center">Adobe <br> Photoshop</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/figma.png" alt="">
+                            </div>
+                            <div class="text-center">Figma</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/xd.png" alt="">
+                            </div>
+                            <div class="text-center">Adobe XD</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/effects.png" alt="">
+                            </div>
+                            <div class="text-center">Adobe After <br> Effects</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/sass.png" alt="">
+                            </div>
+                            <div class="text-center">Sass</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/js.png" alt="">
+                            </div>
+                            <div class="text-center">JS</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/ts.png" alt="">
+                            </div>
+                            <div class="text-center">TypeScript</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/react.png" alt="">
+                            </div>
+                            <div class="text-center">React</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/rest.png" alt="">
+                            </div>
+                            <div class="text-center">Rest Api</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/php.png" alt="">
+                            </div>
+                            <div class="text-center">PHP</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/cake.png" alt="">
+                            </div>
+                            <div class="text-center">Cake PHP</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/laravel.png" alt="">
+                            </div>
+                            <div class="text-center">Laravel</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/node.png" alt="">
+                            </div>
+                            <div class="text-center">Nodejs</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/html.png" alt="">
+                            </div>
+                            <div class="text-center">HTML</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/phyton.png" alt="">
+                            </div>
+                            <div class="text-center">Python</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/magneto.png" alt="">
+                            </div>
+                            <div class="text-center">Magneto</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/wordpress.png" alt="">
+                            </div>
+                            <div class="text-center">WordPress</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/woo.png" alt="">
+                            </div>
+                            <div class="text-center">Woocommerce</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/github.png" alt="">
+                            </div>
+                            <div class="text-center">Github</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/hubspot.png" alt="">
+                            </div>
+                            <div class="text-center">HubSpot</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/aws.png" alt="">
+                            </div>
+                            <div class="text-center">AWS</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/autidesk.png" alt="">
+                            </div>
+                            <div class="text-center">Autodesk 3ds <br>MAX</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/telegram.png" alt="">
+                            </div>
+                            <div class="text-center">Telegram api</div>
+                        </div>
+                        <div class="item brd_24 border">
+                            <div class="image mb_16">
+                                <img src="@img/google.png" alt="">
+                            </div>
+                            <div class="text-center">Google Maps</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section data-aos="fade-up" class="section section__audit audit">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-lg-5">
+                        <div class="shadow"></div>
+                        <h2 class="mb_24-32">Получи аудит своей компании бесплатно</h2>
+                        <div class="image"><img src="@img/dragon_2.png" alt=""></div>
+                    </div>
+                    <div class="col-md-6 col-lg-5 offset-md-1 offset-lg-2">
+                        <div class="mb_16-8">Project inquiries</div>
+                        <a href="tel:+(352) 565-5589" class="audit__link h2 text-color_accent">(352) 565-5589</a>
+                        <a href="mailto:info@pixelcomarketing.com" class="audit__link text-color_accent">mailto:info@pixelcomarketing.com</a>
+                        <a href="#" class="audit__link"></a>
+                        <form action="" class="form audit-form">
+                            <div class="form__items">
+                                <div class="form__item form__item_row ">
+                                    <div class="form__input pos-r">
+                                        <input type="text" id="name-audit" name="name" placeholder="Enter your name">
+                                        <div class="form__message">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form__item form__item_row ">
+                                    <div class="form__input pos-r">
+                                        <input type="email" id="email-audit" name="email"
+                                               placeholder="Enter your email">
+                                        <div class="form__message">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form__item form__item_row ">
+                                    <div class="form__input form__input_tel pos-r">
+                                        <input type="text" id="phone-audit" name="tel"
+                                               placeholder="Enter your phone ">
+                                        <div class="form__message">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form__item form__item_row ">
+                                    <div class="form__input pos-r">
+                                        <input data-form-date type="date"
+                                               placeholder="Сonvenient time to call">
+                                    </div>
+                                </div>
+
+                                <div class="form__item form__item_row ">
+
+                                    <div class="form__input pos-r">
+                                        <textarea id="message-audit" placeholder="Your request "></textarea>
+                                        <span class="icon-12 pos-a close-icon hide "></span>
+                                        <span class="icon-12 pos-a icon-check hide "></span>
+                                    </div>
+                                    <div class="form__message">
+
+                                    </div>
+                                </div>
+                                <div class="form__item form__item_row ">
+                                    <button type="submit" class="btn btn_main w-100">
+                                        Get Proposal
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('html/footer.html',{})
+</div>
+
+
+@@include('html/modal.html',{})
+@@include('html/svg.html',{})
+<script src="app.min.js"></script>
+</body>
+</html>

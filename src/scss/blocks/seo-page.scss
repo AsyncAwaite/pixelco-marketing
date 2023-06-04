@@ -1,0 +1,160 @@
+.seo-page {
+  .main-screen {
+    .row {
+      @media all and (max-width: 576px) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    @media all and (max-width: 576px) {
+      padding-top: gem(48);
+      min-height: 100%;
+    }
+  }
+
+  .info {
+    max-width: gem(1170);
+    margin: 0 auto;
+    border: 1px solid $gray-800;
+    padding: gem(40) gem(100);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: gem(140);
+    align-items: center;
+    position: relative;
+
+    &::before {
+      width: 1px;
+      bottom: gem(40);
+      top: gem(40);
+      left: 50%;
+      content: '';
+      position: absolute;
+      background-color: $gray-800;
+    }
+
+    .h2 {
+      + div {
+        color: $gray-600;
+      }
+    }
+
+    @media all and (max-width: 992px) {
+      padding: gem(25) gem(45);
+      column-gap: gem(70);
+    }
+    @media all and (max-width: 576px) {
+      padding: gem(16);
+      grid-template-columns: 1fr;
+      &::before {
+        content: none;
+      }
+      .h2 {
+        padding-bottom: gem(16);
+        font-size: gem(24);
+        line-height: gem(36);
+        border-bottom: 1px solid $gray-800;
+
+
+        + div {
+          padding-top: gem(16);
+        }
+      }
+    }
+  }
+
+  .why {
+    .image {
+      margin-left: 0;
+    }
+
+    .col-lg-5 {
+      @media all and (max-width: 992px) {
+        align-items: center;
+        margin-bottom: gem(32);
+        .image {
+          width: gem(251);
+          height: gem(251);
+        }
+      }
+    }
+  }
+
+  .why-inform {
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: gem(30);
+      @media all and (max-width: 576px) {
+        grid-template-columns: 1fr;
+        gap: gem(16);
+      }
+    }
+
+    &__item {
+      padding: gem(24);
+
+      .bgc_circle {
+        width: gem(36);
+        height: gem(36);
+        margin-right: gem(24);
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+
+        span {
+          font-size: gem(18);
+          line-height: gem(36);
+          font-weight: 800;
+        }
+      }
+    }
+  }
+
+  .section__steps {
+    .image {
+      height: gem(933);
+      @media all and (max-width: 992px) {
+        height: gem(533);
+      }
+      @media all and (max-width: 576px) {
+        display: none;
+      }
+    }
+
+    .promotion__wrapper {
+      display: none;
+      padding-bottom: 0;
+
+      .promotion__item {
+        margin-bottom: gem(20);
+        height: gem(48);
+
+        .content {
+          &::after {
+            content: none;
+          }
+
+          &::before {
+            height: gem(28);
+          }
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+
+          .content {
+            &::before {
+              content: none;
+            }
+          }
+        }
+      }
+
+      @media all and (max-width: 576px) {
+        display: block;
+      }
+
+    }
+  }
+}

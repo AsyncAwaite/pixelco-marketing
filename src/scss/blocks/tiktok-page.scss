@@ -1,0 +1,60 @@
+.tiktok-page{
+  .info{
+    text-align: center;
+    display: grid;
+    padding: gem(64);
+   gap: gem(86);
+    grid-template-columns: repeat(auto-fit, minmax(gem(270), 1fr));
+    justify-items: center;
+    .text-color_gray{
+      width: 95%;
+      margin:0 auto;
+    }
+    @media all and (max-width: 576px){
+      padding: gem(40) gem(36);
+      gap: gem(56);
+    }
+  }
+  .how-work {
+    &::before {
+      width: 60.4%;
+      height: 100%;
+      top: gem(150);
+      left: 50%;
+      transform: translate(-50%, 0%);
+      content: '';
+      position: absolute;
+      background: url('@img/stroke_linkedin_bg.png') no-repeat center  / contain;
+      z-index: -1;
+    }
+
+    @media all and (max-width: 992px) {
+      &::before {
+        height: 70%;
+      }
+      &::after {
+        width: 60.4%;
+        height: 50%;
+        bottom: gem(100);
+        left: 50%;
+        transform: translate(-50%, 0%);
+        content: '';
+        position: absolute;
+        background: url('@img/stroke_linkedin_bg.png') no-repeat center  / contain;
+        z-index: -1;
+      }
+    }
+    @media all and (max-width: 576px) {
+      &::before, &::after {
+        content: none;
+      }
+      &__wrapper{
+        .row:last-child{
+          &::before {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+}

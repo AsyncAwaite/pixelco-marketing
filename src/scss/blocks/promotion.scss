@@ -1,0 +1,162 @@
+.promotion {
+  .title {
+    padding-right: gem(30);
+    @media all and (max-width: 992px) {
+      padding-right: 0;
+      margin-bottom: gem(32);
+    }
+  }
+
+  &__wrapper {
+    padding-bottom: gem(128);
+    @media all and (max-width: 992px) {
+      padding-bottom: gem(28);
+    }
+  }
+
+  &__item {
+    .number {
+      line-height: gem(24);
+      width: 0.4rem;
+      flex-shrink: 0;
+      @media all and (max-width: 576px){
+        width: gem(22);
+      }
+
+    }
+
+    .point {
+      width: gem(24);
+      height: gem(24);
+      margin: 0 gem(16);
+      flex-shrink: 0;
+      position: relative;
+
+      &::before {
+        width: gem(10);
+        height: gem(10);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $gray-900;
+        border-radius: 50%;
+        content: '';
+        position: absolute;
+      }
+
+    }
+
+    .content {
+      position: relative;
+
+      &::before {
+        width: 1px;
+        height: calc(100% - #{gem(30)});
+        top: gem(30);
+        left: gem(-28);
+        content: '';
+        position: absolute;
+        background: linear-gradient(106.97deg, #9747FF -9.53%, #382ED8 118.8%);
+        @media all and (max-width: 992px) {
+          height: calc(100%);
+        }
+      }
+
+      &::after {
+        width: gem(16);
+        height: gem(16);
+        background: linear-gradient(180deg, #9747FF 0%, #382ED8 100%);
+        bottom: gem(-20);
+        left: gem(-28);
+        transform: translateX(-45%);
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        @media all and (max-width: 992px) {
+          content: none;
+        }
+
+      }
+
+      .line {
+        left: gem(-20);
+        bottom: gem(-130);
+        position: absolute;
+        width: gem(241);
+        height: gem(112.5);
+        background: url('@img/line_1.png') no-repeat center  / contain;
+
+        @media all and (max-width: 992px) {
+          display: none;
+        }
+      }
+
+      @media all and (max-width: 992px) {
+        padding-right: gem(16);
+      }
+    }
+
+    .image {
+      width: gem(320);
+      height: gem(200);
+      @media all and (max-width: 576px) {
+        width: 100%;
+        height: gem(178);
+      }
+    }
+
+    &_short {
+      padding-left: gem(55);
+      @media all and (max-width: 992px) {
+        padding-left: 0;
+      }
+
+      .content {
+
+        &::before {
+          height: calc(100% - #{gem(130)});
+          @media all and (max-width: 992px) {
+            height: 100%;
+          }
+        }
+
+        &::after {
+          bottom: auto;
+          top: calc(100% - #{gem(93)});
+        }
+
+        .line {
+          bottom: gem(-135);
+          left: gem(-40);
+          width: gem(233);
+          height: gem(216);
+          background: url('@img/line_2.png') no-repeat center  / contain;
+          transform: translateX(-100%) rotate(2deg);
+          @media all and (min-width: 1720px){
+            width: gem(333);
+            transform: translateX(-100%) rotate(10deg);
+          }
+        }
+      }
+
+    }
+  }
+
+  &__wrapper {
+    &:last-child {
+      @media all and (max-width: 992px) {
+        .promotion__item {
+          .content {
+            &::before {
+              height: calc(100% - #{gem(30)});
+            }
+
+            &::after {
+              content: '';
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+
+
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -11,70 +13,195 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   &::before {
     color: inherit;
+    transition: color .35s linear;
   }
 }
 
+.icon-puzzle:before {
+  content: "\e91a";
+}
+.icon-diafragm:before {
+  content: "\e92c";
+}
+.icon-check:before {
+  content: "\e908";
+}
+.icon-build:before {
+  content: "\e90a";
+  color: #7c6fe6;
+}
+.icon-hospital:before {
+  content: "\e90b";
+  color: #7c6fe6;
+}
+.icon-box:before {
+  content: "\e90d";
+  color: #7c6fe6;
+}
+.icon-tree:before {
+  content: "\e912";
+  color: #7c6fe6;
+}
+.icon-cut:before {
+  content: "\e913";
+  color: #7c6fe6;
+}
+.icon-coin:before {
+  content: "\e914";
+  color: #7c6fe6;
+}
+.icon-study:before {
+  content: "\e915";
+  color: #7c6fe6;
+}
+.icon-connect:before {
+  content: "\e916";
+}
+.icon-auction:before {
+  content: "\e917";
+  color: #7c6fe6;
+}
+.icon-pin-build:before {
+  content: "\e918";
+  color: #7c6fe6;
+}
+.icon-message:before {
+  content: "\e919";
+  color: #7c6fe6;
+}
+.icon-pin-shop:before {
+  content: "\e91b";
+  color: #7c6fe6;
+}
+.icon-pin-restoran:before {
+  content: "\e91c";
+  color: #7c6fe6;
+}
+.icon-desktop:before {
+  content: "\e91d";
+  color: #7c6fe6;
+}
+.icon-protect:before {
+  content: "\e91e";
+  color: #7c6fe6;
+}
+.icon-truck:before {
+  content: "\e91f";
+  color: #7c6fe6;
+}
+.icon-road-map:before {
+  content: "\e920";
+  color: #7c6fe6;
+}
+.icon-video:before {
+  content: "\e921";
+  color: #7c6fe6;
+}
+.icon-19:before {
+  content: "\e922";
+  color: #7c6fe6;
+}
+.icon-animation:before {
+  content: "\e923";
+  color: #7c6fe6;
+}
+.icon-bricks:before {
+  content: "\e924";
+  color: #7c6fe6;
+}
+.icon-phones:before {
+  content: "\e925";
+  color: #7c6fe6;
+}
+.icon-food-delivery:before {
+  content: "\e926";
+  color: #7c6fe6;
+}
+.icon-web-design:before {
+  content: "\e927";
+  color: #7c6fe6;
+}
+.icon-banners:before {
+  content: "\e928";
+  color: #7c6fe6;
+}
+.icon-clothes:before {
+  content: "\e929";
+  color: #7c6fe6;
+}
+.icon-cosmetics:before {
+  content: "\e92a";
+  color: #7c6fe6;
+}
+.icon-draw:before {
+  content: "\e92b";
+  color: #7c6fe6;
+}
+.icon-air:before {
+  content: "\e92d";
+  color: #7c6fe6;
+}
+.icon-run:before {
+  content: "\e92e";
+  color: #7c6fe6;
+}
+.icon-tools:before {
+  content: "\e92f";
+  color: #7c6fe6;
+}
+.icon-women:before {
+  content: "\e930";
+  color: #7c6fe6;
+}
+.icon-web-content:before {
+  content: "\e931";
+  color: #7c6fe6;
+}
+.icon-gift:before {
+  content: "\e932";
+  color: #7c6fe6;
+}
+.icon-code:before {
+  content: "\e933";
+  color: #7c6fe6;
+}
+.icon-flyers:before {
+  content: "\e935";
+  color: #7c6fe6;
+}
 .icon-Tiktok:before {
   content: "\e900";
   color: #fff;
 }
-
 .icon-Pinterest:before {
   content: "\e901";
   color: #fff;
 }
-
 .icon-Telegram:before {
   content: "\e902";
   color: #fff;
 }
-
 .icon-Twitter:before {
   content: "\e903";
   color: #fff;
 }
-
 .icon-YouTube:before {
   content: "\e904";
   color: #fff;
 }
-
 .icon-LinkedIn:before {
   content: "\e905";
   color: #fff;
 }
-
 .icon-Facebook:before {
   content: "\e906";
   color: #fff;
 }
-
 .icon-Instagram:before {
   content: "\e907";
   color: #fff;
-}
-
-.icon-map:before {
-  content: "\e90e";
-  color: #7c6fe5;
-}
-
-.icon-cards:before {
-  content: "\e90f";
-  color: #7c6fe6;
-}
-
-.icon-bag:before {
-  content: "\e910";
-  color: #7c6fe6;
-}
-
-.icon-calendar:before {
-  content: "\e911";
-  color: #7c6fe6;
 }
 .icon-people:before {
   content: "\e909";
@@ -84,9 +211,27 @@
   content: "\e90c";
   color: #7c6fe6;
 }
+.icon-map:before {
+  content: "\e90e";
+  color: #7c6fe5;
+}
+.icon-cards:before {
+  content: "\e90f";
+  color: #7c6fe6;
+}
+.icon-bag:before {
+  content: "\e910";
+  color: #7c6fe6;
+}
+.icon-calendar:before {
+  content: "\e911";
+  color: #7c6fe6;
+}
+
 .icon {
   &-32 {
     font-size: gem(32);
     line-height: gem(40);
   }
+
 }

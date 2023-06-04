@@ -2,6 +2,9 @@
   &-uppercase {
     text-transform: uppercase;
   }
+  &-normal{
+    text-transform: none!important;
+  }
 
   &-center {
     text-align: center;
@@ -21,6 +24,18 @@
     }
     &_gray{
        color: $gray-700;
+      &-600{
+        color: #D9D7F3;
+      }
+    }
+    &_main{
+      color: $gray-900;
+    }
+    &_gradient{
+
+      background: $gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 

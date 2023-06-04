@@ -4,6 +4,7 @@
     height: gem(285);
     margin-left: 16%;
     @media all and (max-width: 576px) {
+      margin: 0 auto;
       width: gem(203);
       height: gem(156);
     }

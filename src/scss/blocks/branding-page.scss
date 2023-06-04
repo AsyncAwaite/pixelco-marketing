@@ -1,0 +1,74 @@
+.branding-page {
+  .main-screen {
+    &__image {
+      width: gem(538);
+      height: gem(559);
+      @media all and (max-width: 576px) {
+        width: gem(251);
+        height: gem(251);
+      }
+    }
+
+    .row {
+      position: relative;
+
+      &::after {
+        width: 84%;
+        height: gem(330);
+        bottom: gem(-140);
+        left: 8%;
+        content: '';
+        position: absolute;
+        background: url('@img/branding_bg.png') no-repeat center bottom  / contain;
+        z-index: -1;
+        @media all and (max-width: 992px) {
+          content: none;
+        }
+      }
+    }
+
+    .col-md-10 {
+      margin-top: gem(60);
+    }
+  }
+
+  .complex {
+    &__item {
+
+      .shadow {
+        top: 0;
+        transform: none;
+        opacity: .6;
+
+      }
+
+      &:first-child {
+        .shadow {
+          top: 0;
+          width: auto;
+          left: 0;
+          right: 0;
+          transform: none;
+
+        }
+      }
+
+      &:nth-child(2) {
+        .shadow {
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &:last-child {
+        .shadow {
+          transform: translate(0, -50%);
+          left: var(--container-gap-decrement);
+          right: var(--container-gap-decrement);
+          width: auto;
+        }
+      }
+    }
+  }
+
+
+}

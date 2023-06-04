@@ -42,19 +42,35 @@ section {
   }
   &__audit {
     z-index: 2;
-
+    .image{
+      width: 100%;
+      max-width: gem(470);
+      img{
+        object-position: center;
+        @media all and (max-width: 992px){
+          object-position: center top;
+        }
+      }
+      @media all and (max-width: 576px){
+        height: gem(277);
+      }
+    }
     .form {
       max-width: 4.7rem;
       width: 100%;
+      @media all and (max-width: 992px){
+        padding-right: gem(32);
+      }
+      @media all and (max-width: 576px){
+        padding-right: 0;
+      }
     }
 
     .col-md-7 {
-      @media all and (max-width: 992px) {
-        justify-content: flex-end;
-      }
+
       @media all and (max-width: 576px) {
         justify-content: center;
-        margin-bottom: gem(32);
+        margin-top: gem(32);
       }
     }
 

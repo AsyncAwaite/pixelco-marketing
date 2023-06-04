@@ -1,0 +1,35 @@
+.technologies{
+
+  .row{
+    &:last-child{
+      .col-md-10{
+        display: grid;
+        gap: gem(32);
+        justify-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        @media all and (max-width: 576px){
+          grid-template-columns: repeat(2, 1fr);
+          gap: gem(24);
+        }
+      }
+
+    }
+  }
+  .item{
+    padding: gem(24);
+    width: 100%;
+    max-width: gem(270);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .image{
+      width: gem(70);
+      height: gem(70);
+      +div{
+        font-size: var(--body-size-xs);
+        line-height: var(--body-line-xs);
+
+      }
+    }
+  }
+}

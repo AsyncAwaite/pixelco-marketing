@@ -27,8 +27,13 @@
   &__icon {
     display: inline-block;
     width: gem(24);
+
     height: gem(24);
     flex-shrink: 0;
     margin-right: gem(16);
+    span{
+      font-size: gem(24);
+      line-height: gem(24);
+    }
   }
 }

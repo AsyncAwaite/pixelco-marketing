@@ -33,23 +33,37 @@ window.addEventListener("DOMContentLoaded", () => {
         // const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
         // const lastDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
         //
+        if (screen.width >= 577) {
+            window.addEventListener('scroll', () => {
+                if (getElement('.sticky')) {
+                    let offset = scrollY - getElement('.sticky').offsetParent.offsetTop;
+                    if (offset > 0 && offset < getElement('.sticky').parentElement.offsetHeight - getElement('.sticky').offsetHeight) {
+                        offset = scrollY - getElement('.sticky').offsetParent.offsetTop;
+                        getElement('.sticky').style.top = `calc(${offset}px + var(--section-padding))`;
+                    }
+                }
+
+            })
+        }
 
 
         AOS.init({
             duration: 800,
             once: true,
-
         });
         const stringEl = getElement('[data-typing-string]');
-        stringEl.style.minHeight = stringEl.offsetHeight + 'px';
-        const string = stringEl.innerText;
-        stringEl.innerText = '';
-        stringEl.style.opacity = 1;
-        let str = string.split("");
-        (function animate() {
-            str.length > 0 ? stringEl.innerHTML += str.shift() : clearTimeout(running);
-            let running = setTimeout(animate, 60);
-        })();
+        if (stringEl) {
+            stringEl.style.minHeight = stringEl.offsetHeight + 'px';
+            const string = stringEl.innerText;
+            stringEl.innerText = '';
+            stringEl.style.opacity = 1;
+            let str = string.split("");
+            (function animate() {
+                str.length > 0 ? stringEl.innerHTML += str.shift() : clearTimeout(running);
+                let running = setTimeout(animate, 60);
+            })();
+        }
+
         scrollToAnchor();
 
         burger();
@@ -62,10 +76,9 @@ window.addEventListener("DOMContentLoaded", () => {
                 new Modal(".modal").openModal();
             })
         })
-        if (getElement('[data-date]')) {
+        if (getElement('.form-section')) {
             new Form('.form-section').init();
         }
-        // getElement('[data-date]').querySelector('.selected')
         if (getElement('.audit-form')) {
             new Form('.audit-form').init();
         }
