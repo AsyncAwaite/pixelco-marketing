@@ -205,3 +205,9 @@ a {
     outline-width: 0;
   }
 }
+.sticky{
+  transition: all .1s linear;
+}
+.fit-cover{
+  object-fit: cover!important;
+}

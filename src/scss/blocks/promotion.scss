@@ -1,4 +1,8 @@
 .promotion {
+  padding-bottom: gem(128);
+  @media all and (max-width: 992px){
+    padding-bottom: gem(28);
+  }
   .title {
     padding-right: gem(30);
     @media all and (max-width: 992px) {
@@ -11,6 +15,9 @@
     padding-bottom: gem(128);
     @media all and (max-width: 992px) {
       padding-bottom: gem(28);
+    }
+    &:last-child{
+      padding-bottom: 0;
     }
   }
 

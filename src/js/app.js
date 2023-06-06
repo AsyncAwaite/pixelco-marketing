@@ -33,17 +33,51 @@ window.addEventListener("DOMContentLoaded", () => {
         // const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
         // const lastDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
         //
-        if (screen.width >= 577) {
-            window.addEventListener('scroll', () => {
-                if (getElement('.sticky')) {
-                    let offset = scrollY - getElement('.sticky').offsetParent.offsetTop;
-                    if (offset > 0 && offset < getElement('.sticky').parentElement.offsetHeight - getElement('.sticky').offsetHeight) {
-                        offset = scrollY - getElement('.sticky').offsetParent.offsetTop;
-                        getElement('.sticky').style.top = `calc(${offset}px + var(--section-padding))`;
+        function debounce(func, delay) {
+            let timeoutId;
+
+            return function() {
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(func, delay);
+            };
+        }
+        function stickyElement(element, parent = null){
+            let stickyParent = element.parentElement;
+            if (parent){
+                stickyParent = parent;
+            }
+            const offsetHeight = stickyParent.offsetHeight - element.offsetHeight;
+            const headerOffsetHeight = getElement('header').offsetHeight;
+            const sectionOffsetTop = element.closest('section').offsetTop;
+            const handleScroll = debounce(() => {
+                const progress = scrollY - sectionOffsetTop + headerOffsetHeight;
+
+                if (progress > 0) {
+                    const parentOffsetTop = stickyParent.offsetTop;
+                    if (parentOffsetTop <= progress) {
+                        const topValue = progress - parentOffsetTop;
+
+                        if (topValue <= offsetHeight) {
+                            element.style.transform = `translateY(${topValue}px)`;
+                        }
                     }
                 }
+            }, 0);
+            window.addEventListener('scroll', handleScroll);
+        }
+        if (screen.width >= 993) {
+            if (getElement('.sticky')) {
 
-            })
+                getElements('.sticky').forEach(element => {
+                    if (element.classList.contains('sticky-website')){
+
+                        stickyElement(element, element.closest('.container'))
+                        return
+                    }
+                    stickyElement(element)
+                })
+
+            }
         }
 
 

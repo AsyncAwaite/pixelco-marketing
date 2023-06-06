@@ -1,7 +1,8 @@
 .ads-page {
   .main-screen {
-    min-height: 100%;
-    height: gem(654);
+    height: 100%;
+    min-height: gem(654);
+    padding-bottom: gem(60);
 
     .shadow_big {
       right: 0;
@@ -64,10 +65,23 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: gem(86);
     display: grid;
+    @media all and (max-width: 992px) {
+      padding: gem(40) gem(64);
+      grid-template-columns: 1fr;
+      &__item {
+        margin-bottom: gem(56);
+      }
+    }
+    @media all and (max-width: 576px) {
+      padding: gem(40) gem(36);
+    }
 
   }
 
   .why {
+    h2+div{
+      margin-bottom: gem(32);
+    }
     &__text {
       padding: 0;
 
@@ -106,11 +120,12 @@
 
           }
         }
-        .row{
-          @media all and (max-width: 576px){
-          &::before{
-            content: none;
-          }
+
+        .row {
+          @media all and (max-width: 576px) {
+            &::before {
+              content: none;
+            }
           }
         }
       }

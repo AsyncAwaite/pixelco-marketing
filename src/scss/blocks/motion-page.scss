@@ -1,0 +1,84 @@
+.motion-page {
+  .main-screen {
+    .image {
+      width: 100%;
+      height: gem(511);
+    }
+    .row{
+      @media all and (max-width: 576px){
+      flex-direction: column-reverse;
+        .image{
+          width: gem(251);
+          height: gem(251);
+          margin: 0 auto;
+        }
+      }
+    }
+
+  }
+
+  .callback {
+    z-index: 6;
+
+    .form {
+      width: 100%;
+      position: relative;
+      z-index: 5;
+    }
+  }
+
+  .how-work {
+    &::before {
+      width: 100%;
+      height: calc(100% - #{gem(470)});
+      top: gem(-80);
+      left: 0;
+      content: '';
+      position: absolute;
+      background: url('@img/motion__stroke.png') no-repeat center  / contain;
+      z-index: -1;
+      @media all and (max-width: 576px) {
+        content: none;
+      }
+    }
+
+    .circle {
+      background: linear-gradient(51.9deg, #797BFF 9.66%, #FDF0FF 103.24%);
+      box-shadow: 3px 2px 38px rgba(134, 123, 229, 0.7);
+      width: gem(74) !important;
+      height: gem(74);
+      right: 8.33%;
+      top: gem(94);
+      @media all and (max-width: 992px) {
+        display: none;
+      }
+    }
+
+    &__wrapper {
+      .row:last-child {
+        @media all and (max-width: 576px) {
+          &::before {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+
+  .promotion {
+    .shadow {
+
+      left: 50%;
+      transform: translateX(-50%);
+
+      &:first-child {
+        top: 0;
+      }
+
+      &:last-child {
+        top: auto;
+        bottom: 0;
+      }
+    }
+  }
+}

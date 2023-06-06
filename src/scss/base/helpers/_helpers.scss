@@ -64,6 +64,7 @@
     left: 0;
     top: 50%;
     transform: translate(gem(-300), -50%);
+    z-index: -1;
     @media all and (max-width: 992px) {
       width: calc(#{gem(1413)} / 2);
       height: calc(#{gem(1394)} / 2);
@@ -112,6 +113,12 @@
 }
 .border{
   border: 1px solid $gray-800;
+  &-bottom{
+    border-bottom: 1px solid $gray-800;
+  }
+}
+.overflow{
+  overflow: hidden;
 }
 
 @keyframes animatedOpacity {

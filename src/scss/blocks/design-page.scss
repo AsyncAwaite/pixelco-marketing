@@ -1,21 +1,34 @@
-.design-page{
-  .why{
-    .row{
+.design-page {
+  .why {
+    .sticky {
+      @media all and (max-width: 992px) {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        .image {
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .row {
       margin-bottom: gem(120);
-      @media all and (max-width: 992px){
+      @media all and (max-width: 992px) {
         margin-bottom: gem(64);
       }
     }
   }
-  .niche{
-    .shadow{
-      transform: translate(-50%,-50%);
+
+  .niche {
+    .shadow {
+      transform: translate(-50%, -50%);
       opacity: .6;
     }
-    .col-md-6{
-    @media all and (max-width: 576px){
-      margin-bottom: gem(16);
-    }
+
+    .col-md-6 {
+      @media all and (max-width: 576px) {
+        margin-bottom: gem(16);
+      }
     }
   }
 
