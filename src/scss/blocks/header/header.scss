@@ -152,6 +152,17 @@
 
 }
 
+.header-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-visible {
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+
 @import "menu";
 @import "burger";
 

@@ -1,8 +1,8 @@
 .contacts-page {
   .main-screen {
-    padding: gem(120) 0 gem(130);
+    padding: gem(80) 0 gem(130);
     @media all and (max-width: 992px) {
-      padding: gem(84) 0 gem(87);
+      padding: gem(60) 0 gem(87);
     }
     @media all and (max-width: 576px) {
       padding: gem(48) 0 gem(64);

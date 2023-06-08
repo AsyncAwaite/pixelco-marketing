@@ -4,6 +4,8 @@
 
   li {
     margin: 0 gem(24);
+    position: relative;
+    z-index: 5;
 
     a {
       &:hover {
@@ -30,6 +32,7 @@
     margin-bottom: gem(24);
     li {
       margin: 0;
+      width: 100%;
 
       > a {
         padding: gem(24) 0;
@@ -58,4 +61,265 @@
       }
     }
   }
+
+  .submenu {
+
+    &__btn {
+      width: gem(24);
+      height: gem(24);
+      position: relative;
+      margin-right: gem(8);
+      flex-shrink: 0;
+
+      .close {
+        opacity: 0;
+        z-index: 1;
+        transition: all .45s linear;
+
+        &::before, &::after {
+          background-color: #fff;
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: gem(4);
+
+
+        }
+
+        &::before {
+          width: gem(8);
+          height: gem(1.25);
+        }
+
+        &::after {
+          height: gem(8);
+          width: gem(1.25);
+        }
+      }
+
+      span {
+        &::before, &::after {
+          z-index: 0;
+          width: gem(7);
+          height: gem(7);
+          background-color: $accent;
+          content: '';
+          position: absolute;
+          transition: all .35s linear;
+        }
+
+        &:first-child {
+          &::before, &::after {
+            top: gem(4);
+          }
+
+          &::before {
+            left: gem(4);
+          }
+
+          &::after {
+            right: gem(4);
+          }
+        }
+
+        &:last-child {
+          &::before, &::after {
+            bottom: gem(4);
+          }
+
+          &::before {
+            left: gem(4);
+          }
+
+          &::after {
+            right: gem(4);
+          }
+        }
+      }
+
+    }
+
+    [data-submenu] {
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+      @media all and (max-width: 992px) {
+        padding: gem(24) 0;
+        &::after {
+          width: 100%;
+          height: 1px;
+          bottom: 0;
+          left: 0;
+          content: '';
+          position: absolute;
+          background: linear-gradient(271.58deg, rgba(56, 46, 216, 0.3) 6.54%, rgba(145, 105, 251, 0.3) 100.35%);;
+        }
+      }
+    }
+
+    &__menu {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      padding-top: gem(120);
+      z-index: -1;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .25s ease-in-out;
+
+      ul {
+
+        height: 100%;
+        overflow-y: scroll;
+
+        li {
+          margin: 0;
+          margin-bottom: gem(30);
+        }
+      }
+
+
+    }
+
+    &__item {
+      border: 1px solid #35355B;
+      border-radius: gem(16);
+      padding: gem(24);
+      transition: all .35s linear;
+
+      .image {
+        flex-shrink: 0;
+        width: gem(48);
+        height: gem(48);
+        margin-right: gem(24);
+      }
+
+      &:hover {
+        background-color: rgba($gray-800, .6);
+      }
+
+
+    }
+
+    @media all and (max-width: 992px) {
+      transition: all .5s linear;
+      max-height: 50vh;
+      overflow-y: scroll;
+      position: relative;
+      &__menu {
+        padding: 0;
+        visibility: visible;
+        max-height: 50vh;
+        height: 100%;
+        overflow: scroll;
+        opacity: 0;
+        transition: all 0.5s linear;
+        position: relative;
+        width: 100%;
+
+        ul {
+          overflow: hidden;
+          max-height: 0;
+          height: auto;
+
+          li {
+            margin-bottom: gem(12);
+
+            a {
+              .h5 {
+                font-weight: 400;
+              }
+
+              &::after {
+                content: none;
+              }
+            }
+          }
+        }
+      }
+      &__item {
+        padding: gem(20);
+      }
+      &.active {
+        [data-submenu] {
+          position: absolute;
+          width: 100%;
+          background-color: $gray-900;
+
+          &::before {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            content: '';
+            position: absolute;
+            background-color: $gray-900;
+            top: gem(10);
+            z-index: -1;
+          }
+        }
+
+        .submenu {
+
+          &__menu {
+            padding-top: gem(90);
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+  }
+
+  &::before {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    content: '';
+    position: fixed;
+    background-color: $gray-900;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .35s linear;
+  }
+
+  &.active {
+
+    .submenu {
+
+      &__btn {
+        .close {
+          opacity: 1;
+          transform: rotate(45deg);
+        }
+
+        span {
+          &::before, &::after {
+            width: gem(8.25);
+            height: gem(8.25);
+          }
+        }
+
+
+      }
+
+      &__menu {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &::before {
+      opacity: 1;
+      visibility: visible;
+    }
+
+  }
 }
+

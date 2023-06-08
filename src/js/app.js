@@ -36,14 +36,15 @@ window.addEventListener("DOMContentLoaded", () => {
         function debounce(func, delay) {
             let timeoutId;
 
-            return function() {
+            return function () {
                 clearTimeout(timeoutId);
                 timeoutId = setTimeout(func, delay);
             };
         }
-        function stickyElement(element, parent = null){
+
+        function stickyElement(element, parent = null) {
             let stickyParent = element.parentElement;
-            if (parent){
+            if (parent) {
                 stickyParent = parent;
             }
             const offsetHeight = stickyParent.offsetHeight - element.offsetHeight;
@@ -54,22 +55,31 @@ window.addEventListener("DOMContentLoaded", () => {
 
                 if (progress > 0) {
                     const parentOffsetTop = stickyParent.offsetTop;
-                    if (parentOffsetTop <= progress) {
-                        const topValue = progress - parentOffsetTop;
 
-                        if (topValue <= offsetHeight) {
-                            element.style.transform = `translateY(${topValue}px)`;
+                    if (parentOffsetTop <= progress ) {
+                        const topValue = progress - parentOffsetTop;
+                        if (topValue  <= offsetHeight) {
+                            let value = topValue + 60
+                            if (topValue >= 60) {
+                                element.style.transform = `translateY(${value}px)`;
+                            }
+                            if (value <= 70) {
+                                element.style.transform = `translateY(0px)`;
+                            }
+
                         }
+
                     }
                 }
             }, 0);
             window.addEventListener('scroll', handleScroll);
         }
+
         if (screen.width >= 993) {
             if (getElement('.sticky')) {
 
                 getElements('.sticky').forEach(element => {
-                    if (element.classList.contains('sticky-website')){
+                    if (element.classList.contains('sticky-website')) {
 
                         stickyElement(element, element.closest('.container'))
                         return
@@ -77,6 +87,32 @@ window.addEventListener("DOMContentLoaded", () => {
                     stickyElement(element)
                 })
 
+            }
+
+            if (getElement('.submenu')) {
+                let scrollPosition = null;
+                getElement('.submenu').querySelector('[data-submenu]').addEventListener('click', () => {
+                    if (!scrollPosition) {
+                        scrollPosition = scrollY || document.documentElement.scrollTop;
+                    }
+                    if (header.querySelector('.menu').classList.contains('active')) {
+                        document.body.style.position = 'relative';
+                        document.body.style.top = '0';
+                        window.scrollTo(0, scrollPosition);
+                        scrollPosition = null;
+                        header.querySelector('.menu').classList.remove('active')
+                    } else {
+                        header.querySelector('.menu').classList.add('active')
+                        document.body.style.position = 'fixed';
+                        document.body.style.top = `-${scrollPosition}px`;
+
+                    }
+
+                })
+            }
+        } else {
+            if (getElement('.submenu')){
+                smoothHeight('.submenu', '[data-submenu]', '.submenu__menu > .row')
             }
         }
 
@@ -126,13 +162,25 @@ window.addEventListener("DOMContentLoaded", () => {
 
 function headerFixed() {
     if (header) {
+        let lastScrollPosition = 0;
+
         if (scrollY >= header.clientHeight) {
             header.classList.add("--fixed");
         }
         window.addEventListener("scroll", () => {
+            let currentScrollPosition = scrollY || document.documentElement.scrollTop;
+
             try {
                 if (scrollY >= header.clientHeight) {
                     header.classList.add("--fixed");
+                    if (currentScrollPosition > lastScrollPosition) {
+                        header.classList.remove("header-visible");
+                        header.classList.add("header-hidden");
+                    } else {
+                        header.classList.remove("header-hidden");
+                        header.classList.add("header-visible");
+                    }
+                    lastScrollPosition = currentScrollPosition;
                 } else {
                     header.classList.remove("--fixed");
                 }

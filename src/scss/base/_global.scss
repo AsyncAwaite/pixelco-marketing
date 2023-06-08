@@ -73,7 +73,7 @@ button {
 
 
 .page-container {
-overflow-x: hidden;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
 
@@ -205,9 +205,31 @@ a {
     outline-width: 0;
   }
 }
-.sticky{
+
+.sticky {
   transition: all .1s linear;
 }
-.fit-cover{
-  object-fit: cover!important;
+
+.fit-cover {
+  object-fit: cover !important;
+}
+
+
+.not-found {
+  .image {
+    height: gem(470);
+    background: url('@img/404.png') no-repeat center  / contain;
+    @media all and (max-width: 576px){
+      width: gem(300);
+      height: gem(300);
+      //margin: 0;
+    background: url('@img/404_mob.png') no-repeat center  / contain;
+    }
+    .h2{
+      margin-bottom: gem(4);
+      @media all and (max-width: 576px){
+        margin-bottom: gem(12);
+      }
+    }
+  }
 }
