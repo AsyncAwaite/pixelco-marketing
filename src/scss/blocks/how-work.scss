@@ -140,6 +140,7 @@
         width: 100%;
         margin-right: calc(-0.5 * var(--bs-gutter-x));
         margin-left: calc(-0.5 * var(--bs-gutter-x));
+
         > * {
           box-sizing: border-box;
           flex-shrink: 0;
@@ -148,12 +149,15 @@
           padding-right: calc(var(--bs-gutter-x) * 0.5);
           padding-left: calc(var(--bs-gutter-x) * 0.5);
         }
-        .col-lg-8{
+
+        .col-lg-8 {
           width: 66.66666667%;
-          .how-work__text{
+
+          .how-work__text {
             max-width: 100%;
           }
-          @media all and (max-width: 992px){
+
+          @media all and (max-width: 992px) {
             width: 100%;
           }
         }
@@ -246,6 +250,397 @@
 
 
         }
+      }
+    }
+  }
+
+  &-youtube {
+    &__item {
+      padding: gem(32);
+      height: 100%;
+
+      &_row {
+        padding: gem(20) gem(72) gem(20) gem(112);
+      }
+
+      .number {
+        width: gem(40);
+        height: gem(40);
+        border-radius: gem(8);
+        background-color: $gray-800;
+        position: absolute;
+        left: gem(32);
+        top: gem(32);
+        z-index: 2;
+        @media all and (max-width: 992px) {
+          left: gem(24);
+          top: gem(24);
+        }
+        @media all and (max-width: 576px) {
+          left: gem(16);
+          top: gem(16);
+        }
+      }
+
+      .text {
+        width: 100%;
+        max-width: gem(469);
+      }
+
+      .h4 {
+        margin-bottom: gem(8);
+      }
+
+      .check-list {
+        font-size: var(--body-size-sm);
+        line-height: var(--body-line-sm);
+
+        li {
+          padding: gem(16) 0;
+        }
+      }
+
+      .image {
+        width: gem(320);
+        height: gem(320);
+      }
+
+      @media all and (max-width: 992px) {
+        flex-direction: column-reverse;
+        padding: gem(24);
+        .image {
+          width: gem(280);
+          height: gem(280);
+          margin-bottom: gem(24);
+        }
+      }
+      @media all and (max-width: 576px) {
+        padding: gem(16);
+        .image {
+          width: gem(251);
+          height: gem(251);
+        }
+      }
+
+      &_reverse {
+        .image {
+          margin-left: 0 !important;
+          margin-right: auto;
+        }
+
+        @media all and (max-width: 992px) {
+          flex-direction: column;
+          .image {
+            margin: 0 auto !important;
+          }
+        }
+      }
+    }
+
+    h2 + div {
+      .image {
+        width: gem(374);
+        margin-left: auto;
+        @media all and (max-width: 992px) {
+          margin: 0 auto;
+          width: gem(280);
+        }
+        @media all and (max-width: 576px) {
+          width: gem(251);
+        }
+      }
+
+    }
+
+    .col-md-6 + .col-md-6 {
+      @media all and (max-width: 576px) {
+        margin-top: gem(16);
+      }
+    }
+
+    .divider {
+      margin-top: gem(80);
+      margin-bottom: gem(120);
+      @media all and (max-width: 576px) {
+        margin: gem(16) 0 gem(48);
+      }
+
+      &-reverse {
+        margin-bottom: gem(90);
+        .circle {
+          width: gem(254);
+          height: gem(254);
+          right: gem(138);
+          top: auto;
+          bottom: gem(-153);
+          @media all and (max-width: 992px) {
+            display: none;
+          }
+        }
+
+        .how-work-youtube__item {
+          height: gem(370);
+          overflow: hidden;
+
+        }
+
+        .check-list {
+          li:before {
+            background: #fff;
+            opacity: 1;
+
+          }
+        }
+
+        .number {
+          background: rgba(255, 255, 255, 0.1);
+        }
+
+        .image {
+          position: absolute;
+          width: gem(534);
+          height: 100%;
+          bottom: 0;
+          right: gem(50);
+        }
+
+        @media all and (max-width: 992px) {
+          margin-bottom: gem(48);
+          .how-work-youtube__item {
+            height: 100%;
+            align-items: center;
+          }
+
+          .image {
+            position: relative;
+            width: gem(251);
+            height: gem(251);
+            margin-left: auto;
+            margin-right: auto;
+            right: 0;
+
+          }
+        }
+
+      }
+
+      .bgc_gradient {
+        padding: gem(64) gem(101);
+
+        .number {
+          position: relative;
+          top: 0;
+          left: 0;
+          background: rgba(255, 255, 255, 0.1);
+        }
+
+        .image {
+          position: absolute;
+          width: gem(470);
+          height: gem(470);
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        .check-list {
+          li:before {
+            background: #fff;
+            opacity: 1;
+
+          }
+        }
+
+        @media all and (max-width: 992px) {
+          flex-direction: column;
+          .image {
+            position: relative;
+            width: gem(280);
+            height: gem(280);
+            top: 0;
+            left: 0;
+            margin: 0 auto gem(24);
+            transform: none;
+          }
+          .number {
+            top: gem(24);
+            left: gem(24);
+            position: absolute;
+          }
+        }
+        @media all and (max-width: 576px) {
+          padding: gem(16);
+          .image {
+            width: gem(251);
+            height: gem(251);
+          }
+          .number {
+            top: gem(16);
+            left: gem(16);
+            position: absolute;
+          }
+        }
+
+      }
+
+
+      + .col-12 {
+        margin-bottom: gem(120);
+        @media all and (max-width: 992px) {
+          margin-bottom: gem(80);
+        }
+        @media all and (max-width: 576px) {
+          margin-bottom: gem(48);
+        }
+      }
+    }
+
+    .circle {
+      width: gem(188);
+      height: gem(188);
+      background: linear-gradient(51.9deg, #797BFF 9.66%, #FDF0FF 103.24%);
+      box-shadow: 2.04255px 1.3617px 25.8723px rgba(134, 123, 229, 0.7);
+      top: gem(-45);
+      right: gem(-45);
+      @media all and (max-width: 992px) {
+        width: gem(158);
+        height: gem(158);
+        right: gem(-25);
+      }
+      @media all and (max-width: 576px) {
+        display: none;
+      }
+    }
+
+
+    .decor {
+      min-height: gem(453);
+      border-top: 1px solid $gray-800;
+      border-bottom: 1px solid $gray-800;
+      padding-bottom: gem(80);
+      @media all and (max-width: 576px) {
+        padding-top: gem(80);
+        padding-bottom: gem(48);
+      }
+
+      &::before {
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        content: '';
+        position: absolute;
+        background: url('@img/youtube_dotes.png') no-repeat center bottom / contain;
+      }
+
+      .image {
+        position: absolute;
+        left: 50%;
+        top: gem(56);
+        width: gem(330);
+        height: gem(330);
+        transform: translateX(-50%);
+        @media all and (max-width: 576px) {
+          top: gem(24);
+        }
+      }
+
+      .content {
+        width: 100%;
+        max-width: gem(990);
+        margin: 0 auto;
+        z-index: 1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+
+        h2 + div {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: gem(40);
+
+          div {
+            padding: gem(32) gem(40);
+          }
+
+          @media all and (max-width: 576px) {
+            grid-template-columns: 1fr;
+            gap: gem(40) 0;
+            text-align: center;
+          }
+        }
+
+      }
+    }
+
+
+    &__slider {
+      margin-top: gem(120);
+      padding-top: gem(120);
+      position: relative;
+      margin-bottom: gem(90);
+      @media all and (max-width: 992px) {
+        margin-top: gem(90);
+        padding-top: gem(90);
+        margin-bottom: gem(48);
+      }
+      @media all and (max-width: 576px) {
+        margin-top: gem(48);
+        padding-top: gem(48);
+
+      }
+
+      &::before {
+
+        height: gem(240);
+        top: 0;
+        left: var(--container-gap-decrement);
+        right: var(--container-gap-decrement);
+        content: '';
+        position: absolute;
+        background: linear-gradient(180deg, #1D1D4A 0%, rgba(20, 20, 44, 0) 100%);
+      }
+
+      .swiper-slide {
+        height: auto;
+
+        .image {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: gem(248);
+          height: gem(248);
+        }
+
+        &:nth-child(3) {
+          .image {
+
+            width: gem(447);
+            height: gem(451);
+
+
+            background-position: center bottom;
+            transform: translate(-50%, 30%);
+          }
+        }
+      }
+
+      .how-work-youtube__item {
+        padding-top: gem(104);
+        padding-bottom: gem(110);
+        overflow: hidden;
+        height: 100%;
+
+        .circle {
+          width: gem(146);
+          height: gem(146);
+          right: gem(48);
+          bottom: gem(-66);
+        }
+
       }
     }
   }

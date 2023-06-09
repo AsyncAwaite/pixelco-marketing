@@ -9,6 +9,7 @@ import {getElement} from "./helpers.js";
 export default function sliders() {
     let caseSwiper;
     casesSlider();
+    howWorkYoutubeSlider();
     window.addEventListener('resize', () => {
         casesSlider();
     })
@@ -43,33 +44,24 @@ export default function sliders() {
         );
     }
 
-    function moreLotsSlider() {
-        if (!getElement('[data-more-lots-swiper]')) return;
-        let moreLotsSwiper = new Swiper(
-            getElement('[data-more-lots-swiper]'),
+    function howWorkYoutubeSlider() {
+        if (!getElement('[data-swiper="how-work-youtube"]')) return;
+        let howWorkYoutubeSwiper = new Swiper(
+            getElement('[data-swiper="how-work-youtube"]'),
             {
-                slidesPerView: 4,
-                spaceBetween: 20,
-                preloadImages: false,
-                lazy: true,
-                autoplay: {
-                    delay: 8000,
-                },
-                watchSlidesProgress: true,
+                slidesPerView: 1.15,
+                spaceBetween: 30,
                 breakpoints: {
-                    1025: {
-                        slidesPerView: 4,
-                    },
 
-                    768: {
-                        slidesPerView: 2,
+                    600: {
+                        slidesPerView: 2.1,
                         centeredSlides: false
                     },
-                    320: {
-                        slidesPerView: 1,
-                        spaceBetween: 10,
-                        centeredSlides: true
+                    993: {
+                        slidesPerView: 3,
+                        centeredSlides: false
                     },
+
                 },
             }
         );

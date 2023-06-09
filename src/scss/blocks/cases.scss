@@ -5,6 +5,7 @@
       width: 100%;
       margin: 0 auto;
       max-width: gem(461);
+
       img {
         height: gem(266);
         object-fit: cover;
@@ -63,6 +64,7 @@
       margin-bottom: gem(16);
       background-color: $gray-900;
       color: $white;
+
       span {
         &:first-child {
           font-size: gem(17);
@@ -124,6 +126,93 @@
       }
       @media all and (max-width: 576px) {
         padding: gem(16);
+      }
+    }
+  }
+
+  &__filter {
+    margin-bottom: gem(60);
+
+    li {
+      margin-right: gem(16);
+      margin-bottom: gem(16);
+      padding: gem(16) gem(24);
+      border: 1px solid $gray-800;
+      border-radius: gem(8);
+      cursor: pointer;
+      transition: all .35s linear;
+      background-color: transparent;
+
+      &:hover {
+        background-color: $gray-800;
+      }
+
+      &.active {
+        color: $accent;
+        border-color: $accent;
+      }
+    }
+
+    @media all and (max-width: 576px) {
+      display: none;
+    }
+  }
+
+  &-page {
+    .swiper-wrapper {
+      .swiper-slide {
+        margin-bottom: gem(120);
+      }
+    }
+
+    .cases {
+      &__item {
+        .image {
+          height: gem(440);
+          max-width: gem(585);
+
+          img {
+            height: gem(330);
+          }
+        }
+      }
+
+      &__text {
+        max-width: gem(415);
+        margin-left: gem(56);
+
+        .descr {
+          width: 100%;
+        }
+      }
+
+      @media all and (max-width: 992px) {
+        &__item {
+          .image {
+
+            height: gem(355);
+
+            img {
+              height: gem(266);
+            }
+          }
+        }
+        &__text {
+          margin-left: 0;
+        }
+      }
+      @media all and (max-width: 576px) {
+        &__item {
+          .image {
+            width: gem(279);
+            height: gem(211);
+
+            img {
+              height: gem(157);
+            }
+          }
+        }
+
       }
     }
   }

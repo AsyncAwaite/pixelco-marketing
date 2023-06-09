@@ -46,6 +46,7 @@
 
   --body-line-height: #{gem(24)};
   --body-line-l: #{gem(25.2)};
+  --body-line-sm: #{gem(21)};
   --body-line-xs: #{gem(21)};
 
   @media all and (max-width: 992px) {

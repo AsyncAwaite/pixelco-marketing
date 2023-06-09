@@ -1,0 +1,59 @@
+.youtube-page {
+  .main-screen {
+    .shadow {
+      width: gem(700);
+      height: gem(700);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .info {
+    .col-lg-7 {
+      .info__item {
+        justify-content: space-around;
+
+        div {
+          width: 100%;
+          max-width: gem(260);
+        }
+
+        @media all and (max-width: 576px) {
+          flex-direction: column;
+          div:first-child {
+            margin-bottom: gem(56);
+          }
+        }
+      }
+
+      @media all and (max-width: 992px) {
+        margin-bottom: gem(16);
+      }
+    }
+
+    &__item {
+      padding: gem(50) gem(40);
+
+      height: 100%;
+
+      h5 {
+        width: 80%;
+      }
+
+      @media all and (max-width: 992px) {
+        padding: gem(40) gem(36);
+      }
+      @media all and (max-width: 576px) {
+        text-align: center;
+        h5 {
+          width: 100%;
+        }
+      }
+
+
+    }
+
+
+  }
+}

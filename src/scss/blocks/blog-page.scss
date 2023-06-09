@@ -1,0 +1,125 @@
+.blog-page {
+  ul {
+    color: $gray-600;
+
+    .current-menu-item {
+      pointer-events: none;
+      color: $accent;
+
+
+    }
+
+    li {
+      margin-bottom: gem(16);
+    }
+  }
+
+  &__items {
+    display: grid;
+    gap: gem(56) gem(30);
+    grid-template-columns: repeat(3, gem(270));
+    @media all and (max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    word-break: break-all;
+
+    .image {
+      width: 100%;
+      height: gem(300);
+      border-radius: gem(20);
+      overflow: hidden;
+
+      img {
+
+        object-fit: cover;
+      }
+
+      @media all and (max-width: 992px) {
+        height: gem(380);
+      }
+    }
+
+    .date {
+      color: $gray-700;
+      font-weight: 400;
+    }
+
+    .no-image {
+      border-radius: gem(20);
+      padding: gem(40) gem(16) gem(20);
+      height: auto;
+      overflow: hidden;
+
+      &__icon {
+        top: -2px;
+
+        left: -2px;
+        width: gem(62);
+        height: gem(42);
+        overflow: hidden;
+        z-index: -1;
+
+        span {
+          font-size: gem(60);
+          line-height: gem(40);
+
+          &::after {
+            width: 50%;
+            height: 50%;
+            top: 50%;
+            left: 50%;
+            content: '';
+            position: absolute;
+            background-color: #fff;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+      }
+
+      &::before {
+        border-radius: gem(20);
+      }
+
+      &:hover {
+        color: $accent;
+      }
+
+
+    }
+
+    .h4 + a {
+      font-size: var(--body-size-l);
+      line-height: var(--body-line-l);
+      color: $gray-600;
+      font-weight: 400;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+        color: $accent;
+      }
+    }
+
+    &:nth-child(3n + 2) {
+      transform: translateY(gem(-297));
+    }
+
+    &:nth-child(2) {
+      transform: none;
+    }
+
+    @media all and (max-width: 992px) {
+      &:nth-child(3n + 2) {
+        transform: none;
+      }
+    }
+
+
+  }
+
+}

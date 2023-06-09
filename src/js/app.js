@@ -164,14 +164,14 @@ function headerFixed() {
     if (header) {
         let lastScrollPosition = 0;
 
-        if (scrollY >= header.clientHeight) {
+        if (scrollY >= header.clientHeight - 30) {
             header.classList.add("--fixed");
         }
         window.addEventListener("scroll", () => {
             let currentScrollPosition = scrollY || document.documentElement.scrollTop;
 
             try {
-                if (scrollY >= header.clientHeight) {
+                if (scrollY >= header.clientHeight - 30) {
                     header.classList.add("--fixed");
                     if (currentScrollPosition > lastScrollPosition) {
                         header.classList.remove("header-visible");

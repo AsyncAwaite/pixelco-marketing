@@ -57,6 +57,7 @@
   }
 
   &.--fixed {
+    background-color: transparent;
     &::after {
       opacity: 1;
     }
