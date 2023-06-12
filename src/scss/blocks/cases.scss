@@ -55,45 +55,7 @@
       }
     }
 
-    .label {
-      height: gem(40);
-      padding: 0 gem(16);
-      border: 1px solid $gray-800;
-      border-radius: gem(100);
-      margin-right: gem(14);
-      margin-bottom: gem(16);
-      background-color: $gray-900;
-      color: $white;
 
-      span {
-        &:first-child {
-          font-size: gem(17);
-          line-height: gem(17);
-          margin-right: gem(8);
-          @media all and (max-width: 576px) {
-            font-size: gem(16);
-            line-height: gem(16);
-          }
-        }
-
-        &:last-child {
-          font-size: gem(12);
-          line-height: gem(24);
-          @media all and (max-width: 576px) {
-            font-size: gem(10);
-            line-height: gem(16);
-          }
-        }
-      }
-
-      @media all and (max-width: 576px) {
-        margin-right: gem(8);
-        margin-bottom: gem(8);
-        background-color: $gray-800;
-        height: gem(28);
-        padding: 0 gem(8);
-      }
-    }
   }
 
   &-slider {
@@ -215,5 +177,112 @@
 
       }
     }
+  }
+}
+
+.case-item {
+  .section {
+    padding-top: 0;
+  }
+
+  &__mainImg {
+    height: gem(640);
+    padding-bottom: gem(80);
+
+    &::after {
+      width: 100%;
+      height: gem(248);
+      bottom: 0;
+      left: 0;
+      content: '';
+      position: absolute;
+      background: linear-gradient(180deg, rgba(20, 20, 44, 0) 0%, #14142C 100%);
+    }
+
+    .image {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+    }
+
+    img {
+      object-fit: cover;
+    }
+
+    h1 {
+      z-index: 1;
+    }
+  }
+
+  .container {
+    padding-top: gem(128);
+    @media all and (max-width: 992px) {
+      padding-top: gem(64);
+    }
+    @media all and (max-width: 576px) {
+      padding-top: gem(24);
+    }
+  }
+
+  .content {
+    h3 {
+      margin-bottom: gem(24);
+    }
+
+    p {
+      margin-bottom: gem(40);
+      color: $gray-600;
+    }
+
+    img {
+      height: auto;
+      max-width: 100%;
+      border-radius: gem(24);
+      overflow: hidden;
+      margin: 0 auto gem(80);
+    }
+  }
+}
+
+.label {
+  white-space: nowrap;
+  height: gem(40);
+  padding: 0 gem(16);
+  border: 1px solid $gray-800;
+  border-radius: gem(100);
+  margin-right: gem(14);
+  margin-bottom: gem(16);
+  background-color: $gray-900;
+  color: $white;
+
+  span {
+    &:first-child {
+      font-size: gem(17);
+      line-height: gem(17);
+      margin-right: gem(8);
+      @media all and (max-width: 576px) {
+        font-size: gem(16);
+        line-height: gem(16);
+      }
+    }
+
+    &:last-child {
+      font-size: gem(12);
+      line-height: gem(24);
+      @media all and (max-width: 576px) {
+        font-size: gem(10);
+        line-height: gem(16);
+      }
+    }
+  }
+
+  @media all and (max-width: 576px) {
+    margin-right: gem(8);
+    margin-bottom: gem(8);
+    background-color: $gray-800;
+    height: gem(28);
+    padding: 0 gem(8);
   }
 }

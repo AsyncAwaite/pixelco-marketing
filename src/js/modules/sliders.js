@@ -10,6 +10,7 @@ export default function sliders() {
     let caseSwiper;
     casesSlider();
     howWorkYoutubeSlider();
+    blogPageSlider()
     window.addEventListener('resize', () => {
         casesSlider();
     })
@@ -59,6 +60,28 @@ export default function sliders() {
                     },
                     993: {
                         slidesPerView: 3,
+                        centeredSlides: false
+                    },
+
+                },
+            }
+        );
+    }
+    function blogPageSlider() {
+        if (!getElement('[data-swiper="blog-page"]')) return;
+        let howWorkYoutubeSwiper = new Swiper(
+            getElement('[data-swiper="blog-page"]'),
+            {
+                slidesPerView: 1.15,
+                spaceBetween: 30,
+                breakpoints: {
+
+                    600: {
+                        slidesPerView: 2.1,
+                        centeredSlides: false
+                    },
+                    993: {
+                        slidesPerView: 4,
                         centeredSlides: false
                     },
 

@@ -1,5 +1,6 @@
 .blog-page {
-  ul {
+  &__nav {
+
     color: $gray-600;
 
     .current-menu-item {
@@ -12,23 +13,45 @@
     li {
       margin-bottom: gem(16);
     }
+
+    @media all and (max-width: 576px) {
+      display: flex;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      margin-bottom: gem(45);
+      li {
+        white-space: nowrap;
+        margin-bottom: 0;
+        margin-right: gem(16);
+      }
+    }
   }
 
+
   &__items {
-    display: grid;
-    gap: gem(56) gem(30);
-    grid-template-columns: repeat(3, gem(270));
+    //display: grid;
+    //gap: gem(56) gem(30);
+    //grid-template-columns: repeat(3, gem(270));
     @media all and (max-width: 992px) {
       grid-template-columns: 1fr;
     }
   }
 
   &__item {
-    word-break: break-all;
+    display: grid;
+    grid-template-columns: gem(270) 1fr;
+    column-gap: gem(72);
+    margin-bottom: gem(48);
+    @media all and (max-width: 992px) {
+      column-gap: gem(32);
+    }
+    @media all and (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
 
     .image {
-      width: 100%;
-      height: gem(300);
+      width: gem(270);
+      height: gem(270);
       border-radius: gem(20);
       overflow: hidden;
 
@@ -37,8 +60,17 @@
         object-fit: cover;
       }
 
-      @media all and (max-width: 992px) {
-        height: gem(380);
+      @media all and (max-width: 576px) {
+        width: gem(343);
+        height: gem(343);
+        margin-bottom: gem(16);
+      }
+
+      + div {
+        padding-right: gem(70);
+        @media all and (max-width: 992px) {
+          padding-right: gem(30);
+        }
       }
     }
 
@@ -122,4 +154,56 @@
 
   }
 
+  &__textPage {
+    h1 {
+      font-size: var(--font-size-h2);
+      line-height: var(--line-height-h2);
+      margin-bottom: gem(40);
+      @media all and (max-width: 992px) {
+        margin-bottom: gem(24);
+      }
+      @media all and (max-width: 576px) {
+        margin-bottom: gem(16);
+      }
+    }
+
+    p {
+      color: $gray-700;
+      margin-bottom: gem(32);
+      @media all and (max-width: 576px) {
+        margin-bottom: gem(40);
+      }
+    }
+
+    img {
+      height: auto;
+      max-width: 100%;
+      border-radius: gem(24);
+      overflow: hidden;
+      margin-bottom: gem(32);
+    }
+
+    h3 {
+      margin-bottom: gem(24);
+      @media all and (max-width: 576px) {
+        margin-bottom: gem(16);
+      }
+    }
+
+    [data-swiper="blog-page"] {
+      .image {
+        width: 100%;
+        height: gem(270);
+
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+
+    }
+  }
+
 }
+

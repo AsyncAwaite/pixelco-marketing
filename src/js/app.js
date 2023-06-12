@@ -76,9 +76,9 @@ window.addEventListener("DOMContentLoaded", () => {
         }
 
         if (screen.width >= 993) {
-            if (getElement('.sticky')) {
+            if (getElement('.sticky-website')) {
 
-                getElements('.sticky').forEach(element => {
+                getElements('.sticky-website').forEach(element => {
                     if (element.classList.contains('sticky-website')) {
 
                         stickyElement(element, element.closest('.container'))
